@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оценка рисков, методы и как выбрать подходящий</title>
+<meta name="description" content="Качественные шкалы и матрица вероятность-влияние, количественные методы от ожидаемых потерь до метода Монте-Карло, ограничения матрицы и правила выбора метода под задачу. Опора на ГОСТ Р 58771.">
+<link rel="canonical" href="https://risk-place.ru/metody-ocenki-riskov/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta property="og:title" content="Оценка рисков, методы и как выбрать подходящий">
+<meta property="og:description" content="Качественные шкалы и матрица вероятность-влияние, количественные методы от ожидаемых потерь до метода Монте-Карло, ограничения матрицы и правила выбора метода под задачу. Опора на ГОСТ Р 58771.">
+<meta property="og:image" content="https://risk-place.ru/assets/courses/page5-metallurgiya.jpg">
+<meta property="og:url" content="https://risk-place.ru/metody-ocenki-riskov/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risk-place.ru">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Оценка рисков и методы", "description": "Качественные шкалы и матрица вероятность-влияние, количественные методы от ожидаемых потерь до метода Монте-Карло, ограничения матрицы и правила выбора метода под задачу. Опора на ГОСТ Р 58771.", "inLanguage": "ru", "url": "https://risk-place.ru/metody-ocenki-riskov/", "image": "https://risk-place.ru/assets/courses/page5-metallurgiya.jpg", "datePublished": "2026-08-23", "dateModified": "2026-08-23", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/metody-ocenki-riskov/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/#library"}, {"@type": "ListItem", "position": 3, "name": "Оценка рисков и методы", "item": "https://risk-place.ru/metody-ocenki-riskov/"}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="hdr"><div class="wrap in">
+  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
+  <nav class="nav">
+    <a href="../page24/">Программы тренингов</a>
+    <a href="../dashboard/">Дашборд</a>
+    <a href="../onlajn-kurs/">Онлайн-курс</a>
+    <a href="../page14/">Консалтинг</a>
+    <a href="../index.html#library">Библиотека</a>
+    <a href="../o-nas/">О нас</a>
+  </nav>
+  <a class="hbtn" href="#apply">Оставить заявку</a>
+</div></header>
+
+<section class="phero"><div class="wrap">
+  <p class="crumbs"><a href="../index.html">Главная</a> · <a href="../index.html#library">Библиотека</a> · Оценка рисков и методы</p>
+  <div class="ph-in">
+    <div>
+      <p class="kick">Библиотека · разбор</p>
+      <h1>Оценка рисков и методы</h1>
+      <p class="lead">Оценка нужна для одного, чтобы отделить риски, требующие решения руководства, от тех, за которыми достаточно наблюдать. Разбираем, какие методы для этого есть, что каждый из них дает и где проходят границы их применимости.</p>
+      <div class="ph-btns">
+        <a class="btn g" href="#apply">Задать вопрос эксперту</a>
+        <a class="btn o" href="../page24/">Программы тренингов</a>
+      </div>
+    </div>
+    <div class="ph-shot"><img src="../assets/courses/page5-metallurgiya.jpg" alt="Оценка рисков и методы, risk-place.ru" loading="lazy"></div>
+  </div>
+  <div class="facts">
+    <div class="fact"><b>ГОСТ Р 58771</b><span>технологии оценки риска</span></div>
+    <div class="fact"><b>5 на 5</b><span>типовая качественная шкала</span></div>
+    <div class="fact"><b>6 методов</b><span>в рабочем наборе</span></div>
+    <div class="fact"><b>2 вопроса</b><span>определяют выбор метода</span></div>
+    <div class="fact"><b>Динамика</b><span>важнее точности</span></div>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="why"><div class="wrap">
+  <p class="kick">Смысл</p>
+  <h2>Зачем вообще оценивать</h2>
+  <div class="prose">
+    <p>Оценка это не про точность, а про сопоставимость. Компания не может заниматься сотней рисков одновременно, поэтому нужен способ выстроить их в очередь и защитить эту очередь перед руководством. Оценка дает общее основание, по которому риски разных подразделений становятся сравнимыми.</p>
+    <p>Отсюда следует важное. Уточнять оценку имеет смысл ровно до того момента, пока это меняет решение. Если риск попадает в красную зону и при вероятности 30 процентов, и при вероятности 60, спор о том, какая цифра вернее, бессмыслен, решение одинаковое.</p>
+    <p>Методы оценки описаны в ГОСТ Р 58771 «Менеджмент риска. Технологии оценки риска», это российская версия международного стандарта по методам. Ниже разобраны те из них, которые реально применяются в корпоративной практике.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="scale"><div class="wrap">
+  <p class="kick">Качественная шкала</p>
+  <h2>Пример шкалы вероятности</h2>
+  <p class="sub">Шкала работает тогда, когда у каждого уровня есть словесное и числовое описание. Без числового ориентира разные эксперты понимают слово «возможно» по-разному, и оценки перестают быть сопоставимыми.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Уровень</th><th>Как понимать</th></tr></thead>
+    <tbody>
+      <tr><td>5 · Почти наверняка</td><td>Чаще одного раза в год или вероятность выше 80 процентов</td></tr>
+      <tr><td>4 · Вероятно</td><td>Раз в один-три года или вероятность от 50 до 80 процентов</td></tr>
+      <tr><td>3 · Возможно</td><td>Раз в три-пять лет или вероятность от 20 до 50 процентов</td></tr>
+      <tr><td>2 · Маловероятно</td><td>Раз в пять-десять лет или вероятность от 5 до 20 процентов</td></tr>
+      <tr><td>1 · Редко</td><td>Реже одного раза в десять лет или вероятность ниже 5 процентов</td></tr>
+      </tbody>
+  </table></div>
+  <p class="alt">Шкалу влияния строят так же, привязывая уровни к деньгам, срокам, безопасности и репутации. Обычно берут худшее из значений по всем измерениям.</p>
+</div></section>
+
+<section class="sec roomy" id="limits"><div class="wrap">
+  <p class="kick">Ограничения</p>
+  <h2>Что матрица не умеет</h2>
+  <div class="prose">
+    <p>Матрица вероятность-влияние удобна и потому применяется почти везде. Полезно понимать три ее ограничения, чтобы не принимать по ней решений, которых она не выдерживает.</p>
+    <p>Первое, матрица не складывает риски. Десять рисков в желтой зоне могут в сумме дать больше потерь, чем один красный, но на карте этого не видно. Для суммарного взгляда нужны количественные методы.</p>
+    <p>Второе, произведение вероятности на влияние уравнивает совершенно разные ситуации. Частое мелкое событие и редкая катастрофа могут получить одинаковый балл, но управляются они по-разному, и решение по ним должно приниматься на разных уровнях.</p>
+    <p>Третье, шкала порядковая, а не количественная. Уровень 4 не означает «вдвое хуже, чем 2», поэтому арифметика с этими числами за пределами ранжирования некорректна, хотя ее часто делают.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="methods"><div class="wrap">
+  <p class="kick">Набор методов</p>
+  <h2>Шесть методов и когда какой нужен</h2>
+  <p class="sub">Порядок примерно соответствует росту трудоемкости. В большинстве компаний рабочими остаются первые три, остальные подключаются под конкретное решение.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Метод</th><th>Что дает</th><th>Что нужно для применения</th><th>Где уместен</th></tr></thead>
+    <tbody>
+      <tr><td>Экспертная оценка по шкалам</td><td>Быстрый способ разложить портфель рисков по приоритетам</td><td>Согласованные шкалы вероятности и влияния, группа экспертов</td><td>Первичная приоритизация, регулярный пересмотр реестра</td></tr>
+      <tr><td>Анализ сценариев</td><td>Показывает, что произойдет при связке нескольких событий</td><td>Описание двух-трех сценариев и оценка последствий по каждому</td><td>Стратегические риски, проверка устойчивости плана</td></tr>
+      <tr><td>Ожидаемые потери</td><td>Переводит риск в деньги одним числом</td><td>Оценка вероятности и размера ущерба в денежном выражении</td><td>Сравнение мер по стоимости, обоснование бюджета</td></tr>
+      <tr><td>Анализ дерева отказов</td><td>Раскладывает крупное событие на цепочку причин</td><td>Схема события и данные о надежности элементов</td><td>Промышленная безопасность, технические системы</td></tr>
+      <tr><td>Метод Монте-Карло</td><td>Дает распределение исхода, а не одну цифру</td><td>Модель, распределения по параметрам, расчетная среда</td><td>Бюджет и сроки крупного проекта, инвестиционные решения</td></tr>
+      <tr><td>Стоимость под риском</td><td>Показывает потери на заданном уровне доверия</td><td>Ряд исторических данных достаточной длины</td><td>Финансовые и рыночные риски портфеля</td></tr>
+      </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec roomy" id="choice"><div class="wrap prog">
+  <div class="prog-aside">
+    <p class="kick">Выбор</p>
+    <h2>Как выбрать метод под задачу</h2>
+    <p class="t">Два вопроса решают дело. Какое решение вы собираетесь принять и какими данными располагаете.</p>
+    <div class="prog-legend">
+      <p>Метод выбирается под решение</p>
+      <p>Данных обычно меньше, чем хочется</p>
+      <p>Сложный метод без данных дает иллюзию точности</p>
+    </div>
+  </div>
+  <div>
+    <article class="mod"><span class="n">1</span><div><h3>Определите решение</h3>
+      <ul><li>Что именно вы будете делать с результатом. Ранжировать риски, обосновать бюджет меры, защитить резерв проекта или показать устойчивость стратегии</li></ul></div></article>
+    <article class="mod"><span class="n">2</span><div><h3>Проверьте данные</h3>
+      <ul><li>Есть ли история, статистика отказов, финансовая модель. Если данных нет, количественный метод даст точную на вид, но выдуманную цифру</li></ul></div></article>
+    <article class="mod"><span class="n">3</span><div><h3>Начните с простого</h3>
+      <ul><li>Экспертная оценка по шкалам закрывает большинство задач. Переходите к расчетам тогда, когда простой метод перестает различать варианты</li></ul></div></article>
+    <article class="mod"><span class="n">4</span><div><h3>Зафиксируйте допущения</h3>
+      <ul><li>Любая оценка держится на допущениях. Записанные допущения позволяют пересчитать оценку, когда условия изменятся, а не начинать заново</li></ul></div></article>
+    <article class="mod"><span class="n">5</span><div><h3>Покажите разброс</h3>
+      <ul><li>Одна цифра создает ложную уверенность. Диапазон или три сценария честнее и, как ни странно, воспринимаются руководством лучше</li></ul></div></article>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="opportunity"><div class="wrap">
+  <p class="kick">Вторая половина</p>
+  <h2>Оценка возможностей, а не только угроз</h2>
+  <div class="prose">
+    <p>По ГОСТ Р ИСО 31000 риск это влияние неопределенности на цели, и влияние может быть как отрицательным, так и положительным. На практике вторую половину почти всегда теряют, и реестр превращается в список неприятностей.</p>
+    <p>Возможности оцениваются теми же инструментами. У события есть вероятность, есть влияние на цель, только со знаком плюс, и есть меры, которые повышают шанс его наступления. Разница в стратегиях реагирования, вместо «избежать, снизить, передать, принять» работает «использовать, усилить, разделить, принять».</p>
+    <p>Смысл не в симметрии ради красоты. Компания, которая обсуждает на комитете только угрозы, приучает руководителей воспринимать управление рисками как тормоз. Компания, которая рядом с угрозами показывает недоиспользованные возможности, получает совсем другое отношение к той же самой работе.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="example"><div class="wrap">
+  <p class="kick">Пример</p>
+  <h2>Как считают ожидаемые потери</h2>
+  <p class="sub">Простейший количественный метод, который доступен любой компании и часто закрывает вопрос о том, стоит ли мера своих денег. Цифры условные.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Показатель</th><th>Как есть</th><th>После меры</th></tr></thead>
+    <tbody>
+      <tr><td>Вероятность события за год</td><td>30 процентов</td><td>10 процентов</td></tr>
+      <tr><td>Ущерб при наступлении</td><td>20 млн рублей</td><td>12 млн рублей</td></tr>
+      <tr><td>Ожидаемые потери за год</td><td>6 млн рублей</td><td>1,2 млн рублей</td></tr>
+      <tr><td>Стоимость меры</td><td>—</td><td>1,5 млн рублей в год</td></tr>
+      <tr><td>Эффект</td><td>—</td><td>снижение потерь на 4,8 млн при затратах 1,5 млн</td></tr>
+      </tbody>
+  </table></div>
+  <p class="alt">Метод хорош прозрачностью. Каждое число в таблице можно оспорить и заменить, и сразу видно, как меняется вывод. Именно это и требуется на защите бюджета.</p>
+</div></section>
+
+<section class="sec roomy panel" id="mistakes"><div class="wrap">
+  <p class="kick">Грабли</p>
+  <h2>Шесть ошибок оценки</h2>
+  <p class="sub">Каждая из них приводит к тому, что оценке перестают верить, а вместе с ней и всей системе управления рисками.</p>
+  <div class="res">
+    <div class="rcard"><b>Оценка в одиночку</b><span>Риск-менеджер проставил цифры сам, потому что так быстрее. Владельцы с оценкой не согласны и не считают ее своей.</span></div>
+    <div class="rcard"><b>Шкала без описания</b><span>Уровни названы словами без числовых ориентиров. Через полгода никто не помнит, что означало «среднее влияние».</span></div>
+    <div class="rcard"><b>Точность вместо порядка</b><span>Спор о том, 32 процента или 38, при том что решение в обоих случаях одинаковое.</span></div>
+    <div class="rcard"><b>Оценка без даты</b><span>Непонятно, когда риск смотрели в последний раз и учитывает ли оценка то, что уже произошло.</span></div>
+    <div class="rcard"><b>Игнорирование остаточного риска</b><span>Оценили как есть, меры запланировали, а какой риск станет после мер, не посчитали. Обосновать бюджет нечем.</span></div>
+    <div class="rcard"><b>Расчет ради расчета</b><span>Модель Монте-Карло на данных, которых нет. Результат выглядит убедительно и не имеет отношения к реальности.</span></div>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="related"><div class="wrap">
+  <p class="kick">Рядом</p>
+  <h2>Что почитать и что посмотреть дальше</h2>
+  <div class="cats">
+    <a class="cat" href="../reestr-i-karta-riskov/"><h3>Реестр и карта рисков</h3><p>Куда попадает результат оценки и как он превращается в решения.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../standarty-i-trebovaniya/"><h3>Стандарты и требования</h3><p>ГОСТ Р 58771 и другие документы, на которые опирается методология.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../page9/"><h3>Профессионал в области риск-менеджмента</h3><p>Программа на сорок часов, где методы оценки разбираются на практике.</p><span class="go">Программа &rarr;</span></a>
+  </div>
+</div></section>
+
+<section class="apply" id="apply"><div class="wrap in">
+  <div>
+    <p class="kick">Одна форма для любого вопроса</p>
+    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
+    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
+    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
+  </div>
+  <form class="form" id="leadForm">
+    <div class="row">
+      <input id="f-name" placeholder="Имя" required>
+      <input id="f-email" type="email" placeholder="Рабочая почта" required>
+    </div>
+    <div class="row">
+      <input id="f-org" placeholder="Компания">
+      <input id="f-role" placeholder="Должность">
+    </div>
+    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
+    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
+    <button class="btn g" type="submit">Отправить заявку</button>
+    <p class="note" id="fnote"></p>
+  </form>
+</div></section>
+
+<footer class="ftr"><div class="wrap in">
+  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
+  <span>
+    <a href="../page24/">Все программы</a> ·
+    <a href="../page15/">Методология и стандарты</a> ·
+    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
+    <a href="../o-nas/">О нас</a> ·
+    <a href="../page12/">Политика конфиденциальности</a>
+  </span>
+</div></footer>
+
+<script>
+function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var note=document.getElementById('fnote');
+  if(!document.getElementById('f-consent').checked){
+    note.textContent='Отметьте согласие на обработку персональных данных.';
+    note.classList.add('err'); return;
+  }
+  var body={type:'demo',product:'library',source:'ru',
+    name:document.getElementById('f-name').value.trim(),
+    email:document.getElementById('f-email').value.trim(),
+    org:document.getElementById('f-org').value.trim(),
+    role:document.getElementById('f-role').value.trim(),
+    message:document.getElementById('f-msg').value.trim(),
+    lang:'ru',page:'metody-ocenki-riskov'};
+  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){
+      if(!r.ok)throw 0;
+      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
+      note.classList.remove('err'); ev('lead_submit');
+    })
+    .catch(function(){
+      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
+      note.classList.add('err');
+    });
+});
+</script>
+</body>
+</html>

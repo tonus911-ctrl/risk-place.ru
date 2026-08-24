@@ -226,6 +226,17 @@ h2{font-size:clamp(21px,2vw,27px);line-height:1.28;letter-spacing:-0.012em}
 .prose a{color:var(--wine);text-decoration:underline}
 .prose blockquote{margin:22px 0;padding:16px 22px;border-left:3px solid var(--gold);background:var(--panel);border-radius:0 10px 10px 0;font-size:16.5px}
 
+/* --- таблицы в материалах ------------------------------------------------ */
+.tbl-wrap{overflow-x:auto;margin:4px 0 8px}
+.tbl{width:100%;border-collapse:collapse;font-size:15.5px;background:#fff}
+.tbl th{text-align:left;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);font-weight:700;padding:0 14px 11px;border-bottom:2px solid var(--gold);white-space:nowrap}
+.tbl td{padding:13px 14px;border-bottom:1px solid var(--line);color:#2B2F38;vertical-align:top;line-height:1.55}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl td:first-child{font-weight:600;color:var(--ink)}
+.tbl .no{color:var(--wine)}
+.tbl .yes{color:#1B5E36}
+@media(max-width:720px){.tbl{font-size:14.5px}.tbl td{padding:10px 9px}.tbl th{padding:0 9px 9px}}
+
 /* --- формы -------------------------------------------------------------- */
 .form{max-width:none}
 .form select,.form textarea,.form .row{max-width:660px}
