@@ -340,6 +340,7 @@ ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvi
 <script>
 function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
 function pick(v){var s=document.getElementById('f-product');if(s)s.value=v;}
+var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
 document.getElementById('leadForm').addEventListener('submit',function(e){
   e.preventDefault();
   var note=document.getElementById('fnote');
@@ -347,7 +348,8 @@ document.getElementById('leadForm').addEventListener('submit',function(e){
     note.textContent='Отметьте согласие на обработку персональных данных.';
     note.classList.add('err'); return;
   }
-  var body={type:'demo',product:document.getElementById('f-product').value,source:'ru',
+  var pv=document.getElementById('f-product').value;
+  var body={type:'demo',product:(PRODNAME[pv]||pv),source:'ru',
     name:document.getElementById('f-name').value.trim(),
     email:document.getElementById('f-email').value.trim(),
     org:document.getElementById('f-org').value.trim(),
