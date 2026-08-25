@@ -322,3 +322,11 @@ h2{font-size:clamp(21px,2vw,27px);line-height:1.28;letter-spacing:-0.012em}
 /* белые блоки библиотеки: воздуха вдвое меньше */
 .sec.lib:not(.panel){padding:clamp(16px,1.8vw,25px) 0 clamp(22px,2.5vw,36px)}
 .sec.lib>.wrap>h2{margin-bottom:clamp(13px,1.6vw,22px);max-width:none}
+/* содержимое блока с отступом от заголовка, заголовок выносится влево */
+.sec.lib>.wrap>*{margin-left:28px}
+.sec.lib>.wrap>h2,.sec.lib>.wrap>.kick{margin-left:0}
+@media(max-width:720px){.sec.lib>.wrap>*{margin-left:0}}
+/* пустая строка статуса под кнопкой не занимает место */
+.form .note:empty{display:none}
+.sec.lib>.wrap>*:last-child,.sec.lib .prose>*:last-child,.sec.lib .prose li:last-child{margin-bottom:0}
+.sec.lib .faq-q,.sec.lib .faq-a{padding:15px 0}
