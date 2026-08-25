@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как показать динамику рисков, а не срез</title>
+<meta name="description" content="Почему картина рисков на дату малоинформативна, как хранить историю оценок, какие способы показа динамики работают и как использовать тренд в разговоре с руководством.">
+<link rel="canonical" href="https://risk-place.ru/dinamika-riskov/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta property="og:title" content="Как показать динамику рисков, а не срез">
+<meta property="og:description" content="Почему картина рисков на дату малоинформативна, как хранить историю оценок, какие способы показа динамики работают и как использовать тренд в разговоре с руководством.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/dinamika-riskov.png">
+<meta property="og:url" content="https://risk-place.ru/dinamika-riskov/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risk-place.ru">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Динамика рисков", "description": "Почему картина рисков на дату малоинформативна, как хранить историю оценок, какие способы показа динамики работают и как использовать тренд в разговоре с руководством.", "inLanguage": "ru", "url": "https://risk-place.ru/dinamika-riskov/", "image": "https://risk-place.ru/assets/lib/dinamika-riskov.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/dinamika-riskov/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Отчетность и автоматизация", "item": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}, {"@type": "ListItem", "position": 4, "name": "Динамика рисков", "item": "https://risk-place.ru/dinamika-riskov/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Со скольких периодов появляется смысл", "acceptedAnswer": {"@type": "Answer", "text": "С двух появляется сравнение, с четырех появляется тренд. Год работы дает минимально осмысленную картину."}}, {"@type": "Question", "name": "Что делать, если методология менялась", "acceptedAnswer": {"@type": "Answer", "text": "Показывать разрыв явно и не сравнивать напрямую. Можно пересчитать прошлые оценки по новой шкале для двух-трех верхних рисков, чтобы сохранить преемственность."}}, {"@type": "Question", "name": "Как быть с рисками, которые появились в середине периода", "acceptedAnswer": {"@type": "Answer", "text": "Показывать отдельно, как новые. Включение их в общее сравнение без пометки искажает картину."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="hdr"><div class="wrap in">
+  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
+  <nav class="nav">
+    <a href="../page24/">Программы тренингов</a>
+    <a href="../dashboard/">Дашборд</a>
+    <a href="../onlajn-kurs/">Онлайн-курс</a>
+    <a href="../page14/">Консалтинг</a>
+    <a href="../biblioteka/">Библиотека</a>
+    <a href="../o-nas/">О нас</a>
+  </nav>
+  <a class="hbtn" href="#apply">Оставить заявку</a>
+</div></header>
+
+<section class="phero"><div class="wrap">
+  <p class="crumbs"><a href="../index.html">Главная</a> · <a href="../biblioteka/">Библиотека</a> · <a href="../otchetnost-i-avtomatizaciya/">Отчетность и автоматизация</a> · Динамика рисков</p>
+  <div class="ph-in">
+    <div>
+      <p class="kick">Библиотека · Отчетность и автоматизация</p>
+      <h1>Динамика рисков</h1>
+      <p class="lead">Один срез показывает, где компания стоит. Два среза показывают, куда она идет. Второе важнее.</p>
+      <div class="ph-btns">
+        <a class="btn g" href="#apply">Задать вопрос эксперту</a>
+        <a class="btn o" href="../otchetnost-i-avtomatizaciya/">Весь раздел</a>
+      </div>
+    </div>
+    <div class="ph-shot"><img src="../assets/lib/dinamika-riskov.png" alt="Динамика рисков, разбор risk-place.ru" width="1200" height="630" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="s1"><div class="wrap">
+  <h2>Почему срез недостаточен</h2>
+  <div class="prose">
+    <p>Руководитель, которому показали карту рисков с восемью красными точками, не может сделать вывод. Восемь это много или мало. Стало лучше или хуже. Работает ли то, что делалось весь год.</p>
+    <p>Единственный способ ответить на эти вопросы это сравнение с прошлым периодом. Причем сравнение должно быть корректным, то есть проводиться по одной и той же методологии и по сопоставимому перечню рисков. Смена шкал между периодами обесценивает динамику полностью, и это стоит помнить при пересмотре методологии.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="s2"><div class="wrap">
+  <h2>Что нужно хранить, чтобы динамика была возможна</h2>
+  <div class="prose">
+    <p>Требования к данным, а не к отчету.</p>
+    <ul>
+      <li>Каждая оценка это отдельная запись с датой, автором и типом, до мер или после мер</li>
+      <li>Признак изменения формулировки риска, чтобы отличать переоценку от переопределения</li>
+      <li>История статусов мероприятий, включая переносы сроков</li>
+      <li>Значения индикаторов за все периоды, а не только последнее</li>
+      <li>Записи о реализовавшихся событиях с датами и суммами</li>
+      <li>Архивные срезы реестра на отчетные даты</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="s3"><div class="wrap">
+  <h2>Способы показа динамики</h2>
+  <p class="sub">От простого к сложному, все рабочие.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Способ</th><th>Что показывает</th><th>Когда применять</th></tr></thead>
+    <tbody>
+      <tr><td>Стрелки на карте рисков</td><td>Движение отдельных рисков между двумя периодами</td><td>Отчет комитету и совету, самый наглядный</td></tr>
+      <tr><td>Столбцы по зонам за периоды</td><td>Изменение числа рисков в каждой зоне</td><td>Быстрая оценка общей картины</td></tr>
+      <tr><td>График совокупной оценки</td><td>Сумма денежных оценок или взвешенный индекс по периодам</td><td>Разговор о результативности системы</td></tr>
+      <tr><td>Тепловая шкала по категориям</td><td>Как менялась каждая категория, строки категории, столбцы периоды</td><td>Поиск направления, где ухудшается</td></tr>
+      <tr><td>График индикатора с порогами</td><td>Приближение к границе во времени</td><td>Оперативный мониторинг</td></tr>
+      <tr><td>Воронка мероприятий</td><td>Сколько запланировано, выполнено, просрочено по периодам</td><td>Дисциплина исполнения</td></tr>
+      </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec roomy panel" id="s4"><div class="wrap">
+  <h2>Как использовать тренд в разговоре</h2>
+  <div class="prose">
+    <p>Динамика меняет структуру разговора с руководством. Вместо описания состояния появляется объяснение причин. Два риска ушли из красной зоны, потому что выполнены такие-то мероприятия. Один пришел, потому что изменились внешние условия и мы это увидели по индикатору за два месяца до события.</p>
+    <p>Такой разговор дает функции то, чего не дает никакой отчет о состоянии, а именно доказательство пользы. И одновременно он задает правильный вопрос руководству, продолжаем ли мы вкладываться в то, что дает результат, и что делаем с направлением, где картина ухудшается второй квартал подряд.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="faq"><div class="wrap">
+  <p class="kick">Частые вопросы</p>
+  <h2>Коротко о главном</h2>
+  <div class="faq">
+    <div class="faq-q">Со скольких периодов появляется смысл</div>
+    <div class="faq-a">С двух появляется сравнение, с четырех появляется тренд. Год работы дает минимально осмысленную картину.</div>
+    <div class="faq-q">Что делать, если методология менялась</div>
+    <div class="faq-a">Показывать разрыв явно и не сравнивать напрямую. Можно пересчитать прошлые оценки по новой шкале для двух-трех верхних рисков, чтобы сохранить преемственность.</div>
+    <div class="faq-q">Как быть с рисками, которые появились в середине периода</div>
+    <div class="faq-a">Показывать отдельно, как новые. Включение их в общее сравнение без пометки искажает картину.</div>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="related"><div class="wrap">
+  <p class="kick">Рядом в разделе «Отчетность и автоматизация»</p>
+  <h2>Что почитать дальше</h2>
+  <div class="cats">
+    <a class="cat" href="../dashboard-riskov/"><h3>Дашборд рисков</h3><p>Где динамика показывается постоянно.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../peresmotr-reestra/"><h3>Пересмотр реестра</h3><p>Ритм, который создает точки для сравнения.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../metriki-kachestva-processa/"><h3>Метрики качества</h3><p>Другой срез динамики, про работу самой функции.</p><span class="go">Читать &rarr;</span></a>
+  </div>
+  <p class="alt" style="margin-top:18px"><a href="../otchetnost-i-avtomatizaciya/">Вернуться к разделу «Отчетность и автоматизация»</a> · <a href="../biblioteka/">вся библиотека</a></p>
+</div></section>
+
+<section class="apply" id="apply"><div class="wrap in">
+  <div>
+    <p class="kick">Одна форма для любого вопроса</p>
+    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
+    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
+    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
+  </div>
+  <form class="form" id="leadForm">
+    <div class="row">
+      <input id="f-name" placeholder="Имя" required>
+      <input id="f-email" type="email" placeholder="Рабочая почта" required>
+    </div>
+    <div class="row">
+      <input id="f-org" placeholder="Компания">
+      <input id="f-role" placeholder="Должность">
+    </div>
+    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
+    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
+    <button class="btn g" type="submit">Отправить заявку</button>
+    <p class="note" id="fnote"></p>
+  </form>
+</div></section>
+
+<footer class="ftr"><div class="wrap in">
+  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
+  <span>
+    <a href="../page24/">Все программы</a> ·
+    <a href="../page15/">Методология и стандарты</a> ·
+    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
+    <a href="../o-nas/">О нас</a> ·
+    <a href="../page12/">Политика конфиденциальности</a>
+  </span>
+</div></footer>
+
+<script>
+function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
+var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var note=document.getElementById('fnote');
+  if(!document.getElementById('f-consent').checked){
+    note.textContent='Отметьте согласие на обработку персональных данных.';
+    note.classList.add('err'); return;
+  }
+  var body={type:'demo',product:(PRODNAME['library']||'library'),source:'ru',
+    name:document.getElementById('f-name').value.trim(),
+    email:document.getElementById('f-email').value.trim(),
+    org:document.getElementById('f-org').value.trim(),
+    role:document.getElementById('f-role').value.trim(),
+    message:document.getElementById('f-msg').value.trim(),
+    lang:'ru',page:'dinamika-riskov'};
+  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){
+      if(!r.ok)throw 0;
+      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
+      note.classList.remove('err'); ev('lead_submit');
+    })
+    .catch(function(){
+      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
+      note.classList.add('err');
+    });
+});
+</script>
+</body>
+</html>

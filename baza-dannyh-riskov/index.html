@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>База данных рисков вместо таблиц</title>
+<meta name="description" content="Когда таблица перестает справляться, как устроена база данных рисков, какие сущности и связи в ней нужны и что она дает по сравнению с файлом, который правят по очереди.">
+<link rel="canonical" href="https://risk-place.ru/baza-dannyh-riskov/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta property="og:title" content="База данных рисков вместо таблиц">
+<meta property="og:description" content="Когда таблица перестает справляться, как устроена база данных рисков, какие сущности и связи в ней нужны и что она дает по сравнению с файлом, который правят по очереди.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/baza-dannyh-riskov.png">
+<meta property="og:url" content="https://risk-place.ru/baza-dannyh-riskov/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risk-place.ru">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "База данных рисков", "description": "Когда таблица перестает справляться, как устроена база данных рисков, какие сущности и связи в ней нужны и что она дает по сравнению с файлом, который правят по очереди.", "inLanguage": "ru", "url": "https://risk-place.ru/baza-dannyh-riskov/", "image": "https://risk-place.ru/assets/lib/baza-dannyh-riskov.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/baza-dannyh-riskov/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/reestr-i-karta-riskov/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Реестр и карта рисков", "item": "https://risk-place.ru/reestr-i-karta-riskov/"}, {"@type": "ListItem", "position": 4, "name": "База данных рисков", "item": "https://risk-place.ru/baza-dannyh-riskov/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Обязательно ли покупать специализированную систему", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Большинство компаний до тысячи сотрудников закрывают потребность аккуратной базой и генератором отчета. Покупка системы не решает проблему плохих формулировок и отсутствия владельцев."}}, {"@type": "Question", "name": "Что делать с историческими данными при переходе", "acceptedAnswer": {"@type": "Answer", "text": "Переносить последние две оценки по каждому риску и все открытые мероприятия. Остальное оставлять в архиве файлов, восстановление истории редко окупается."}}, {"@type": "Question", "name": "Кто должен вести базу", "acceptedAnswer": {"@type": "Answer", "text": "Ввод делают владельцы и исполнители, ведение справочников и контроль качества данных риск-менеджер. Если все вводит риск-менеджер, база быстро расходится с реальностью."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="hdr"><div class="wrap in">
+  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
+  <nav class="nav">
+    <a href="../page24/">Программы тренингов</a>
+    <a href="../dashboard/">Дашборд</a>
+    <a href="../onlajn-kurs/">Онлайн-курс</a>
+    <a href="../page14/">Консалтинг</a>
+    <a href="../biblioteka/">Библиотека</a>
+    <a href="../o-nas/">О нас</a>
+  </nav>
+  <a class="hbtn" href="#apply">Оставить заявку</a>
+</div></header>
+
+<section class="phero"><div class="wrap">
+  <p class="crumbs"><a href="../index.html">Главная</a> · <a href="../biblioteka/">Библиотека</a> · <a href="../reestr-i-karta-riskov/">Реестр и карта рисков</a> · База данных рисков</p>
+  <div class="ph-in">
+    <div>
+      <p class="kick">Библиотека · Реестр и карта рисков</p>
+      <h1>База данных рисков</h1>
+      <p class="lead">Таблица хороша, пока владельцев меньше двадцати. Дальше начинается то, ради чего придумали базы данных.</p>
+      <div class="ph-btns">
+        <a class="btn g" href="#apply">Задать вопрос эксперту</a>
+        <a class="btn o" href="../reestr-i-karta-riskov/">Весь раздел</a>
+      </div>
+    </div>
+    <div class="ph-shot"><img src="../assets/lib/baza-dannyh-riskov.png" alt="База данных рисков, разбор risk-place.ru" width="1200" height="630" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="s1"><div class="wrap">
+  <h2>Признаки, что таблица исчерпана</h2>
+  <div class="prose">
+    <p>Достаточно трех из шести.</p>
+    <ul>
+      <li>Файл существует в нескольких версиях, и никто не уверен, какая последняя</li>
+      <li>История оценок теряется, каждый пересмотр затирает предыдущий</li>
+      <li>Сведение реестров подразделений в корпоративный занимает больше дня</li>
+      <li>Мероприятия живут отдельно от рисков, в другом файле или в почте</li>
+      <li>Отчет руководству собирается руками и каждый раз заново</li>
+      <li>Невозможно ответить на вопрос, как менялся уровень конкретного риска за два года</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="s2"><div class="wrap">
+  <h2>Минимальная модель данных</h2>
+  <p class="sub">Пять сущностей, из которых собирается все остальное.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Сущность</th><th>Ключевые атрибуты</th><th>Связи</th></tr></thead>
+    <tbody>
+      <tr><td>Риск</td><td>Номер, формулировка, категория, процесс, цель, владелец, статус</td><td>Один ко многим с оценками и мерами</td></tr>
+      <tr><td>Оценка</td><td>Дата, вероятность, влияние, уровень, тип до или после мер, автор</td><td>Принадлежит риску, хранится вся история</td></tr>
+      <tr><td>Мероприятие</td><td>Действие, исполнитель, срок, бюджет, статус, факт выполнения</td><td>Может относиться к нескольким рискам</td></tr>
+      <tr><td>Индикатор</td><td>Название, единица, порог, значение, дата снятия</td><td>Привязан к риску, значения копятся</td></tr>
+      <tr><td>Событие</td><td>Инцидент, дата, ущерб, связанный риск</td><td>Связывает реальность с реестром</td></tr>
+      </tbody>
+  </table></div>
+  <p class="alt">Главное отличие от таблицы в том, что оценка это отдельная запись с датой, а не колонка. Отсюда берется вся динамика.</p>
+</div></section>
+
+<section class="sec roomy" id="s3"><div class="wrap">
+  <h2>Что это дает на практике</h2>
+  <div class="prose">
+    <p>Первое, отчет собирается запросом, а не руками. Квартальная подготовка комитета сокращается с недели до часа. Второе, появляется история, а значит и разговор о трендах вместо разговора о фотографии. Третье, инциденты можно связывать с рисками и проверять качество прогноза, это единственный честный способ измерить полезность системы.</p>
+    <p>Четвертое, менее очевидное. База заставляет привести в порядок справочники, категории, процессы, подразделения. После этого агрегация по портфелю становится возможной, а до этого она была невозможна ни в какой таблице.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="s4"><div class="wrap">
+  <h2>Чем реализовать без большого бюджета</h2>
+  <div class="prose">
+    <p>Порядок по возрастанию усилий.</p>
+    <ul>
+      <li>Учетная таблица с историей в отдельном листе плюс сводные, работает до тридцати рисков</li>
+      <li>Легкая база на файловом движке с формой ввода, снимает проблему версий</li>
+      <li>Портал или low-code платформа внутри контура компании, дает роли и согласования</li>
+      <li>Модуль в существующей корпоративной системе, если она уже есть и в ней живут процессы</li>
+      <li>Специализированная система управления рисками, оправдана при сотнях рисков и нескольких юрлицах</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="faq"><div class="wrap">
+  <p class="kick">Частые вопросы</p>
+  <h2>Коротко о главном</h2>
+  <div class="faq">
+    <div class="faq-q">Обязательно ли покупать специализированную систему</div>
+    <div class="faq-a">Нет. Большинство компаний до тысячи сотрудников закрывают потребность аккуратной базой и генератором отчета. Покупка системы не решает проблему плохих формулировок и отсутствия владельцев.</div>
+    <div class="faq-q">Что делать с историческими данными при переходе</div>
+    <div class="faq-a">Переносить последние две оценки по каждому риску и все открытые мероприятия. Остальное оставлять в архиве файлов, восстановление истории редко окупается.</div>
+    <div class="faq-q">Кто должен вести базу</div>
+    <div class="faq-a">Ввод делают владельцы и исполнители, ведение справочников и контроль качества данных риск-менеджер. Если все вводит риск-менеджер, база быстро расходится с реальностью.</div>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="related"><div class="wrap">
+  <p class="kick">Рядом в разделе «Реестр и карта рисков»</p>
+  <h2>Что почитать дальше</h2>
+  <div class="cats">
+    <a class="cat" href="../avtomatizaciya-riskov/"><h3>Автоматизация</h3><p>Что автоматизировать в первую очередь и в каком порядке.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../excel-ili-sistema/"><h3>Таблица или система</h3><p>Критерии перехода и как не купить лишнего.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../dashboard-riskov/"><h3>Дашборд рисков</h3><p>Что вырастает из базы, когда данные накопились.</p><span class="go">Читать &rarr;</span></a>
+  </div>
+  <p class="alt" style="margin-top:18px"><a href="../reestr-i-karta-riskov/">Вернуться к разделу «Реестр и карта рисков»</a> · <a href="../biblioteka/">вся библиотека</a></p>
+</div></section>
+
+<section class="apply" id="apply"><div class="wrap in">
+  <div>
+    <p class="kick">Одна форма для любого вопроса</p>
+    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
+    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
+    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
+  </div>
+  <form class="form" id="leadForm">
+    <div class="row">
+      <input id="f-name" placeholder="Имя" required>
+      <input id="f-email" type="email" placeholder="Рабочая почта" required>
+    </div>
+    <div class="row">
+      <input id="f-org" placeholder="Компания">
+      <input id="f-role" placeholder="Должность">
+    </div>
+    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
+    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
+    <button class="btn g" type="submit">Отправить заявку</button>
+    <p class="note" id="fnote"></p>
+  </form>
+</div></section>
+
+<footer class="ftr"><div class="wrap in">
+  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
+  <span>
+    <a href="../page24/">Все программы</a> ·
+    <a href="../page15/">Методология и стандарты</a> ·
+    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
+    <a href="../o-nas/">О нас</a> ·
+    <a href="../page12/">Политика конфиденциальности</a>
+  </span>
+</div></footer>
+
+<script>
+function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
+var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var note=document.getElementById('fnote');
+  if(!document.getElementById('f-consent').checked){
+    note.textContent='Отметьте согласие на обработку персональных данных.';
+    note.classList.add('err'); return;
+  }
+  var body={type:'demo',product:(PRODNAME['library']||'library'),source:'ru',
+    name:document.getElementById('f-name').value.trim(),
+    email:document.getElementById('f-email').value.trim(),
+    org:document.getElementById('f-org').value.trim(),
+    role:document.getElementById('f-role').value.trim(),
+    message:document.getElementById('f-msg').value.trim(),
+    lang:'ru',page:'baza-dannyh-riskov'};
+  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){
+      if(!r.ok)throw 0;
+      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
+      note.classList.remove('err'); ev('lead_submit');
+    })
+    .catch(function(){
+      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
+      note.classList.add('err');
+    });
+});
+</script>
+</body>
+</html>

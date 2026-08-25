@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как выбрать метод оценки рисков под задачу</title>
+<meta name="description" content="Как выбрать метод оценки риска, дерево решений по типу задачи и доступности данных, обзор методов ГОСТ Р 58771 и правило разумной достаточности.">
+<link rel="canonical" href="https://risk-place.ru/vybor-metoda-ocenki/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta property="og:title" content="Как выбрать метод оценки рисков под задачу">
+<meta property="og:description" content="Как выбрать метод оценки риска, дерево решений по типу задачи и доступности данных, обзор методов ГОСТ Р 58771 и правило разумной достаточности.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/vybor-metoda-ocenki.png">
+<meta property="og:url" content="https://risk-place.ru/vybor-metoda-ocenki/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risk-place.ru">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Выбор метода", "description": "Как выбрать метод оценки риска, дерево решений по типу задачи и доступности данных, обзор методов ГОСТ Р 58771 и правило разумной достаточности.", "inLanguage": "ru", "url": "https://risk-place.ru/vybor-metoda-ocenki/", "image": "https://risk-place.ru/assets/lib/vybor-metoda-ocenki.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/vybor-metoda-ocenki/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/metody-ocenki-riskov/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Оценка рисков и методы", "item": "https://risk-place.ru/metody-ocenki-riskov/"}, {"@type": "ListItem", "position": 4, "name": "Выбор метода", "item": "https://risk-place.ru/vybor-metoda-ocenki/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Можно ли использовать несколько методов для одного риска", "acceptedAnswer": {"@type": "Answer", "text": "Да, и для существенных рисков это правильно. Совпадение результатов двух независимых методов сильно повышает доверие к оценке."}}, {"@type": "Question", "name": "Обязательно ли брать методы только из ГОСТа", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Стандарт не ограничивает перечень. Но если метод авторский, его придется отдельно защищать перед аудитом."}}, {"@type": "Question", "name": "С чего начать компании, у которой методов нет вообще", "acceptedAnswer": {"@type": "Answer", "text": "Матрица с описанными шкалами плюс ожидаемые потери по верхней пятерке рисков. Этого набора хватает на первые два года."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="hdr"><div class="wrap in">
+  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
+  <nav class="nav">
+    <a href="../page24/">Программы тренингов</a>
+    <a href="../dashboard/">Дашборд</a>
+    <a href="../onlajn-kurs/">Онлайн-курс</a>
+    <a href="../page14/">Консалтинг</a>
+    <a href="../biblioteka/">Библиотека</a>
+    <a href="../o-nas/">О нас</a>
+  </nav>
+  <a class="hbtn" href="#apply">Оставить заявку</a>
+</div></header>
+
+<section class="phero"><div class="wrap">
+  <p class="crumbs"><a href="../index.html">Главная</a> · <a href="../biblioteka/">Библиотека</a> · <a href="../metody-ocenki-riskov/">Оценка рисков и методы</a> · Выбор метода</p>
+  <div class="ph-in">
+    <div>
+      <p class="kick">Библиотека · Оценка рисков и методы</p>
+      <h1>Выбор метода</h1>
+      <p class="lead">ГОСТ Р 58771 описывает больше тридцати методов. В работе используются пять-шесть. Разбираем, какой когда.</p>
+      <div class="ph-btns">
+        <a class="btn g" href="#apply">Задать вопрос эксперту</a>
+        <a class="btn o" href="../metody-ocenki-riskov/">Весь раздел</a>
+      </div>
+    </div>
+    <div class="ph-shot"><img src="../assets/lib/vybor-metoda-ocenki.png" alt="Выбор метода, разбор risk-place.ru" width="1200" height="630" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="s1"><div class="wrap">
+  <h2>Четыре вопроса, которые определяют выбор</h2>
+  <p class="sub">Отвечайте по порядку, метод определится сам.</p>
+  <div>
+    <article class="mod"><span class="n">1</span><div><h3>Зачем нужна оценка</h3><ul><li>Приоритизация, обоснование бюджета, проверка достаточности барьеров или регуляторное требование</li></ul></div></article>
+    <article class="mod"><span class="n">2</span><div><h3>Какие данные есть</h3><ul><li>Только мнения, мнения плюс отдельные факты, статистика или технические характеристики</li></ul></div></article>
+    <article class="mod"><span class="n">3</span><div><h3>Сколько времени и людей</h3><ul><li>Часы, дни или недели. Метод, на который нет ресурса, не выберут дважды</li></ul></div></article>
+    <article class="mod"><span class="n">4</span><div><h3>Кто читает результат</h3><ul><li>Комитет, инвестор, инженерная служба или инспектор. Аудитория определяет форму, а форма ограничивает метод</li></ul></div></article>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="s2"><div class="wrap">
+  <h2>Дерево выбора</h2>
+  <p class="sub">Практический ориентир.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Задача</th><th>Данных мало</th><th>Данные есть</th></tr></thead>
+    <tbody>
+      <tr><td>Отобрать существенные риски</td><td>Матрица, экспертная сессия</td><td>Матрица с денежным влиянием</td></tr>
+      <tr><td>Обосновать бюджет мероприятия</td><td>Ожидаемые потери на диапазонах</td><td>Ожидаемые потери по статистике</td></tr>
+      <tr><td>Определить резерв проекта</td><td>Экспертный процент, три сценария</td><td>Монте-Карло по статьям</td></tr>
+      <tr><td>Проверить достаточность барьеров</td><td>Галстук-бабочка качественно</td><td>Дерево отказов с вероятностями</td></tr>
+      <tr><td>Оценить совокупный эффект</td><td>Сценарный анализ</td><td>Агрегация в деньгах, моделирование портфеля</td></tr>
+      <tr><td>Понять причины повторяющихся сбоев</td><td>Пять почему, диаграмма Исикавы</td><td>Анализ отказов по видам и последствиям</td></tr>
+      </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec roomy" id="s3"><div class="wrap">
+  <h2>Правило разумной достаточности</h2>
+  <div class="prose">
+    <p>Метод оценки выбирается не по красоте, а по цене решения, которое от него зависит. Если от результата зависит решение на десять миллионов, оценка не должна стоить полтора. Если от результата зависит остановка производства, экспертной сессии мало.</p>
+    <p>Второе правило. Глубина оценки должна быть одинаковой внутри одного сравнения. Нельзя сравнивать риск, посчитанный методом Монте-Карло, с риском, оцененным на глаз, и делать вывод, какой из них важнее. Либо поднимайте второй до уровня первого, либо сравнивайте оба качественно.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="s4"><div class="wrap">
+  <h2>Что говорит ГОСТ Р 58771</h2>
+  <div class="prose">
+    <p>Стандарт полезен как каталог, а не как инструкция.</p>
+    <ul>
+      <li>Методы сгруппированы по применимости к идентификации, анализу и сравнительной оценке</li>
+      <li>По каждому методу указаны потребность в ресурсах, характер результата и уровень неопределенности</li>
+      <li>Стандарт прямо говорит, что универсального метода нет и выбор зависит от контекста</li>
+      <li>Половина описанных методов в российской практике не используется никогда, и это нормально</li>
+      <li>Ссылка на стандарт в методологии компании ускоряет прохождение аудита</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sec roomy" id="faq"><div class="wrap">
+  <p class="kick">Частые вопросы</p>
+  <h2>Коротко о главном</h2>
+  <div class="faq">
+    <div class="faq-q">Можно ли использовать несколько методов для одного риска</div>
+    <div class="faq-a">Да, и для существенных рисков это правильно. Совпадение результатов двух независимых методов сильно повышает доверие к оценке.</div>
+    <div class="faq-q">Обязательно ли брать методы только из ГОСТа</div>
+    <div class="faq-a">Нет. Стандарт не ограничивает перечень. Но если метод авторский, его придется отдельно защищать перед аудитом.</div>
+    <div class="faq-q">С чего начать компании, у которой методов нет вообще</div>
+    <div class="faq-a">Матрица с описанными шкалами плюс ожидаемые потери по верхней пятерке рисков. Этого набора хватает на первые два года.</div>
+  </div>
+</div></section>
+
+<section class="sec roomy panel" id="related"><div class="wrap">
+  <p class="kick">Рядом в разделе «Оценка рисков и методы»</p>
+  <h2>Что почитать дальше</h2>
+  <div class="cats">
+    <a class="cat" href="../gost-58771-metody/"><h3>ГОСТ Р 58771</h3><p>Каталог методов, на который ссылается методология.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../matrica-riskov/"><h3>Матрица рисков</h3><p>Метод по умолчанию и его границы.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../kachestvennaya-i-kolichestvennaya/"><h3>Два подхода к оценке</h3><p>Развилка, определяющая выбор.</p><span class="go">Читать &rarr;</span></a>
+  </div>
+  <p class="alt" style="margin-top:18px"><a href="../metody-ocenki-riskov/">Вернуться к разделу «Оценка рисков и методы»</a> · <a href="../biblioteka/">вся библиотека</a></p>
+</div></section>
+
+<section class="apply" id="apply"><div class="wrap in">
+  <div>
+    <p class="kick">Одна форма для любого вопроса</p>
+    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
+    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
+    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
+  </div>
+  <form class="form" id="leadForm">
+    <div class="row">
+      <input id="f-name" placeholder="Имя" required>
+      <input id="f-email" type="email" placeholder="Рабочая почта" required>
+    </div>
+    <div class="row">
+      <input id="f-org" placeholder="Компания">
+      <input id="f-role" placeholder="Должность">
+    </div>
+    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
+    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
+    <button class="btn g" type="submit">Отправить заявку</button>
+    <p class="note" id="fnote"></p>
+  </form>
+</div></section>
+
+<footer class="ftr"><div class="wrap in">
+  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
+  <span>
+    <a href="../page24/">Все программы</a> ·
+    <a href="../page15/">Методология и стандарты</a> ·
+    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
+    <a href="../o-nas/">О нас</a> ·
+    <a href="../page12/">Политика конфиденциальности</a>
+  </span>
+</div></footer>
+
+<script>
+function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
+var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var note=document.getElementById('fnote');
+  if(!document.getElementById('f-consent').checked){
+    note.textContent='Отметьте согласие на обработку персональных данных.';
+    note.classList.add('err'); return;
+  }
+  var body={type:'demo',product:(PRODNAME['library']||'library'),source:'ru',
+    name:document.getElementById('f-name').value.trim(),
+    email:document.getElementById('f-email').value.trim(),
+    org:document.getElementById('f-org').value.trim(),
+    role:document.getElementById('f-role').value.trim(),
+    message:document.getElementById('f-msg').value.trim(),
+    lang:'ru',page:'vybor-metoda-ocenki'};
+  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){
+      if(!r.ok)throw 0;
+      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
+      note.classList.remove('err'); ev('lead_submit');
+    })
+    .catch(function(){
+      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
+      note.classList.add('err');
+    });
+});
+</script>
+</body>
+</html>
