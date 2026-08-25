@@ -319,4 +319,6 @@ h2{font-size:clamp(21px,2vw,27px);line-height:1.28;letter-spacing:-0.012em}
 
 /* библиотека: заголовок ближе к своему тексту */
 .sec.lib{padding-top:clamp(31px,3.5vw,50px)}
+/* белые блоки библиотеки: воздуха вдвое меньше */
+.sec.lib:not(.panel){padding:clamp(16px,1.8vw,25px) 0 clamp(22px,2.5vw,36px)}
 .sec.lib>.wrap>h2{margin-bottom:clamp(13px,1.6vw,22px);max-width:none}
