@@ -316,3 +316,6 @@ h2{font-size:clamp(21px,2vw,27px);line-height:1.28;letter-spacing:-0.012em}
 .gl-item b{display:block;font-size:16px;margin-bottom:3px}
 .gl-item span.en{font-size:13px;color:var(--muted);font-weight:500}
 .gl-item p{margin:4px 0 0;font-size:14.5px;line-height:1.62;color:#3E434C}
+
+/* тонкий золотой разделитель между белыми секциями */
+.sec.sep{border-top:1px solid var(--gold)}
