@@ -8,7 +8,7 @@
   <url><loc>https://risk-place.ru/avtomatizaciya-riskov/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/avtomatizaciya-upravleniya-riskami/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/baza-dannyh-riskov/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://risk-place.ru/biblioteka/</loc><lastmod>2026-08-25</lastmod><priority>0.9</priority></url>
+  <url><loc>https://risk-place.ru/biblioteka/</loc><lastmod>2026-08-27</lastmod><priority>0.9</priority></url>
   <url><loc>https://risk-place.ru/biznes-processy/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/celi-i-riski/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/chto-takoe-komplaens/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -63,7 +63,7 @@
   <url><loc>https://risk-place.ru/otchet-komitetu-po-proektu/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/otchet-po-riskam/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/otchetnost-i-avtomatizaciya/</loc><lastmod>2026-08-25</lastmod><priority>0.75</priority></url>
-  <url><loc>https://risk-place.ru/otraslevye-riski/</loc><lastmod>2026-08-25</lastmod><priority>0.75</priority></url>
+  <url><loc>https://risk-place.ru/otraslevye-riski/</loc><lastmod>2026-08-27</lastmod><priority>0.75</priority></url>
   <url><loc>https://risk-place.ru/ozhidaemye-poteri/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page10/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page11/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -81,7 +81,7 @@
   <url><loc>https://risk-place.ru/page22/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page23/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page24/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://risk-place.ru/page3/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://risk-place.ru/page3/</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page4/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page5/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/page7/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -107,7 +107,7 @@
   <url><loc>https://risk-place.ru/risk-kultura/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/risk-sessiya/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/riski-banka/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://risk-place.ru/riski-it/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://risk-place.ru/riski-it/</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/riski-metallurgiya/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/riski-msb/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/riski-neftegaz/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -143,4 +143,7 @@
   <url><loc>https://risk-place.ru/vybor-metoda-ocenki/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/zrelost-sur/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://risk-place.ru/telenkov/</loc><lastmod>2026-08-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://risk-place.ru/riski-it-proektov/</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://risk-place.ru/riski-informacionnoj-bezopasnosti/</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://risk-place.ru/upravlenie-riskami-it-obuchenie/</loc><lastmod>2026-08-27</lastmod><priority>0.6</priority></url>
 </urlset>
