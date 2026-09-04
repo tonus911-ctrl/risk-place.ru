@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Метрики риска, справочник с примерами расчета</title>
+<meta name="description" content="Что такое метрики риска, чем метрика отличается от индикатора, десять рабочих метрик с формулой и примером расчета, как задать пороги и что из этого показывать руководству.">
+<link rel="canonical" href="https://risk-place.ru/metriki-riska/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta property="og:title" content="Метрики риска, справочник с примерами расчета">
+<meta property="og:description" content="Что такое метрики риска, чем метрика отличается от индикатора, десять рабочих метрик с формулой и примером расчета, как задать пороги и что из этого показывать руководству.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/metriki-riska.png">
+<meta property="og:url" content="https://risk-place.ru/metriki-riska/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="risk-place.ru">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-82K0ZJ2K9S"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-82K0ZJ2K9S');
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Метрики риска", "description": "Что такое метрики риска, чем метрика отличается от индикатора, десять рабочих метрик с формулой и примером расчета, как задать пороги и что из этого показывать руководству.", "inLanguage": "ru", "url": "https://risk-place.ru/metriki-riska/", "image": "https://risk-place.ru/assets/lib/metriki-riska.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/metriki-riska/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Отчетность и автоматизация", "item": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}, {"@type": "ListItem", "position": 4, "name": "Метрики риска", "item": "https://risk-place.ru/metriki-riska/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Чем метрика риска отличается от ключевого индикатора риска", "acceptedAnswer": {"@type": "Answer", "text": "Метрика описывает состояние, индикатор требует действия. Индикатор это метрика с заданным порогом и закрепленным решением при его пересечении."}}, {"@type": "Question", "name": "Сколько метрик риска нужно компании", "acceptedAnswer": {"@type": "Answer", "text": "Столько, сколько руководство реально смотрит. На практике от восьми до пятнадцати на организацию и по две-три на ключевой риск."}}, {"@type": "Question", "name": "Какие метрики риска показывать совету директоров", "acceptedAnswer": {"@type": "Answer", "text": "Связанные с риск-аппетитом: пересечения порогов, динамику ключевых рисков, просроченные мероприятия и потери в деньгах."}}, {"@type": "Question", "name": "Как часто пересчитывать метрики", "acceptedAnswer": {"@type": "Answer", "text": "Ежемесячно для менеджмента и ежеквартально для совета. Метрика, которая обновляется раз в полгода, показывает историю, а не состояние."}}, {"@type": "Question", "name": "Что делать, если метрика всегда в норме", "acceptedAnswer": {"@type": "Answer", "text": "Проверить порог. Индикатор, который никогда не срабатывает, либо измеряет не то, либо имеет порог, поставленный ради спокойствия."}}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="hdr"><div class="wrap in">
+  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
+  <nav class="nav">
+    <a href="../page24/">Программы тренингов</a>
+    <a href="../dashboard/">Дашборд</a>
+    <a href="../onlajn-kurs/">Онлайн-курс</a>
+    <a href="../page14/">Консалтинг</a>
+    <a href="../biblioteka/">Библиотека</a>
+    <a href="../o-nas/">О нас</a>
+  </nav>
+  <a class="hbtn" href="#apply">Оставить заявку</a>
+</div></header>
+
+<section class="phero"><div class="wrap">
+  <p class="crumbs"><a href="../index.html">Главная</a> · <a href="../biblioteka/">Библиотека</a> · <a href="../otchetnost-i-avtomatizaciya/">Отчетность и автоматизация</a> · Метрики риска</p>
+  <div class="ph-in">
+    <div>
+      <p class="kick">Библиотека · Отчетность и автоматизация</p>
+      <h1>Метрики риска</h1>
+      <p class="lead">Метрика риска это число, которое показывает состояние риска до того, как он реализовался. Ниже десять рабочих метрик с формулами, порогами и примерами расчета.</p>
+      <div class="ph-btns">
+        <a class="btn g" href="#apply">Задать вопрос эксперту</a>
+        <a class="btn o" href="../otchetnost-i-avtomatizaciya/">Весь раздел</a>
+      </div>
+    </div>
+    <div class="ph-shot"><img src="../assets/lib/metriki-riska.png" alt="Метрики риска, разбор risk-place.ru" width="1200" height="630" loading="lazy"></div>
+  </div>
+</div></section>
+
+<section class="sec roomy lib" id="s1"><div class="wrap">
+  <h2>Метрика, индикатор и показатель, в чем разница</h2>
+  <div class="prose">
+    <p>Три слова используют как синонимы, и из-за этого в отчетах появляются наборы цифр без назначения. Разница простая и рабочая.</p>
+    <p><b>Метрика</b> это любое измерение, связанное с риском: число инцидентов, доля просроченных мероприятий, время простоя. Она описывает состояние.</p>
+    <p><b>Индикатор</b> это метрика, у которой задан порог и закреплено действие при его пересечении. Он не описывает, а заставляет действовать.</p>
+    <p><b>Показатель эффективности</b> измеряет результат работы, а не уровень риска. Смешение этих двух вещей в одной таблице приводит к тому, что руководитель видит достижения там, где надо видеть угрозу.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy lib" id="s2"><div class="wrap">
+  <h2>Десять рабочих метрик риска</h2>
+  <p class="sub">Набор, который закрывает большинство нефинансовых компаний. Формулы упрощены до вида, пригодного для расчета в таблице.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Метрика</th><th>Как считается</th><th>Что показывает</th></tr></thead>
+    <tbody>
+      <tr><td>Доля рисков с владельцем</td><td>Риски с назначенным владельцем делим на все риски реестра</td><td>Управляемость реестра. Ниже 90 процентов означает, что часть рисков ничья</td></tr>
+      <tr><td>Просроченные мероприятия</td><td>Число мероприятий с истекшим сроком делим на все запланированные</td><td>Исполнительскую дисциплину. Главная метрика последней мили</td></tr>
+      <tr><td>Средний возраст риска в статусе</td><td>Среднее число дней с последнего изменения статуса</td><td>Застой. Риск, который полгода не менялся, скорее забыт, чем стабилен</td></tr>
+      <tr><td>Покрытие контролями</td><td>Риски высокой зоны, у которых есть работающий контроль, делим на все риски высокой зоны</td><td>Реальную защищенность там, где это важнее всего</td></tr>
+      <tr><td>Результат тестирования контролей</td><td>Успешные тесты делим на проведенные</td><td>Работают ли меры в жизни, а не на бумаге</td></tr>
+      <tr><td>Число реализовавшихся рисков</td><td>Количество событий за период из числа заранее описанных</td><td>Качество прогноза. Реализовался риск не из реестра, значит реестр неполон</td></tr>
+      <tr><td>Потери от реализовавшихся рисков</td><td>Сумма прямых потерь и затрат на восстановление</td><td>Цену вопроса в деньгах. Единственная метрика, которую слушает финансовый директор</td></tr>
+      <tr><td>Время до эскалации</td><td>Среднее время от обнаружения проблемы до доклада руководству</td><td>Скорость сигнала. Часто узкое место всей системы</td></tr>
+      <tr><td>Доля добровольных сообщений</td><td>Инциденты, о которых сообщили сами, делим на все выявленные</td><td>Риск-культуру напрямую</td></tr>
+      <tr><td>Пересечения риск-аппетита</td><td>Число выходов за установленные границы за период</td><td>Насколько система живет по объявленным правилам</td></tr>
+      </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec roomy lib" id="s3"><div class="wrap">
+  <h2>Как задать порог, чтобы метрика стала индикатором</h2>
+  <div class="prose">
+    <p>Порог назначается не от красивого числа, а от последствия. Рабочий способ такой: взять историю за год, посмотреть, при каком значении метрики раньше случались неприятности, и поставить порог с запасом до этой точки.</p>
+    <p>У каждого порога должно быть закрепленное действие: кто узнает, что делает и в какой срок. Порог без действия превращает индикатор обратно в метрику, а отчет в справку.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy lib" id="s4"><div class="wrap">
+  <h2>Пример расчета на цифрах</h2>
+  <p class="sub">Реестр из 120 рисков, квартал.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Метрика</th><th>Расчет</th><th>Значение</th><th>Порог</th><th>Что делаем</th></tr></thead>
+    <tbody>
+      <tr><td>Просроченные мероприятия</td><td>14 из 96</td><td>15 процентов</td><td>10 процентов</td><td>Пересечен. Разбор на комитете, персональные сроки</td></tr>
+      <tr><td>Покрытие контролями</td><td>18 из 21</td><td>86 процентов</td><td>90 процентов</td><td>Пересечен. Три риска высокой зоны без контроля, назначить меры</td></tr>
+      <tr><td>Доля добровольных сообщений</td><td>22 из 40</td><td>55 процентов</td><td>50 процентов</td><td>В норме, наблюдаем</td></tr>
+      <tr><td>Потери за квартал</td><td>4,3 млн</td><td>4,3 млн</td><td>5 млн</td><td>В норме, но динамика растет</td></tr>
+      </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec roomy lib" id="s5"><div class="wrap">
+  <h2>Что показывать руководству, а что оставить себе</h2>
+  <div class="prose">
+    <p>Совету директоров идут метрики, связанные с риск-аппетитом: пересечения границ, динамика по ключевым рискам, просроченные мероприятия и деньги. Четыре-пять цифр, каждая с трендом и с решением, которое требуется.</p>
+    <p>Все остальное живет на уровне риск-функции и менеджмента. Попытка показать совету двадцать метрик заканчивается тем, что не смотрят ни одну.</p>
+  </div>
+</div></section>
+
+<section class="sec roomy lib" id="faq"><div class="wrap">
+  <p class="kick">Частые вопросы</p>
+  <h2>Коротко о главном</h2>
+  <div class="faq">
+    <div class="faq-q">Чем метрика риска отличается от ключевого индикатора риска</div>
+    <div class="faq-a">Метрика описывает состояние, индикатор требует действия. Индикатор это метрика с заданным порогом и закрепленным решением при его пересечении.</div>
+    <div class="faq-q">Сколько метрик риска нужно компании</div>
+    <div class="faq-a">Столько, сколько руководство реально смотрит. На практике от восьми до пятнадцати на организацию и по две-три на ключевой риск.</div>
+    <div class="faq-q">Какие метрики риска показывать совету директоров</div>
+    <div class="faq-a">Связанные с риск-аппетитом: пересечения порогов, динамику ключевых рисков, просроченные мероприятия и потери в деньгах.</div>
+    <div class="faq-q">Как часто пересчитывать метрики</div>
+    <div class="faq-a">Ежемесячно для менеджмента и ежеквартально для совета. Метрика, которая обновляется раз в полгода, показывает историю, а не состояние.</div>
+    <div class="faq-q">Что делать, если метрика всегда в норме</div>
+    <div class="faq-a">Проверить порог. Индикатор, который никогда не срабатывает, либо измеряет не то, либо имеет порог, поставленный ради спокойствия.</div>
+  </div>
+</div></section>
+
+<section class="sec roomy lib panel" id="related"><div class="wrap">
+  <p class="kick">Рядом в разделе «Отчетность и автоматизация»</p>
+  <h2>Что почитать дальше</h2>
+  <div class="cats">
+    <a class="cat" href="../kri-klyuchevye-indikatory/"><h3>Индикаторы риска</h3><p>Как превратить метрику в индикатор с порогом и действием.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../dashboard-riskov/"><h3>Дашборд рисков</h3><p>Где эти метрики живут и как показываются руководству.</p><span class="go">Читать &rarr;</span></a>
+    <a class="cat" href="../risk-appetit-kak-zadat/"><h3>Риск-аппетит</h3><p>Границы, относительно которых считаются пересечения.</p><span class="go">Читать &rarr;</span></a>
+  </div>
+  <p class="alt" style="margin-top:18px"><a href="../otchetnost-i-avtomatizaciya/">Вернуться к разделу «Отчетность и автоматизация»</a> · <a href="../biblioteka/">вся библиотека</a></p>
+</div></section>
+
+<section class="apply" id="apply"><div class="wrap in">
+  <div>
+    <p class="kick">Одна форма для любого вопроса</p>
+    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
+    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
+    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
+  </div>
+  <form class="form" id="leadForm">
+    <div class="row">
+      <input id="f-name" placeholder="Имя" required>
+      <input id="f-email" type="email" placeholder="Рабочая почта" required>
+    </div>
+    <div class="row">
+      <input id="f-org" placeholder="Компания">
+      <input id="f-role" placeholder="Должность">
+    </div>
+    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
+    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
+    <button class="btn g" type="submit">Отправить заявку</button>
+    <p class="note" id="fnote"></p>
+  </form>
+</div></section>
+
+<footer class="ftr"><div class="wrap in">
+  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
+  <span>
+    <a href="../page24/">Все программы</a> ·
+    <a href="../page15/">Методология и стандарты</a> ·
+    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
+    <a href="../o-nas/">О нас</a> ·
+    <a href="../page12/">Политика конфиденциальности</a>
+  </span>
+</div></footer>
+
+<script>
+function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
+var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var note=document.getElementById('fnote');
+  if(!document.getElementById('f-consent').checked){
+    note.textContent='Отметьте согласие на обработку персональных данных.';
+    note.classList.add('err'); return;
+  }
+  var body={type:'demo',product:(PRODNAME['library']||'library'),source:'ru',
+    name:document.getElementById('f-name').value.trim(),
+    email:document.getElementById('f-email').value.trim(),
+    org:document.getElementById('f-org').value.trim(),
+    role:document.getElementById('f-role').value.trim(),
+    message:document.getElementById('f-msg').value.trim(),
+    lang:'ru',page:'metriki-riska'};
+  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+    .then(function(r){
+      if(!r.ok)throw 0;
+      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
+      note.classList.remove('err'); ev('lead_submit');
+    })
+    .catch(function(){
+      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
+      note.classList.add('err');
+    });
+});
+</script>
+</body>
+</html>

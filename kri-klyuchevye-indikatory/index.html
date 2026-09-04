@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ключевые индикаторы риска, как выбрать</title>
-<meta name="description" content="Что такое ключевые индикаторы риска, чем опережающий индикатор отличается от запаздывающего, как выбрать величину и задать порог и как организовать сбор значений.">
+<title>Метрики риска и КРИ, как выбрать и настроить</title>
+<meta name="description" content="Метрики риска и ключевые индикаторы: чем метрика отличается от индикатора, как выбрать десять рабочих метрик, как задать пороги и что показывать руководству.">
 <link rel="canonical" href="https://risk-place.ru/kri-klyuchevye-indikatory/">
 <link rel="icon" type="image/png" href="../assets/favicon.png">
-<meta property="og:title" content="Ключевые индикаторы риска, как выбрать">
-<meta property="og:description" content="Что такое ключевые индикаторы риска, чем опережающий индикатор отличается от запаздывающего, как выбрать величину и задать порог и как организовать сбор значений.">
+<meta property="og:title" content="Метрики риска и КРИ, как выбрать и настроить">
+<meta property="og:description" content="Метрики риска и ключевые индикаторы: чем метрика отличается от индикатора, как выбрать десять рабочих метрик, как задать пороги и что показывать руководству.">
 <meta property="og:image" content="https://risk-place.ru/assets/lib/kri-klyuchevye-indikatory.png">
 <meta property="og:url" content="https://risk-place.ru/kri-klyuchevye-indikatory/">
 <meta property="og:type" content="article">
@@ -30,7 +30,7 @@ gtag('js', new Date());
 gtag('config', 'G-82K0ZJ2K9S');
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Индикаторы риска", "description": "Что такое ключевые индикаторы риска, чем опережающий индикатор отличается от запаздывающего, как выбрать величину и задать порог и как организовать сбор значений.", "inLanguage": "ru", "url": "https://risk-place.ru/kri-klyuchevye-indikatory/", "image": "https://risk-place.ru/assets/lib/kri-klyuchevye-indikatory.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/kri-klyuchevye-indikatory/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Отчетность и автоматизация", "item": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}, {"@type": "ListItem", "position": 4, "name": "Индикаторы риска", "item": "https://risk-place.ru/kri-klyuchevye-indikatory/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько индикаторов нужно для начала", "acceptedAnswer": {"@type": "Answer", "text": "Пять-семь по верхним рискам. Попытка сразу построить систему из пятидесяти индикаторов приводит к тому, что не собирается ни один."}}, {"@type": "Question", "name": "Кто собирает значения", "acceptedAnswer": {"@type": "Answer", "text": "Тот, у кого данные уже есть, обычно профильное подразделение. Риск-функция сводит и проверяет, но не собирает вручную."}}, {"@type": "Question", "name": "Что делать при частых ложных срабатываниях", "acceptedAnswer": {"@type": "Answer", "text": "Пересмотреть порог или сам индикатор. Частые срабатывания без последствий обесценивают систему быстрее, чем их отсутствие."}}]}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Индикаторы риска", "description": "Метрики риска и ключевые индикаторы: чем метрика отличается от индикатора, как выбрать десять рабочих метрик, как задать пороги и что показывать руководству.", "inLanguage": "ru", "url": "https://risk-place.ru/kri-klyuchevye-indikatory/", "image": "https://risk-place.ru/assets/lib/kri-klyuchevye-indikatory.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/kri-klyuchevye-indikatory/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Отчетность и автоматизация", "item": "https://risk-place.ru/otchetnost-i-avtomatizaciya/"}, {"@type": "ListItem", "position": 4, "name": "Индикаторы риска", "item": "https://risk-place.ru/kri-klyuchevye-indikatory/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько индикаторов нужно для начала", "acceptedAnswer": {"@type": "Answer", "text": "Пять-семь по верхним рискам. Попытка сразу построить систему из пятидесяти индикаторов приводит к тому, что не собирается ни один."}}, {"@type": "Question", "name": "Кто собирает значения", "acceptedAnswer": {"@type": "Answer", "text": "Тот, у кого данные уже есть, обычно профильное подразделение. Риск-функция сводит и проверяет, но не собирает вручную."}}, {"@type": "Question", "name": "Что делать при частых ложных срабатываниях", "acceptedAnswer": {"@type": "Answer", "text": "Пересмотреть порог или сам индикатор. Частые срабатывания без последствий обесценивают систему быстрее, чем их отсутствие."}}, {"@type": "Question", "name": "Чем метрика риска отличается от ключевого индикатора риска", "acceptedAnswer": {"@type": "Answer", "text": "Метрика это любое измерение, связанное с риском. Ключевой индикатор это метрика с заданным порогом и с закрепленным действием при его пересечении. Метрика без порога только описывает, индикатор заставляет действовать."}}, {"@type": "Question", "name": "Сколько метрик риска нужно компании", "acceptedAnswer": {"@type": "Answer", "text": "Столько, сколько руководство реально смотрит. На практике от восьми до пятнадцати на организацию и по две-три на ключевой риск. Больше превращается в отчет, который никто не открывает."}}, {"@type": "Question", "name": "Какие метрики риска показывать совету директоров", "acceptedAnswer": {"@type": "Answer", "text": "Те, что связаны с риск-аппетитом: пересечения порогов, динамика по ключевым рискам, просроченные мероприятия и результаты тестирования контролей. Остальное остается на уровне менеджмента."}}]}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +58,7 @@ gtag('config', 'G-82K0ZJ2K9S');
     <div>
       <p class="kick">Библиотека · Отчетность и автоматизация</p>
       <h1>Индикаторы риска</h1>
-      <p class="lead">Индикатор нужен, чтобы узнать о риске до его реализации. Иначе это не индикатор, а статистика потерь.</p>
+      <p class="lead">Метрики риска показывают, куда движется риск, пока он еще не реализовался. Разбираем, как выбрать рабочий набор и задать пороги, за которыми следует действие.</p>
       <div class="ph-btns">
         <a class="btn g" href="#apply">Задать вопрос эксперту</a>
         <a class="btn o" href="../otchetnost-i-avtomatizaciya/">Весь раздел</a>
@@ -126,6 +126,12 @@ gtag('config', 'G-82K0ZJ2K9S');
     <div class="faq-a">Тот, у кого данные уже есть, обычно профильное подразделение. Риск-функция сводит и проверяет, но не собирает вручную.</div>
     <div class="faq-q">Что делать при частых ложных срабатываниях</div>
     <div class="faq-a">Пересмотреть порог или сам индикатор. Частые срабатывания без последствий обесценивают систему быстрее, чем их отсутствие.</div>
+    <div class="faq-q">Чем метрика риска отличается от ключевого индикатора риска</div>
+    <div class="faq-a">Метрика это любое измерение, связанное с риском. Ключевой индикатор это метрика с заданным порогом и с закрепленным действием при его пересечении. Метрика без порога только описывает, индикатор заставляет действовать.</div>
+    <div class="faq-q">Сколько метрик риска нужно компании</div>
+    <div class="faq-a">Столько, сколько руководство реально смотрит. На практике от восьми до пятнадцати на организацию и по две-три на ключевой риск. Больше превращается в отчет, который никто не открывает.</div>
+    <div class="faq-q">Какие метрики риска показывать совету директоров</div>
+    <div class="faq-a">Те, что связаны с риск-аппетитом: пересечения порогов, динамика по ключевым рискам, просроченные мероприятия и результаты тестирования контролей. Остальное остается на уровне менеджмента.</div>
   </div>
 </div></section>
 
