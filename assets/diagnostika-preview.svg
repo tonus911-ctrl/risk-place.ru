@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 560" width="1060" height="560" role="img" aria-label="Диагностика зрелости системы управления рисками: 13 вопросов, 5 уровней, 3 пробела">
+<rect width="1060" height="560" rx="18" fill="#FFFFFF"/>
+<text x="40" y="54" font-family="'Golos Text','Segoe UI',Arial,sans-serif" font-size="24" font-weight="700" fill="#1E222B">Диагностика зрелости системы управления рисками</text>
+<text x="40" y="84" font-family="'Golos Text','Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#7A5E17">13 вопросов · 10 минут · результат сразу · по уровням ГОСТ Р 70350</text>
+<g font-family="'Golos Text','Segoe UI',Arial,sans-serif">
+<rect x="40" y="130" width="980" height="46" rx="8" fill="#F5F1E8" stroke="#E6DDCA"/>
+<rect x="40" y="130" width="588" height="46" rx="8" fill="#7A1F2E"/>
+<text x="56" y="160" font-size="17" font-weight="700" fill="#FFFFFF">Ваш уровень: 3 из 5 · «Определенный»</text>
+<g font-size="13.5" fill="#5B6472" text-anchor="middle">
+<text x="138" y="206">1 · Начальный</text><text x="334" y="206">2 · Повторяемый</text><text x="530" y="206">3 · Определенный</text><text x="726" y="206">4 · Управляемый</text><text x="922" y="206">5 · Оптимизируемый</text></g>
+<text x="40" y="262" font-size="16" font-weight="700" fill="#1E222B">Три главных пробела</text>
+<g font-size="15" fill="#1E222B">
+<rect x="40" y="280" width="980" height="56" rx="8" fill="#FBFAF7" stroke="#E6DDCA"/><text x="60" y="314">01 · Аппетит к риску не утвержден советом директоров, лимиты не заданы</text>
+<rect x="40" y="346" width="980" height="56" rx="8" fill="#FBFAF7" stroke="#E6DDCA"/><text x="60" y="380">02 · Реестр обновляется раз в год перед аудитом, владельцы назначены у трети рисков</text>
+<rect x="40" y="412" width="980" height="56" rx="8" fill="#FBFAF7" stroke="#E6DDCA"/><text x="60" y="446">03 · Отчет по рискам нет в повестке совета, индикаторы раннего предупреждения не считаются</text>
+</g>
+<text x="40" y="520" font-size="15" font-weight="700" fill="#7A5E17">Следующий шаг → аудит зрелости и построение системы под ключ</text>
+</g>
+</svg>

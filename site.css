@@ -540,7 +540,7 @@ th{background:var(--panel);font-weight:700;color:var(--ink)}
 .sol .pic{margin:0 0 16px}
 .sol .pic div{aspect-ratio:19/10;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px}
 .sol .pic img{display:block;width:100%;height:100%;object-fit:contain}
-.sol .pic.photo div{aspect-ratio:3/2;padding:0}
+.sol .pic.photo div{padding:0}
 .sol .pic.photo img{object-fit:cover}
 .sol .body{padding:clamp(20px,2.1vw,26px);display:flex;flex-direction:column;flex:1}
 .sol .k{font-size:12px;letter-spacing:.1em;margin-bottom:14px}
