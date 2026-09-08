@@ -3,23 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Дашборд рисков проектов, все риски на одном экране</title>
-<meta name="description" content="Единая картина рисков проекта для управляющего комитета: индекс здоровья рисков, тепловая карта, владельцы и сроки мероприятий, индикаторы раннего предупреждения. Старт за две недели, данные не покидают компанию.">
+<title>Дашборд рисков проекта и компании: все риски на одном экране</title>
+<meta name="description" content="Дашборд рисков для управляющего комитета и совета: индекс здоровья рисков, тепловая карта, владельцы и сроки, индикаторы раннего предупреждения, динамика. Две редакции: риски проекта и риски компании. Старт за две недели, работает в вашем контуре, данные не покидают компанию.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://risk-place.ru/dashboard/">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
-<meta property="og:title" content="Дашборд рисков проектов, все риски на одном экране">
-<meta property="og:description" content="Единая картина рисков проекта для управляющего комитета: индекс здоровья рисков, тепловая карта, владельцы и сроки мероприятий, индикаторы раннего предупреждения. Старт за две недели, данные не покидают компанию.">
-<meta property="og:image" content="https://risk-place.ru/assets/dashboard-screen.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#14181F">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://risk-place.ru/dashboard/">
-<meta property="og:type" content="article">
+<meta property="og:title" content="Дашборд рисков проекта и компании: все риски на одном экране">
+<meta property="og:description" content="Дашборд рисков для управляющего комитета и совета: индекс здоровья рисков, тепловая карта, владельцы и сроки, индикаторы раннего предупреждения, динамика. Две редакции: риски проекта и риски компании. Старт за две недели, работает в вашем контуре, данные не покидают компанию.">
+<meta property="og:image" content="https://risk-place.ru/assets/hero-lighthouse-wide.jpg">
 <meta property="og:site_name" content="risk-place.ru">
+<meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
 ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" alt=""></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-82K0ZJ2K9S"></script>
@@ -29,123 +33,99 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-82K0ZJ2K9S');
 </script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Service", "@id": "https://risk-place.ru/dashboard/#service", "name": "Дашборд рисков проектов", "serviceType": "Мониторинг и визуализация рисков проектов", "description": "Единая картина рисков проекта для управляющего комитета: индекс здоровья рисков, тепловая карта, владельцы и сроки мероприятий, индикаторы раннего предупреждения. Старт за две недели, данные не покидают компанию.", "url": "https://risk-place.ru/dashboard/", "image": "https://risk-place.ru/assets/dashboard-screen.png", "areaServed": {"@type": "Country", "name": "Россия"}, "provider": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Дашборд рисков проектов", "item": "https://risk-place.ru/dashboard/"}]}]}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
-
-<header class="hdr"><div class="wrap in">
-  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
-  <nav class="nav" id="hnav">
-    <a href="../page24/">Программы тренингов</a>
-    <a href="../dashboard/">Дашборд</a>
-    <a href="../onlajn-kurs/">Онлайн-курс</a>
-    <a href="../page14/">Консалтинг</a>
-    <a href="../biblioteka/">Библиотека</a>
-    <a href="../o-nas/">О нас</a>
-    <a class="nav-apply" href="#apply">Оставить заявку</a>
+<!--TPL:HEADER-->
+<header class="uh">
+  <div class="uh-bar">
+    <a href="/" class="uh-logo"><span class="uh-mark"><img src="/assets/mayak.png" alt="" width="23" height="23"></span><span class="uh-txt">risk-<span class="lp">place</span>.ru</span></a>
+    <nav class="uh-nav" id="uhNav"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Отраслевые курсы</a><a href="/dlya-kompanij/" class="act">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></nav>
+    <button class="uh-burger" aria-label="Меню">&#9776;</button>
+  </div>
+</header>
+<!--/TPL:HEADER-->
+<!--TPL:HERO-->
+<div class="ph"><div class="in">
+  <div class="crumbs"><a href="/">Главная</a><span class="sep">/</span><a href="/dlya-kompanij/">Для компаний</a><span class="sep">/</span>Дашборд рисков</div>
+  <div class="rule"></div>
+  <div class="eyebrow">ИТ-решение · две редакции · доступно сейчас</div>
+  <h1>Дашборд рисков: все риски на одном экране</h1>
+  <p class="lead">Управляющий комитет и совет директоров принимают решения по единой картине рисков, а не по слайдам подразделений и подрядчиков. Мы приводим в порядок методологию, собираем дашборд на ваших данных и разворачиваем его внутри вашего контура. Редакция для проекта уже работает у клиента в капитальном строительстве, редакция для компании собирается на том же движке.</p>
+  <div class="tiles"><div class="tile"><b>2 недели</b><span>от реестра в таблице до дашборда</span></div><div class="tile"><b>Ваш контур</b><span>ноутбук, сервер или частное облако</span></div><div class="tile"><b>Один файл</b><span>открывается без интернета</span></div><div class="tile"><b>История</b><span>снимки и тренды по периодам</span></div><div class="tile"><b>Без ИТ-проекта</b><span>на старте интеграции не нужны</span></div></div>
+  <div class="cta-row"><a class="btn navy" href="#demo">Заказать демонстрацию</a><a class="more" href="#redakcii">Две редакции: проект и компания →</a></div>
+  
+</div></div>
+<!--/TPL:HERO-->
+<div class="pb">
+<!--TPL:TOC-->
+<aside class="ptoc">
+  <div class="t">На странице</div>
+  <nav>
+    <a href="#situaciya">Знакомая ситуация</a>
+    <a href="#chto-vidit">Что видит комитет</a>
+    <a href="#kak-vyglyadit">Как выглядит</a>
+    <a href="#redakcii">Две редакции</a>
+    <a href="#start">Старт за две недели</a>
+    <a href="#arch">Как устроен</a>
+    <a href="#urovni">Уровни продукта</a>
+    <a href="#faq">Частые вопросы</a>
   </nav>
-  <a class="hbtn" href="#apply">Оставить заявку</a>
-  <button class="hburger" onclick="document.getElementById('hnav').classList.toggle('open')" aria-label="Меню">&#9776;</button>
-</div></header>
-
-<section class="phero"><div class="wrap">
-  <p class="crumbs"><a href="../index.html">Главная</a> · Дашборд рисков проектов</p>
-  <div class="ph-in">
-    <div>
-      <p class="kick">ИТ-продукт · доступен сейчас</p>
-      <h1>Все риски проекта на одном экране</h1>
-      <p class="lead">Управляющий комитет принимает решения по единой картине рисков, а не по слайдам подрядчиков. Мы приводим в порядок методологию, собираем дашборд на ваших данных и разворачиваем его внутри вашего контура. То же решение уже работает у наших клиентов в непрерывности бизнеса.</p>
-      <p class="pill"><i></i>Старт за две недели · данные не покидают компанию</p>
-      <div class="ph-btns">
-        <a class="btn g" href="#apply">Заказать демонстрацию</a>
-        <a class="btn o" href="#how">Как это устроено</a>
-      </div>
-    </div>
-    <div class="ph-shot"><img src="../assets/dashboard-screen.png" alt="Дашборд рисков проекта: индекс здоровья рисков, тепловая карта вероятность-влияние и риски на решение комитета" width="1960" height="910" loading="lazy"></div>
-  </div>
-  <div class="facts">
-    <div class="fact"><b>2 недели</b><span>от реестра в таблице до дашборда</span></div>
-    <div class="fact"><b>Ваш контур</b><span>ноутбук, сервер или частное облако</span></div>
-    <div class="fact"><b>Один файл</b><span>открывается без интернета</span></div>
-    <div class="fact"><b>История</b><span>снимки и тренды по периодам</span></div>
-    <div class="fact"><b>Без ИТ-проекта</b><span>на старте интеграции не нужны</span></div>
-  </div>
-</div></section>
-
-<section class="sec roomy lib" id="pain"><div class="wrap">
-  <p class="kick">Знакомая ситуация</p>
+</aside>
+<!--/TPL:TOC-->
+<main class="pmain">
+<section class="ps" id="situaciya">
   <h2>Комитет спрашивает, а ответить нечем</h2>
-  <p class="sub">Три состояния, в которых оказывается почти каждый крупный проект.</p>
-  <div class="res">
-    <div class="rcard"><b>«У нас все под контролем?»</b><span>Вопрос заказчика на комитете, а в ответ реестр на сорок строк, где половина рисков без владельца и половина мероприятий просрочена.</span></div>
-    <div class="rcard"><b>Каждый подрядчик со своей картиной</b><span>Три презентации, три методики, три оценки одного и того же риска. Свести их к общему знаменателю негде.</span></div>
-    <div class="rcard"><b>О проблеме узнают по факту</b><span>Отставание видно, когда срок уже сорван, а не когда индикатор перешел границу два месяца назад.</span></div>
+  <p class="sub">Три состояния, в которых оказывается почти каждый крупный проект и почти каждая компания без живой картины рисков.</p>
+  <div class="g3">
+    <div class="card"><div class="ct">«У нас все под контролем?»</div><p>Вопрос заказчика на комитете, а в ответ реестр на сорок строк, где половина рисков без владельца и половина мероприятий просрочена.</p></div>
+    <div class="card"><div class="ct">Каждый со своей картиной</div><p>Три презентации, три методики, три оценки одного и того же риска у подразделений и подрядчиков. Свести их к общему знаменателю негде.</p></div>
+    <div class="card"><div class="ct">О проблеме узнают по факту</div><p>Отставание видно, когда срок уже сорван, а не когда индикатор перешел границу два месяца назад.</p></div>
   </div>
-</div></section>
+</section>
 
-<section class="sec roomy lib" id="what"><div class="wrap">
+<section class="ps" id="chto-vidit">
   <h2>Что видит управляющий комитет</h2>
   <p class="sub">Шесть вещей, ради которых собирается дашборд. Все они на одном экране и обновляются по расписанию.</p>
-  <div class="res">
-    <div class="rcard"><b>Индекс здоровья рисков</b><span>Одна цифра от 0 до 100 и ее динамика к прошлому периоду. С нее начинается разговор на комитете.</span></div>
-    <div class="rcard"><b>Тепловая карта</b><span>Вероятность против влияния, с числом рисков в каждой клетке. Видно, где скопление и куда смотреть первым делом.</span></div>
-    <div class="rcard"><b>Владелец и срок</b><span>По каждому значимому риску: кто отвечает и когда ближайшее мероприятие. Риск без владельца виден сразу.</span></div>
-    <div class="rcard"><b>Индикаторы раннего предупреждения</b><span>Показатели, которые меняются раньше, чем срывается срок. Настраиваются на этапе методологии.</span></div>
-    <div class="rcard"><b>Разрезы по стримам</b><span>Проектирование, стройка, закупки, согласования. Видно, какой стрим тянет проект вниз.</span></div>
-    <div class="rcard"><b>Динамика к прошлому периоду</b><span>Что улучшилось за месяц, где началась деградация. Не только текущий срез, но и тренд.</span></div>
+  <div class="g3">
+    <div class="card"><div class="ct">Индекс здоровья рисков</div><p>Одна цифра от 0 до 100 и ее динамика к прошлому периоду. С нее начинается разговор на комитете.</p></div>
+    <div class="card"><div class="ct">Тепловая карта</div><p>Вероятность против влияния, с числом рисков в каждой клетке. Видно, где скопление и куда смотреть первым делом.</p></div>
+    <div class="card"><div class="ct">Владелец и срок</div><p>По каждому значимому риску: кто отвечает и когда ближайшее мероприятие. Риск без владельца виден сразу.</p></div>
+    <div class="card"><div class="ct">Индикаторы раннего предупреждения</div><p>Показатели, которые меняются раньше, чем срывается срок. Настраиваются на этапе методологии.</p></div>
+    <div class="card"><div class="ct">Разрезы по стримам и подразделениям</div><p>Проектирование, стройка, закупки, согласования или бизнес-единицы компании. Видно, кто тянет вниз.</p></div>
+    <div class="card"><div class="ct">Динамика к прошлому периоду</div><p>Что улучшилось за месяц, где началась деградация. Не только текущий срез, но и тренд.</p></div>
   </div>
-</div></section>
+</section>
 
-<section class="sec roomy lib" id="start"><div class="wrap">
-  <p class="kick">Старт</p>
-  <h2>Две недели, а не полгода</h2>
-  <div class="prog">
-    <div class="prog-aside">
-      <p class="t">Дашборд не требует ИТ-проекта на старте. Достаточно реестра в таблице и одного ответственного сотрудника.</p>
-      <div class="prog-legend">
-        <p>Шаг 1 — методология и форма</p>
-        <p>Шаг 2 — заполнение координатором</p>
-        <p>Шаг 3 — первый дашборд на комитете</p>
-      </div>
-    </div>
-    <div>
-      <article class="mod"><span class="n">1</span><div>
-        <h3>Реестр с методологией внутри</h3>
-        <ul>
-          <li>На одном листе форма с уже выбранными показателями, на втором инструкция, что и откуда брать</li>
-          <li>Единые формулировки рисков, шкалы вероятности и влияния, правила приоритизации</li>
-          <li>Не нужно месяцами решать, что мерить: методология уже в файле</li>
-        </ul></div></article>
-      <article class="mod"><span class="n">2</span><div>
-        <h3>Координатор заполняет форму</h3>
-        <ul>
-          <li>Обычный сотрудник проектного офиса, полтора-два часа</li>
-          <li>Если части данных пока нет, помогаем собрать базовые на экспресс-разборе</li>
-          <li>Дальше обновление по расписанию, обычно раз в месяц к комитету</li>
-        </ul></div></article>
-      <article class="mod"><span class="n">3</span><div>
-        <h3>Первый дашборд у вас на столе</h3>
-        <ul>
-          <li>Движок собирает один HTML-файл: открывается в любом браузере, работает без интернета</li>
-          <li>Можно разослать участникам комитета или положить на внутренний портал</li>
-          <li>Каждая пересборка сохраняет снимок, поэтому со второго месяца появляется динамика</li>
-        </ul></div></article>
-    </div>
+<section class="ps" id="kak-vyglyadit">
+  <h2>Как выглядит дашборд</h2>
+  <img class="fig" src="/assets/dashboard-screen.png" alt="Дашборд рисков проекта: индекс здоровья, тепловая карта, владельцы и сроки, индикаторы раннего предупреждения">
+  <p class="figcap">Фрагмент дашборда рисков проекта. Четыре зоны, интегральный индекс и динамика к прошлому периоду.</p>
+</section>
+
+<section class="ps" id="redakcii">
+  <h2>Две редакции: проект и компания</h2>
+  <div class="g2 tight">
+    <div class="card gold"><div class="k">Доступно сейчас</div><div class="ct">Дашборд рисков проекта</div><p>Для управляющего комитета инвестиционного или строительного проекта, ИТ-программы. Стримы, контрольные точки, индикаторы отставания и перерасхода, отчет комитету. Уже работает у клиента в капитальном строительстве, пакет развертывания передан в ИТ заказчика.</p></div>
+    <div class="card"><div class="k">На том же движке</div><div class="ct">Дашборд рисков компании</div><p>Для совета директоров и комитета по рискам: реестр компании, аппетит к риску и лимиты, индикаторы по подразделениям, реализовавшиеся события и потери периода, динамика совокупной оценки. Собирается на реестре, который остается после <a href="/sur-pod-klyuch/">построения системы</a>.</p></div>
   </div>
-</div></section>
+  <p class="note">То же решение работает у наших клиентов в непрерывности бизнеса: <a href="https://bcm.risk-place.ru/dashboard.html">дашборд непрерывности и рисков на bcm.risk-place.ru</a>.</p>
+</section>
 
-<section class="sec roomy lib" id="how"><div class="wrap">
-  <p class="kick">Архитектура</p>
+<section class="ps" id="start">
+  <h2>Старт за две недели, а не за полгода</h2>
+  <p class="sub">Дашборд не требует ИТ-проекта на старте. Достаточно реестра в таблице и одного ответственного сотрудника.</p>
+  <div class="steps w">
+    <div class="nr"><div class="nr-n">01</div><div><b>Реестр с методологией внутри</b><span>На одном листе форма с уже выбранными показателями, на втором инструкция, что и откуда брать: единые формулировки рисков, шкалы вероятности и влияния, правила приоритизации.</span></div></div>
+    <div class="nr"><div class="nr-n">02</div><div><b>Координатор заполняет форму</b><span>Обычный сотрудник проектного офиса или риск-функции, полтора-два часа. Если части данных пока нет, помогаем собрать базовые на экспресс-разборе. Дальше обновление по расписанию, обычно раз в месяц к комитету.</span></div></div>
+    <div class="nr"><div class="nr-n">03</div><div><b>Первый дашборд у вас на столе</b><span>Движок собирает один HTML-файл: открывается в любом браузере, работает без интернета, можно разослать участникам комитета или положить на внутренний портал. Каждая пересборка сохраняет снимок, со второго месяца появляется динамика.</span></div></div>
+  </div>
+</section>
+
+<section class="ps" id="arch">
   <h2>Как устроен дашборд</h2>
-  <p class="sub">Никакой тяжелой ИТ-системы. Дашборд — это один файл, который собирает небольшой движок на Python. Движок работает целиком внутри вашего контура, наружу не уходит ни одной цифры.</p>
-  <figure class="shot">
-    <svg xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block" viewBox="0 0 680 552" font-family="Figtree,'Segoe UI',Arial,sans-serif" role="img" aria-label="Схема: как устроен дашборд рисков проектов, от реестра в Excel до экрана управляющего комитета">
+  <p>Никакой тяжелой ИТ-системы. Дашборд это один файл, который собирает небольшой движок на Python. Движок работает целиком внутри вашего контура, наружу не уходит ни одной цифры.</p>
+  <svg class="fig bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 552" font-family="'Golos Text','Segoe UI',Arial,sans-serif" role="img" aria-label="Схема: как устроен дашборд рисков проектов, от реестра в Excel до экрана управляющего комитета">
 <title>Как устроен дашборд рисков проектов</title>
 <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
 <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
@@ -194,124 +174,79 @@ gtag('config', 'G-82K0ZJ2K9S');
 <text x="340" y="514" font-size="12" fill="#565A63" text-anchor="middle">pull — движок сам читает ваш реестр по расписанию</text>
 <text x="340" y="532" font-size="12" fill="#565A63" text-anchor="middle">API — движок забирает сам, или ваша витрина отправляет</text>
 </svg>
-    <figcaption>Уровень «Старт» работает на реестре в таблице. Уровень «Интеграция» подключается к вашим системам, когда появится аппетит. История хранится рядом с движком, поэтому виден не только срез, но и тренд.</figcaption>
-  </figure>
-  <div class="big">
-    <div class="pcard">
-      <span class="tag">Уровень 1 · старт</span>
-      <h3>Реестр в таблице</h3>
-      <ul>
-        <li>Источник данных — книга Excel, которую мы передаем вместе с дашбордом</li>
-        <li>Движок читает ее по расписанию и собирает HTML</li>
-        <li>Ни интеграций, ни серверов, ни закупок</li>
-      </ul>
-    </div>
-    <div class="pcard">
-      <span class="tag">Уровень 2 · интеграция</span>
-      <h3>Ваши системы-источники</h3>
-      <ul>
-        <li>MS Project или Primavera, ERP, BI, файлы проектного офиса</li>
-        <li>Чаще всего новые данные создавать не нужно, переиспользуем те, что уже есть</li>
-        <li>Состав витрины, маппинг и правила качества данных проектируем мы, подключение выполняет ваша ИТ-команда</li>
-      </ul>
-    </div>
-  </div>
-</div></section>
+  <p class="figcap">Уровень «Старт» работает на реестре в таблице. Уровень «Интеграция» подключается к вашим системам, когда появится аппетит. История хранится рядом с движком, поэтому виден не только срез, но и тренд.</p>
+</section>
 
-<section class="sec roomy lib" id="levels"><div class="wrap">
+<section class="ps" id="urovni">
   <h2>Уровни продукта</h2>
-  <p class="sub">Стоимость зависит от масштаба проекта и выбранного уровня. Обсудим на демонстрации, когда примерим продукт на ваш контур.</p>
-  <div class="cats">
-    <a class="cat" href="#apply"><h3>Старт</h3><p>Реестр с методологией, движок, настройка под вашу структуру проекта, подготовка координатора, первый дашборд. Запуск за две недели.</p><span class="go">Заказать демонстрацию &rarr;</span></a>
-    <a class="cat" href="#apply"><h3>Интеграция</h3><p>Подключение к вашей витрине данных или системам: проектирование состава, маппинг, правила качества. Реализуется вместе с вашей ИТ-командой.</p><span class="go">Заказать демонстрацию &rarr;</span></a>
-    <a class="cat" href="#apply"><h3>Ежемесячный сервис · опция</h3><p>Мы сами собираем обновления, пересобираем дашборд и присылаем короткий комментарий эксперта: что изменилось и на что смотреть.</p><span class="go">Заказать демонстрацию &rarr;</span></a>
+  <div class="g3">
+    <div class="card"><div class="ct">Старт</div><p>Книга Excel с методологией, движок, настройка под вашу структуру, первый дашборд и обучение координатора. Две недели.</p></div>
+    <div class="card"><div class="ct">Интеграция</div><p>Подключение к вашим системам-источникам: MS Project или Primavera, ERP, BI, витрина данных. Дизайн и маппинг делаем мы, подключение ваше ИТ.</p></div>
+    <div class="card"><div class="ct">Ежемесячный сервис · опция</div><p>Мы сами собираем обновления, пересобираем дашборд к комитету и готовим короткую записку с изменениями периода.</p></div>
   </div>
-</div></section>
+  <p class="price"><b>По объему работ</b><span>расчет за два рабочих дня · старт за две недели</span></p>
+</section>
 
-<section class="sec roomy lib" id="why"><div class="wrap">
-  <h2>Почему это не еще один отчет в BI</h2>
-  <div class="faq">
-    <div><p class="faq-q">Методология внутри</p><p class="faq-a">Команда BI полгода выясняет, что мерить. Здесь показатели рисков уже выбраны, определены и увязаны между собой — заполняйте с первого дня.</p></div>
-    <div><p class="faq-q">Не нужен ИТ-проект</p><p class="faq-a">Старт без интеграций, серверов и закупок: таблица плюс легкий движок в вашем контуре.</p></div>
-    <div><p class="faq-q">История и тренды из коробки</p><p class="faq-a">Каждая пересборка сохраняет датированный снимок, поэтому видна динамика, а не только текущий срез.</p></div>
-    <div><p class="faq-q">Живет после внедрения</p><p class="faq-a">Регулярное обновление и светофоры не дают системе тихо умереть через квартал после запуска.</p></div>
-    <div><p class="faq-q">Данные остаются у вас</p><p class="faq-a">Движок работает внутри вашего контура. Наружу не уходит ни одна цифра, облако не требуется.</p></div>
-    <div><p class="faq-q">Подходит не всем</p><p class="faq-a">Если в компании нет ни реестра, ни ответственного за риски, начинать надо не с дашборда, а с методологии. В этом случае предложим консалтинг.</p></div>
-  </div>
-</div></section>
+<section class="ps" id="faq">
+  <h2>Частые вопросы</h2>
+  <div class="faq"><div class="q">Данные покидают компанию?</div><p>Нет. Движок и история работают на вашем ноутбуке, сервере или в частном облаке. Мы видим данные только на этапе настройки, если вы сами их покажете.</p></div>
+  <div class="faq"><div class="q">Чем это отличается от отчета в BI?</div><p>Методологией внутри. Дашборд собирается на реестре с едиными формулировками, шкалами и правилами приоритизации, а не на том, что оказалось в таблице. И он хранит снимки, поэтому показывает динамику, а не только срез.</p></div>
+  <div class="faq"><div class="q">Сколько времени занимает обновление?</div><p>Полтора-два часа координатора раз в месяц. Пересборка автоматическая.</p></div>
+  <div class="faq"><div class="q">Можно начать с дашборда, если системы управления рисками еще нет?</div><p>Да, реестр с методологией внутри и есть первый шаг системы. Если нужно больше, дальше идет <a href="/sur-pod-klyuch/">построение системы под ключ</a> на том же реестре.</p></div>
+</section>
 
-<section class="sec roomy lib panel" id="related"><div class="wrap">
-  <p class="kick">Рядом</p>
-  <h2>Что часто берут вместе с дашбордом</h2>
-  <div class="cats">
-    <a class="cat" href="../page8/"><h3>Управление рисками проектов капитального строительства</h3><p>Программа для команды, которая будет вести реестр и отчитываться комитету.</p><span class="go">Программа &rarr;</span></a>
-    <a class="cat" href="../page15/"><h3>Разработка корпоративной методологии</h3><p>Политика, стандарт и регламенты, если методологии в компании пока нет.</p><span class="go">Подробнее &rarr;</span></a>
-    <a class="cat" href="../page13/"><h3>Аутсорсинг функции риск-менеджмента</h3><p>Если вести реестр и отчетность некому, эту работу можем взять на себя.</p><span class="go">Подробнее &rarr;</span></a>
-  </div>
-</div></section>
-
-<section class="apply" id="apply"><div class="wrap in">
-  <div>
-    <p class="kick">Одна форма для любого вопроса</p>
-    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
-    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
-    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
-  </div>
-  <form class="form" id="leadForm">
-    <div class="row">
-      <input id="f-name" placeholder="Имя" required>
-      <input id="f-email" type="email" placeholder="Рабочая почта" required>
+<section class="ps" id="demo">
+  <div class="inset">
+    <h2>Запросить демонстрацию</h2>
+    <p>Покажем дашборд на примере вашей отрасли за 30 минут по видеосвязи. Оставьте имя и рабочую почту, ответим в течение рабочего дня.</p>
+    <div class="fgrid w">
+      <input type="text" class="fld" id="dmName" placeholder="Ваше имя">
+      <input type="email" class="fld" id="dmEmail" placeholder="Рабочая почта">
+      <input type="text" class="fld" id="dmOrg" placeholder="Компания">
+      <input type="text" class="fld" id="dmRole" placeholder="Должность">
     </div>
-    <div class="row">
-      <input id="f-org" placeholder="Компания">
-      <input id="f-role" placeholder="Должность">
+    <textarea class="fld" id="dmMsg" rows="3" placeholder="Комментарий (необязательно)"></textarea>
+    <label class="consent"><input type="checkbox" id="dmConsent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="https://bcm.risk-place.ru/privacy-policy.html" target="_blank" rel="noopener">политики обработки персональных данных</a></span></label>
+    <button type="button" class="btn navy" id="dmSubmit">Запросить демонстрацию</button>
+    <p class="fmsg" id="dmMsgOut"></p>
+    <p class="small">Предпочитаете переписку — <a href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Телеграм</a> · <a href="mailto:info@risk-place.ru">info@risk-place.ru</a></p>
+  </div>
+</section>
+<section class="ps" id="contacts">
+  <div class="cstrip">
+    <div class="txt">
+      <div class="ct">Остались вопросы?</div>
+      <div class="cd">Ответим в течение рабочего дня и предложим следующий шаг.</div>
     </div>
-    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
-    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
-    <button class="btn g" type="submit">Отправить заявку</button>
-    <p class="note" id="fnote"></p>
-  </form>
-</div></section>
-
-<footer class="ftr"><div class="wrap in">
-  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
-  <span>
-    <a href="../page24/">Все программы</a> ·
-    <a href="../page15/">Методология и стандарты</a> ·
-    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
-    <a href="../o-nas/">О нас</a> ·
-    <a href="../page12/">Политика конфиденциальности</a>
-  </span>
+    <div class="btns">
+      <a class="btn line" href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn navy" href="mailto:info@risk-place.ru">info@risk-place.ru</a>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+<!--TPL:FOOTER-->
+<footer class="uf"><div class="in">
+  <div class="row1"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Отраслевые курсы</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></div>
+  <div class="row2"><span>© 2026 Risk-place</span><a href="/sertifikaciya-ermp/#certificate">Проверить сертификат</a><a href="https://bcm.risk-place.ru/privacy-policy.html">Политика конфиденциальности</a><a href="mailto:info@risk-place.ru">info@risk-place.ru</a><a href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Telegram</a><a href="https://bcm.risk-place.ru/">bcm.risk-place.ru (непрерывность)</a><a href="https://risk-place.org/">risk-place.org (EN, AR)</a></div>
 </div></footer>
-
+<script>(function(){var b=document.querySelector('.uh-burger');if(b)b.addEventListener('click',function(){document.getElementById('uhNav').classList.toggle('open');});})();</script>
+<!--/TPL:FOOTER-->
 <script>
-function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
-var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
-document.getElementById('leadForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  var note=document.getElementById('fnote');
-  if(!document.getElementById('f-consent').checked){
-    note.textContent='Отметьте согласие на обработку персональных данных.';
-    note.classList.add('err'); return;
-  }
-  var body={type:'demo',product:(PRODNAME['dashboard']||'dashboard'),source:'ru',
-    name:document.getElementById('f-name').value.trim(),
-    email:document.getElementById('f-email').value.trim(),
-    org:document.getElementById('f-org').value.trim(),
-    role:document.getElementById('f-role').value.trim(),
-    message:document.getElementById('f-msg').value.trim(),
-    lang:'ru',page:'dashboard'};
-  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
-    .then(function(r){
-      if(!r.ok)throw 0;
-      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
-      note.classList.remove('err'); ev('lead_submit');
-    })
-    .catch(function(){
-      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
-      note.classList.add('err');
-    });
-});
+(function(){var btn=document.getElementById("dmSubmit");if(!btn)return;
+  function v(id){var el=document.getElementById(id);return el?el.value.trim():"";}
+  var out=document.getElementById("dmMsgOut");function say(k,t){out.className="fmsg "+k;out.textContent=t;}
+  btn.addEventListener("click",async function(){var name=v("dmName"),email=v("dmEmail");
+    if(!name||email.indexOf("@")<0){say("err","Заполните имя и рабочую почту.");return;}
+    if(!document.getElementById("dmConsent").checked){say("err","Отметьте согласие на обработку персональных данных.");return;}
+    this.disabled=true;say("note","Отправляем…");
+    var body={type:"demo",product:"dashboard",source:"ru",name:name,email:email,org:v("dmOrg"),role:v("dmRole"),message:v("dmMsg"),lang:"ru",page:"rp-dashboard"};
+    try{var r=await fetch("https://ergp.risk-place.org/api/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+      if(!r.ok)throw 0;say("ok","Спасибо! Ответим в течение рабочего дня и предложим следующий шаг.");
+      try{ym(96530203,"reachGoal","rp_dashboard_demo");}catch(e){}try{gtag("event","rp_dashboard_demo");}catch(e){}
+    }catch(e){say("err","Не получилось отправить. Напишите нам: info@risk-place.ru");this.disabled=false;}
+  });})();
 </script>
 </body>
 </html>
