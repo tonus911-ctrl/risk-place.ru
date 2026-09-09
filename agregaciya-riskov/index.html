@@ -5,21 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Как агрегировать риски по портфелю компании</title>
 <meta name="description" content="Зачем агрегировать риски, три рабочих способа свести риски подразделений в корпоративный профиль, ошибка простого суммирования и как показать концентрацию риска.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://risk-place.ru/agregaciya-riskov/">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#14181F">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://risk-place.ru/agregaciya-riskov/">
 <meta property="og:title" content="Как агрегировать риски по портфелю компании">
 <meta property="og:description" content="Зачем агрегировать риски, три рабочих способа свести риски подразделений в корпоративный профиль, ошибка простого суммирования и как показать концентрацию риска.">
 <meta property="og:image" content="https://risk-place.ru/assets/lib/agregaciya-riskov.png">
-<meta property="og:url" content="https://risk-place.ru/agregaciya-riskov/">
-<meta property="og:type" content="article">
 <meta property="og:site_name" content="risk-place.ru">
+<meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
 ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/96530203" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" alt=""></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-82K0ZJ2K9S"></script>
@@ -29,77 +33,61 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-82K0ZJ2K9S');
 </script>
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Агрегация рисков", "description": "Зачем агрегировать риски, три рабочих способа свести риски подразделений в корпоративный профиль, ошибка простого суммирования и как показать концентрацию риска.", "inLanguage": "ru", "url": "https://risk-place.ru/agregaciya-riskov/", "image": "https://risk-place.ru/assets/lib/agregaciya-riskov.png", "datePublished": "2026-08-24", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "Евгений Теленков", "url": "https://risk-place.ru/o-nas/"}, "publisher": {"@type": "Organization", "name": "risk-place.ru", "url": "https://risk-place.ru/"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://risk-place.ru/agregaciya-riskov/"}, "isPartOf": {"@type": "WebPage", "@id": "https://risk-place.ru/reestr-i-karta-riskov/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://risk-place.ru/"}, {"@type": "ListItem", "position": 2, "name": "Библиотека", "item": "https://risk-place.ru/biblioteka/"}, {"@type": "ListItem", "position": 3, "name": "Реестр и карта рисков", "item": "https://risk-place.ru/reestr-i-karta-riskov/"}, {"@type": "ListItem", "position": 4, "name": "Агрегация рисков", "item": "https://risk-place.ru/agregaciya-riskov/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как быть, если у предприятий группы разные масштабы", "acceptedAnswer": {"@type": "Answer", "text": "Денежные пороги шкалы задавать в процентах от показателя предприятия, а для группы пересчитывать в абсолютные суммы. Иначе мелкое предприятие никогда не покажет красный риск."}}, {"@type": "Question", "name": "Нужно ли выносить на совет все существенные риски подразделений", "acceptedAnswer": {"@type": "Answer", "text": "Нет. На совет идут риски группы, обычно пятнадцать-двадцать. Риски подразделений остаются на своем уровне, наверх поднимается только то, что проходит критерий существенности."}}, {"@type": "Question", "name": "Считать ли корреляции строго", "acceptedAnswer": {"@type": "Answer", "text": "Строгий расчет оправдан в финансовом секторе. В промышленности достаточно пометить группы событий, срабатывающих вместе, и показать сценарий их одновременной реализации."}}]}]}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Агрегация рисков","description":"Зачем агрегировать риски, три рабочих способа свести риски подразделений в корпоративный профиль, ошибка простого суммирования и как показать концентрацию риска.","inLanguage":"ru-RU","author":{"@type":"Person","name":"Евгений Теленков"},"publisher":{"@type":"Organization","name":"risk-place.ru","url":"https://risk-place.ru/"},"mainEntityOfPage":"https://risk-place.ru/agregaciya-riskov/"}</script>
 </head>
 <body>
-
-<header class="hdr"><div class="wrap in">
-  <a class="logo" href="../index.html"><img src="../assets/mayak.png" alt=""><b>risk-<span class="g">place</span>.ru</b></a>
-  <nav class="nav" id="hnav">
-    <a href="../page24/">Программы тренингов</a>
-    <a href="../dashboard/">Дашборд</a>
-    <a href="../onlajn-kurs/">Онлайн-курс</a>
-    <a href="../page14/">Консалтинг</a>
-    <a href="../biblioteka/">Библиотека</a>
-    <a href="../o-nas/">О нас</a>
-    <a class="nav-apply" href="#apply">Оставить заявку</a>
+<!--TPL:HEADER-->
+<header class="uh">
+  <div class="uh-bar">
+    <a href="/" class="uh-logo"><span class="uh-mark"><img src="/assets/mayak.png" alt="" width="27" height="27"></span><span class="uh-txt">risk-<span class="lp">place</span>.ru</span></a>
+    <nav class="uh-nav" id="uhNav"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Отраслевые курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/" class="act">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></nav>
+    <button class="uh-burger" aria-label="Меню">&#9776;</button>
+  </div>
+</header>
+<!--/TPL:HEADER-->
+<!--TPL:HERO-->
+<div class="ph"><div class="in">
+  <div class="crumbs"><a href="/">Главная</a><span class="sep">/</span><a href="/biblioteka/">Библиотека</a><span class="sep">/</span><a href="/reestr-i-karta-riskov/">Реестр и карта рисков</a><span class="sep">/</span>Агрегация рисков</div>
+  <div class="rule"></div>
+  <div class="eyebrow">Библиотека · Реестр и карта рисков</div>
+  <h1>Агрегация рисков</h1>
+  <p class="lead">Отдельный риск редко угрожает компании. Угрожает совокупность. Разбираем, как ее увидеть.</p>
+  
+  
+  
+</div></div>
+<!--/TPL:HERO-->
+<div class="pb">
+<!--TPL:TOC-->
+<aside class="ptoc">
+  <div class="t">На странице</div>
+  <nav>
+    <a href="#s1">Зачем это нужно</a>
+    <a href="#s2">Три способа агрегации</a>
+    <a href="#s3">Почему нельзя просто сложить баллы</a>
+    <a href="#s4">Что нужно, чтобы агрегация вообще стала возможной</a>
+    <a href="#faq">Частые вопросы</a>
   </nav>
-  <a class="hbtn" href="#apply">Оставить заявку</a>
-  <button class="hburger" onclick="document.getElementById('hnav').classList.toggle('open')" aria-label="Меню">&#9776;</button>
-</div></header>
-
-<section class="phero"><div class="wrap">
-  <p class="crumbs"><a href="../index.html">Главная</a> · <a href="../biblioteka/">Библиотека</a> · <a href="../reestr-i-karta-riskov/">Реестр и карта рисков</a> · Агрегация рисков</p>
-  <div class="ph-in">
-    <div>
-      <p class="kick">Библиотека · Реестр и карта рисков</p>
-      <h1>Агрегация рисков</h1>
-      <p class="lead">Отдельный риск редко угрожает компании. Угрожает совокупность. Разбираем, как ее увидеть.</p>
-      <div class="ph-btns">
-        <a class="btn g" href="#apply">Задать вопрос эксперту</a>
-        <a class="btn o" href="../reestr-i-karta-riskov/">Весь раздел</a>
-      </div>
-    </div>
-    <div class="ph-shot"><img src="../assets/lib/agregaciya-riskov.png" alt="Агрегация рисков, разбор risk-place.ru" width="1200" height="630" loading="lazy"></div>
-  </div>
-</div></section>
-
-<section class="sec roomy lib" id="s1"><div class="wrap">
-  <h2>Зачем это нужно</h2>
-  <div class="prose">
-    <p>У холдинга пять предприятий, у каждого свой реестр по сорок строк. Двести строк невозможно вынести на совет директоров, и суммировать их баллы бессмысленно, потому что шкалы разные, а некоторые риски у разных предприятий это один и тот же риск.</p>
+</aside>
+<!--/TPL:TOC-->
+<main class="pmain">
+<div class="article">
+<h2 id="s1">Зачем это нужно</h2>
+<p>У холдинга пять предприятий, у каждого свой реестр по сорок строк. Двести строк невозможно вынести на совет директоров, и суммировать их баллы бессмысленно, потому что шкалы разные, а некоторые риски у разных предприятий это один и тот же риск.</p>
     <p>Агрегация отвечает на три вопроса руководства. Какие риски существенны для группы в целом. Где концентрация, то есть какая причина порождает риски сразу в нескольких местах. И сколько денег группа может потерять в плохом сценарии.</p>
-  </div>
-</div></section>
 
-<section class="sec roomy lib" id="s2"><div class="wrap">
-  <h2>Три способа агрегации</h2>
-  <p class="sub">Применяются вместе, а не вместо друг друга.</p>
+<h2 id="s2">Три способа агрегации</h2>
+<p>Применяются вместе, а не вместо друг друга.</p>
   <div>
-    <article class="mod"><span class="n">1</span><div><h3>По категории</h3><ul><li>Все риски группируются по единому справочнику категорий, внутри категории берется максимальное или взвешенное влияние. Дает картину, где болит сильнее</li></ul></div></article>
-    <article class="mod"><span class="n">2</span><div><h3>По причине</h3><ul><li>Риски связываются с общим источником, один поставщик, одна платформа, один регион. Показывает концентрацию, которую по категориям не видно</li></ul></div></article>
-    <article class="mod"><span class="n">3</span><div><h3>По деньгам</h3><ul><li>Влияние переводится в рубли, считаются ожидаемые потери и потери в неблагоприятном сценарии. Единственный язык, на котором риски складываются корректно</li></ul></div></article>
-  </div>
-</div></section>
+    <div class="nrs"><div class="nr"><div class="nr-n">1</div><div><h3>По категории</h3><p>Все риски группируются по единому справочнику категорий, внутри категории берется максимальное или взвешенное влияние. Дает картину, где болит сильнее</p></div></div><div class="nr"><div class="nr-n">2</div><div><h3>По причине</h3><p>Риски связываются с общим источником, один поставщик, одна платформа, один регион. Показывает концентрацию, которую по категориям не видно</p></div></div><div class="nr"><div class="nr-n">3</div><div><h3>По деньгам</h3><p>Влияние переводится в рубли, считаются ожидаемые потери и потери в неблагоприятном сценарии. Единственный язык, на котором риски складываются корректно</p></div></div></div></div>
 
-<section class="sec roomy lib" id="s3"><div class="wrap">
-  <h2>Почему нельзя просто сложить баллы</h2>
-  <div class="prose">
-    <p>Балл это порядковая величина, а не количество. Риск с оценкой 4 не вдвое опаснее риска с оценкой 2, и сумма баллов не имеет физического смысла. Складывать можно только денежные величины и только с учетом того, что события не независимы.</p>
+<h2 id="s3">Почему нельзя просто сложить баллы</h2>
+<p>Балл это порядковая величина, а не количество. Риск с оценкой 4 не вдвое опаснее риска с оценкой 2, и сумма баллов не имеет физического смысла. Складывать можно только денежные величины и только с учетом того, что события не независимы.</p>
     <p>Отсюда практическое правило. Для управленческого разговора агрегируйте максимумом и концентрацией. Для расчета совокупного эффекта переводите в деньги и считайте ожидаемые потери, а корреляции учитывайте хотя бы грубо, помечая риски, которые срабатывают вместе.</p>
-  </div>
-</div></section>
 
-<section class="sec roomy lib" id="s4"><div class="wrap">
-  <h2>Что нужно, чтобы агрегация вообще стала возможной</h2>
-  <div class="prose">
-    <p>Это требования к системе, а не к отчету.</p>
+<h2 id="s4">Что нужно, чтобы агрегация вообще стала возможной</h2>
+<p>Это требования к системе, а не к отчету.</p>
     <ul>
       <li>Единый справочник категорий для всех подразделений и юрлиц</li>
       <li>Единые шкалы вероятности и влияния, с денежными порогами, привязанными к масштабу бизнеса</li>
@@ -107,95 +95,40 @@ gtag('config', 'G-82K0ZJ2K9S');
       <li>Признак существенности для группы, который ставится по правилу, а не вручную</li>
       <li>Дисциплина сроков, реестры подразделений закрываются до сборки корпоративного</li>
     </ul>
-  </div>
-</div></section>
 
-<section class="sec roomy lib" id="faq"><div class="wrap">
-  <p class="kick">Частые вопросы</p>
-  <h2>Коротко о главном</h2>
-  <div class="faq">
-    <div class="faq-q">Как быть, если у предприятий группы разные масштабы</div>
-    <div class="faq-a">Денежные пороги шкалы задавать в процентах от показателя предприятия, а для группы пересчитывать в абсолютные суммы. Иначе мелкое предприятие никогда не покажет красный риск.</div>
-    <div class="faq-q">Нужно ли выносить на совет все существенные риски подразделений</div>
-    <div class="faq-a">Нет. На совет идут риски группы, обычно пятнадцать-двадцать. Риски подразделений остаются на своем уровне, наверх поднимается только то, что проходит критерий существенности.</div>
-    <div class="faq-q">Считать ли корреляции строго</div>
-    <div class="faq-a">Строгий расчет оправдан в финансовом секторе. В промышленности достаточно пометить группы событий, срабатывающих вместе, и показать сценарий их одновременной реализации.</div>
-  </div>
-</div></section>
+<h2 id="faq">Частые вопросы</h2>
+<div class="faq"><div class="q">Как быть, если у предприятий группы разные масштабы</div><p>Денежные пороги шкалы задавать в процентах от показателя предприятия, а для группы пересчитывать в абсолютные суммы. Иначе мелкое предприятие никогда не покажет красный риск.</p></div><div class="faq"><div class="q">Нужно ли выносить на совет все существенные риски подразделений</div><p>Нет. На совет идут риски группы, обычно пятнадцать-двадцать. Риски подразделений остаются на своем уровне, наверх поднимается только то, что проходит критерий существенности.</p></div><div class="faq"><div class="q">Считать ли корреляции строго</div><p>Строгий расчет оправдан в финансовом секторе. В промышленности достаточно пометить группы событий, срабатывающих вместе, и показать сценарий их одновременной реализации.</p></div>
 
-<section class="sec roomy lib panel" id="related"><div class="wrap">
-  <p class="kick">Рядом в разделе «Реестр и карта рисков»</p>
-  <h2>Что почитать дальше</h2>
-  <div class="cats">
-    <a class="cat" href="../scenarnyj-analiz/"><h3>Сценарный анализ</h3><p>Как показать одновременную реализацию нескольких рисков.</p><span class="go">Читать &rarr;</span></a>
-    <a class="cat" href="../ozhidaemye-poteri/"><h3>Ожидаемые потери</h3><p>Перевод влияния в деньги, единственный корректный способ складывать.</p><span class="go">Читать &rarr;</span></a>
-    <a class="cat" href="../otchet-po-riskam/"><h3>Отчет по рискам</h3><p>Куда попадает результат агрегации и в каком виде.</p><span class="go">Читать &rarr;</span></a>
+<div class="inset cta">
+  <h3>Проверьте зрелость своей системы управления рисками</h3>
+  <p>Тринадцать вопросов по пяти уровням ГОСТ Р 70350, результат сразу: уровень, три главных пробела и следующий шаг.</p>
+  <div class="btns">
+    <a href="/#besplatno" class="btn gold">Пройти диагностику →</a>
+    <a href="/sertifikaciya-ermp/" class="btn line">Сертификация ERMP →</a>
+    <a href="/dlya-kompanij/" class="btn line">Решения для компаний →</a>
   </div>
-  <p class="alt" style="margin-top:18px"><a href="../reestr-i-karta-riskov/">Вернуться к разделу «Реестр и карта рисков»</a> · <a href="../biblioteka/">вся библиотека</a></p>
-</div></section>
+</div>
 
-<section class="apply" id="apply"><div class="wrap in">
+<div class="expert">
+  <img src="/assets/exp-telenkov.jpg" alt="Евгений Теленков">
   <div>
-    <p class="kick">Одна форма для любого вопроса</p>
-    <h2>Оставьте заявку, ответим в течение рабочего дня</h2>
-    <p class="lead">Расскажем о ближайших датах, предложим формат под ваш состав участников и назовем порядок бюджета.</p>
-    <p class="mail">Предпочитаете почту — напишите на <a href="mailto:info@risk-place.ru">info@risk-place.ru</a>. Адрес: Москва, улица Скаковая, 32с2.</p>
+    <div class="nm">Евгений Теленков</div>
+    <div class="rl">Директор практики управления рисками · к.э.н. · соавтор шести ГОСТ Р</div>
+    <div class="bio">Пятнадцать лет во главе риск-функций: «Билайн», «Норникель», «Роснефть», риск-консалтинг в Ernst &amp; Young. Директор по рискам нефтехимического мегапроекта стоимостью 20 млрд долларов. Заместитель председателя технического комитета 010 «Менеджмент риска» Росстандарта. Подготовил более 800 специалистов.</div>
+    <div><a href="/o-nas/">Подробнее о практике risk-place →</a></div>
   </div>
-  <form class="form" id="leadForm">
-    <div class="row">
-      <input id="f-name" placeholder="Имя" required>
-      <input id="f-email" type="email" placeholder="Рабочая почта" required>
-    </div>
-    <div class="row">
-      <input id="f-org" placeholder="Компания">
-      <input id="f-role" placeholder="Должность">
-    </div>
-    <textarea id="f-msg" rows="4" placeholder="Сколько участников, желаемые даты, вопрос (необязательно)"></textarea>
-    <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>Даю согласие на обработку моих персональных данных на условиях <a href="../page12/" target="_blank" rel="noopener">политики конфиденциальности</a></span></label>
-    <button class="btn g" type="submit">Отправить заявку</button>
-    <p class="note" id="fnote"></p>
-  </form>
-</div></section>
-
-<footer class="ftr"><div class="wrap in">
-  <span>© 2026 risk-place.ru · Программы по управлению рисками, дашборд проектов, консалтинг</span>
-  <span>
-    <a href="../page24/">Все программы</a> ·
-    <a href="../page15/">Методология и стандарты</a> ·
-    <a href="https://bcm.risk-place.ru">Непрерывность бизнеса</a> ·
-    <a href="../o-nas/">О нас</a> ·
-    <a href="../page12/">Политика конфиденциальности</a>
-  </span>
+</div>
+</div>
+<div class="upbox"><span class="k">Раздел 02 · Реестр и карта рисков</span><a href="/reestr-i-karta-riskov/">Обзор раздела →</a><span class="sep">·</span><a class="sec" href="/biblioteka/">Вся библиотека</a></div>
+<div class="rel"><div class="k">Читайте также</div><div class="rel-grid"><a href="/scenarnyj-analiz/" class="rel-card"><div class="rt">Сценарный анализ →</div><div class="rd">Как показать одновременную реализацию нескольких рисков.</div></a><a href="/ozhidaemye-poteri/" class="rel-card"><div class="rt">Ожидаемые потери →</div><div class="rd">Перевод влияния в деньги, единственный корректный способ складывать.</div></a><a href="/otchet-po-riskam/" class="rel-card"><div class="rt">Отчет по рискам →</div><div class="rd">Куда попадает результат агрегации и в каком виде.</div></a></div></div>
+</main>
+</div>
+<!--TPL:FOOTER-->
+<footer class="uf"><div class="in">
+  <div class="row1"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Отраслевые курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></div>
+  <div class="row2"><span>© 2026 Risk-place</span><a href="/sertifikaciya-ermp/#certificate">Проверить сертификат</a><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a><a href="mailto:info@risk-place.ru">info@risk-place.ru</a><a href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Telegram</a><a href="https://bcm.risk-place.ru/">bcm.risk-place.ru (непрерывность)</a><a href="https://risk-place.org/">risk-place.org (EN, AR)</a></div>
 </div></footer>
-
-<script>
-function ev(n){try{ym(96530203,'reachGoal',n);}catch(e){}}
-var PRODNAME={training:'Программа или тренинг',custom:'Программа под задачу',consulting:'Консалтинг и методология',dashboard:'Дашборд рисков проектов',online:'Онлайн-курс, лист ожидания',library:'Вопрос по материалам',other:'Другой вопрос'};
-document.getElementById('leadForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  var note=document.getElementById('fnote');
-  if(!document.getElementById('f-consent').checked){
-    note.textContent='Отметьте согласие на обработку персональных данных.';
-    note.classList.add('err'); return;
-  }
-  var body={type:'demo',product:(PRODNAME['library']||'library'),source:'ru',
-    name:document.getElementById('f-name').value.trim(),
-    email:document.getElementById('f-email').value.trim(),
-    org:document.getElementById('f-org').value.trim(),
-    role:document.getElementById('f-role').value.trim(),
-    message:document.getElementById('f-msg').value.trim(),
-    lang:'ru',page:'agregaciya-riskov'};
-  fetch('https://ergp.risk-place.org/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
-    .then(function(r){
-      if(!r.ok)throw 0;
-      note.textContent='Спасибо! Ответим на почту в течение рабочего дня.';
-      note.classList.remove('err'); ev('lead_submit');
-    })
-    .catch(function(){
-      note.textContent='Не получилось отправить. Напишите нам: info@risk-place.ru';
-      note.classList.add('err');
-    });
-});
-</script>
+<script>(function(){var b=document.querySelector('.uh-burger');if(b)b.addEventListener('click',function(){document.getElementById('uhNav').classList.toggle('open');});})();</script>
+<!--/TPL:FOOTER-->
 </body>
 </html>
