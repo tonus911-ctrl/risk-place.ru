@@ -695,3 +695,19 @@ th{background:var(--panel);font-weight:700;color:var(--ink)}
   .sol h3{min-height:0}
   .hero-panel{min-width:0;flex-basis:100%}
 }
+
+/* ═══ Воздух между картинками, карточками и текстом (29.09.2026) ═══
+   Обход всех 171 страницы на ширине 1280 и 390 нашел места, где блок
+   с картинкой, карточками или рамкой вплотную (0-6 px) примыкает к тексту:
+   каталог курсов, страницы курсов, дашборд, СУР под ключ, ERMP, о нас,
+   программы комплаенса, матрица рисков и контролей, страница Евгения.
+   Правило одно: между таким блоком и текстом — строка-пробел, 24 px;
+   между подзаголовком раздела и карточками под ним — 16 px. */
+.pmain .cards+.article,.pmain .cards+p,.pmain .cards+.ps,
+.pmain .g2+p,.pmain .g3+p,.pmain .g2+.note,.pmain .g3+.note,
+.pmain .g3+.small,.pmain .g3+.price,.pmain .rel+.small,.pmain .rel+p,
+.pmain .nrs+.card,.pmain .tiles+p,
+.pmain .article+.ps{margin-top:24px}
+/* карточка эксперта после врезки: 26 px, как уже стоит в статьях */
+.pmain .inset+.expert{margin-top:26px}
+.pmain p.sub+.g2,.pmain p.sub+.g3,.pmain p.sub+.nrs,.pmain p.sub+.cards{margin-top:16px}
