@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Диагностика зрелости системы управления рисками, бесплатно</title>
+<meta name="description" content="Бесплатная диагностика зрелости системы управления рисками: 13 вопросов по логике ГОСТ Р 70350, результат сразу — уровень из пяти, профиль по девяти областям, главные пробелы и первый шаг.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://risk-place.ru/diagnostika/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#14181F">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://risk-place.ru/diagnostika/">
+<meta property="og:title" content="Диагностика зрелости системы управления рисками, бесплатно">
+<meta property="og:description" content="Бесплатная диагностика зрелости системы управления рисками: 13 вопросов по логике ГОСТ Р 70350, результат сразу — уровень из пяти, профиль по девяти областям, главные пробелы и первый шаг.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/diagnostika.png">
+<meta property="og:site_name" content="risk-place.ru">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-82K0ZJ2K9S"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-82K0ZJ2K9S');
+</script>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<!--TPL:HEADER-->
+<header class="uh">
+  <div class="uh-bar">
+    <a href="/" class="uh-logo"><span class="uh-mark"><img src="/assets/mayak.png" alt="" width="27" height="27"></span><span class="uh-txt">risk-<span class="lp">place</span>.ru</span></a>
+    <nav class="uh-nav" id="uhNav"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></nav>
+    <button class="uh-burger" aria-label="Меню">&#9776;</button>
+  </div>
+</header>
+<!--/TPL:HEADER-->
+<div class="pb one"><main class="pmain quiz">
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- ВСТУПЛЕНИЕ -->
+<div class="screen active" id="s-intro">
+  <div class="eyebrow">Диагностика зрелости · бесплатно</div>
+  <h1 class="qtitle">Насколько зрелая у вас система управления рисками?</h1>
+  <p class="lead">Тринадцать вопросов по пяти уровням зрелости, логика ГОСТ Р 70350 «Оценивание качества менеджмента риска организации». Результат сразу на экране: уровень, профиль по девяти областям, три главных пробела и первый шаг по каждому.</p>
+  <div class="callout">Отвечайте по фактам, которые можно показать документом, протоколом или расчетом, а не по намерениям. Если данных нет, выбирайте «затрудняюсь ответить»: результат от этого только точнее.</div>
+  <div class="qmeta">
+    <div class="qmi"><div class="qdot"></div><span>13 вопросов</span></div>
+    <div class="qmi"><div class="qdot"></div><span>10 минут</span></div>
+    <div class="qmi"><div class="qdot"></div><span>Без регистрации</span></div>
+  </div>
+  <button class="btn navy wide" type="button" onclick="startQuiz()">Начать диагностику →</button>
+  <p class="small note-under">Контакты не нужны. Ответы учитываются только в обезличенной статистике.</p>
+</div>
+
+<!-- ВОПРОСЫ -->
+<div class="screen" id="s-questions">
+  <div class="q-counter" id="qCounter"></div>
+  <div class="q-text" id="qText"></div>
+  <p class="q-hint" id="qHint"></p>
+  <div class="options" id="qOptions"></div>
+  <div class="nav-row">
+    <button class="btn line" type="button" id="btnBack" onclick="prevQ()">← Назад</button>
+    <button class="btn navy" type="button" id="btnNext" onclick="nextQ()" disabled>Далее →</button>
+  </div>
+</div>
+
+<!-- ПРОФИЛЬ КОМПАНИИ -->
+<div class="screen" id="s-profile">
+  <div class="eyebrow">Последний шаг</div>
+  <h2 class="qtitle">Несколько слов о компании</h2>
+  <p class="lead">На балл не влияет. Помогает подобрать следующий шаг под масштаб и вашу роль. Можно пропустить.</p>
+  <div class="pgroup">
+    <div class="k">Размер компании</div>
+    <div class="options" id="pSize"></div>
+  </div>
+  <div class="pgroup">
+    <div class="k">Ваша роль</div>
+    <div class="options" id="pRole"></div>
+  </div>
+  <div class="nav-row">
+    <button class="btn line" type="button" onclick="backToQuestions()">← Назад</button>
+    <button class="btn navy" type="button" onclick="showResults()">Показать результат →</button>
+  </div>
+</div>
+
+<!-- РЕЗУЛЬТАТ -->
+<div class="screen" id="s-results">
+  <div id="resBanner" class="result-banner">
+    <div id="resBadge" class="level-badge"></div>
+    <div class="score-pill" id="resPill"></div>
+    <div class="result-title-big" id="resTitle"></div>
+    <div class="result-sub" id="resSub"></div>
+  </div>
+  <div class="level-track" id="resTrack"></div>
+
+  <div class="result-card"><div class="card-label">Что это значит</div><div class="card-text" id="resDesc"></div></div>
+
+  <div class="result-card">
+    <div class="card-label">Профиль по областям</div>
+    <div id="resProfile"></div>
+    <p class="small prof-note">Целевой уровень для большинства компаний — три по всем областям и четыре по ключевым: выявлению и реестру, отчетности, встроенности в решения. Пятый уровень везде съедает ресурс без пропорциональной отдачи.</p>
+  </div>
+
+  <div class="k gaps-k" id="t-gaps-label"></div>
+  <div id="resGaps"></div>
+
+  <div class="result-card" id="resNotesCard" hidden><div class="card-label">На что обратить внимание</div><div class="card-text" id="resNotes"></div></div>
+
+  <div class="result-card"><div class="card-label">Следующий шаг</div><div class="card-text" id="resNext"></div></div>
+
+  <div class="inset result-cta">
+    <div class="k">Вам подойдет</div>
+    <h3 id="recName"></h3>
+    <p id="recWhy"></p>
+    <div class="btns cta-buttons">
+      <button class="btn gold" type="button" id="recPrimaryBtn"></button>
+      <button class="btn line" type="button" id="recAltBtn"></button>
+    </div>
+    <p class="small"><a id="recMore" href="/dlya-kompanij/">Подробнее о решении →</a></p>
+  </div>
+
+  <p class="small restart"><a href="#" onclick="restart();return false;">Пройти диагностику заново</a> · <a href="/ocenka-zrelosti/">Как устроена полная оценка зрелости</a></p>
+</div>
+
+<!-- ЗАЯВКА -->
+<div class="screen" id="s-contacts">
+  <div class="eyebrow">По желанию</div>
+  <h2 class="qtitle" id="t-cont-title"></h2>
+  <p class="lead" id="t-cont-desc"></p>
+  <div id="formBox">
+    <div class="fgrid">
+      <input class="fld" type="text" id="fName" placeholder="Имя">
+      <input class="fld" type="email" id="fEmail" placeholder="Рабочая почта">
+    </div>
+    <div class="fstack"><input class="fld" type="text" id="fCompany" placeholder="Компания (необязательно)"></div>
+    <label class="consent">
+      <input type="checkbox" id="fConsent">
+      <span>Даю согласие на обработку моих персональных данных на условиях <a href="/politika-konfidencialnosti/" target="_blank" rel="noopener">политики обработки персональных данных</a></span>
+    </label>
+    <div class="btns btn-row">
+      <button class="btn line" type="button" onclick="backToResults()">← К результату</button>
+      <button class="btn gold" type="button" id="btnSubmit" onclick="submitForm()">Отправить</button>
+    </div>
+    <p class="fmsg" id="fNote"></p>
+  </div>
+  <div id="formDone" hidden>
+    <div class="contact-success done-box">Спасибо! Ответим в течение рабочего дня на указанную почту. Ваш результат диагностики уже у эксперта.</div>
+    <div class="btns"><button class="btn line" type="button" onclick="backToResults()">← К результату</button></div>
+  </div>
+</div>
+</main></div>
+
+<script>
+// ════════════════════════════════════════════════════════════════════
+// Диагностика зрелости системы управления рисками · risk-place.ru
+// Данные: области, вопросы, уровни, пробелы, рекомендации.
+// Шкала уровней — как на странице /ocenka-zrelosti/ (логика ГОСТ Р 70350).
+// Каждый вариант ответа описывает наблюдаемый факт, а не самооценку:
+// «оценка без доказательства не ставится». Поэтому «не знаю» = уровень 1.
+// ════════════════════════════════════════════════════════════════════
+
+var LEVELS = [
+  null,
+  {n:1, name:"Начальный", theme:"t1", tc:"t1-c",
+   sub:"Система в самом начале пути",
+   desc:"Работа с риском пока ведется по ситуации и держится на опыте конкретных людей, единый порядок еще не сложился. Это нормальная стартовая точка: у многих компаний система начинается именно отсюда, и первые шаги дают заметный эффект быстро.",
+   next:"Первая задача — не документы, а договоренность: кто в компании отвечает за риск, как он записывается и кому докладывается. Это закладывается за один-два месяца и дает основу, на которую потом ляжет методология."},
+  {n:2, name:"Повторяемый", theme:"t2", tc:"t2-c",
+   sub:"Порядок есть, единообразия пока нет",
+   desc:"Порядок работы с риском описан и применяется в отдельных подразделениях или проектах. Следующая задача — единообразие: чтобы данные разных подразделений можно было сравнивать и сводить в одну картину для руководства.",
+   next:"Главный шаг — единая методика для всей компании: одна формула записи риска, одна шкала в деньгах, один порядок пересмотра. После этого реестр становится сопоставимым и его можно показывать совету."},
+  {n:3, name:"Определенный", theme:"t3", tc:"t3-c",
+   sub:"Система работает по всей компании",
+   desc:"Методология утверждена, роли распределены, процесс работает по всей компании и дает сопоставимые данные. Для большинства компаний это достаточный и честный уровень. Вопрос дальше не в процедурах, а в том, меняет ли система решения.",
+   next:"Следующий шаг — довести до уровня четыре ключевые элементы: выявление, отчетность и встроенность в решения. Именно там система начинает влиять на бюджет, инвестиции и проекты."},
+  {n:4, name:"Управляемый", theme:"t4", tc:"t4-c",
+   sub:"Решения принимаются по данным о рисках",
+   desc:"Качество процесса измеряется метриками, решения принимаются по данным, эффект мер подтверждается. Функция рисков говорит с руководством на языке денег и сроков. Это уровень, на котором система окупает себя.",
+   next:"Держать уровень сложнее, чем достигать. Раз в два-три года полезен независимый взгляд со стороны и сравнение с практикой отрасли: внутри его не получить."},
+  {n:5, name:"Развивающийся", theme:"t5", tc:"t5-c",
+   sub:"Практика опережает требования",
+   desc:"Система регулярно пересматривается по результатам, риск-аппетит и метрики уточняются вместе со стратегией. Таких компаний немного. Полезная проверка на этом уровне — убедиться, что каждый ответ подтверждается документом, протоколом или расчетом.",
+   next:"На этом уровне ценность дает внешняя оценка: она проверяет, что высокий балл держится на доказательствах, и показывает, где вы относительно лучших практик отрасли."}
+];
+
+// Области оценки. target — целевой уровень: 4 для ключевых элементов,
+// 3 для остальных (методика /zrelost-sur/: «три по всем и четыре по ключевым»).
+var AREAS = {
+  doc:   {name:"Методология и документы", target:3, weight:1,
+          gap:"Документы пока в работе или живут отдельно от практики. Единая методика нужна, чтобы оценки разных подразделений стали сопоставимы и сложились в одну картину для руководства.",
+          step:"Утвердите короткую политику и методику: формула записи риска, шкала в деньгах, роли, периодичность пересмотра. Пять-семь страниц, а не сто.",
+          link:"/dokumenty-sur/", linkText:"Документы системы управления рисками"},
+  roles: {name:"Роли и полномочия", target:3, weight:1.2,
+          gap:"Пока риски в основном ведет служба рисков. Система заработает в полную силу, когда владельцами станут руководители, отвечающие за результат, а служба рисков сосредоточится на методе и проверке.",
+          step:"Назначьте владельцем каждого риска руководителя, отвечающего за соответствующую цель, и разведите роли: бизнес управляет риском, служба рисков дает метод и проверяет, аудит оценивает систему.",
+          link:"/vladelec-riska/", linkText:"Владелец риска: кто это и за что отвечает"},
+  proc:  {name:"Выявление, реестр и оценка", target:4, weight:1.5,
+          gap:"Реестр пока не дает полной управленческой картины. Она появляется, когда риск записан цепочкой «причина — событие — последствие» и оценен в деньгах, а не только баллами.",
+          step:"Перепишите топ-20 рисков по формуле «из-за... может произойти... что приведет к...» и оцените каждый в деньгах. Этого хватит, чтобы первый отчет совету стал предметным.",
+          link:"/formulirovka-riska/", linkText:"Как правильно сформулировать риск"},
+  appet: {name:"Риск-аппетит и индикаторы", target:3, weight:1.2,
+          gap:"Граница допустимого риска пока не задана. С ней становится понятно, какой риск требует мер, а какой можно спокойно принять, и индикаторам появляется точка отсчета.",
+          step:"Сформулируйте 5-7 границ аппетита по ключевым целям в числах и выведите из них ключевые индикаторы риска с порогами эскалации.",
+          link:"/risk-appetit-kak-zadat/", linkText:"Риск-аппетит: как задать и применять"},
+  integ: {name:"Встроенность в решения", target:4, weight:1.5,
+          gap:"Пока оценка рисков идет параллельно с бюджетом, инвестициями и проектами. Когда она становится частью этих решений, система превращается из отчета в рабочий инструмент управления.",
+          step:"Сделайте оценку рисков обязательной точкой в двух процессах: инвестиционном комитете и утверждении бюджета. Без нее вопрос на рассмотрение не выносится.",
+          link:"/risk-orientirovannoe-upravlenie/", linkText:"Риск-ориентированное управление"},
+  report:{name:"Отчетность и решения руководства", target:4, weight:1.5,
+          gap:"Отчетность по рискам пока информирует, но не ведет к решениям. Сильный отчет заканчивается предложением и поручением, тогда он становится инструментом правления и совета.",
+          step:"Перестройте отчет вокруг решений: три риска за пределами аппетита, что предлагается сделать, какое решение нужно от правления или совета. Одна страница, раз в квартал.",
+          link:"/otchet-po-riskam/", linkText:"Отчет по рискам для руководства"},
+  eff:   {name:"Меры и результативность", target:3, weight:1.3,
+          gap:"Меры есть, следующий шаг — видеть их исполнение и эффект. Самый наглядный признак зрелости — возможность показать, что изменилось благодаря системе.",
+          step:"Для каждой меры по топ-10 рискам зафиксируйте ответственного, срок и ожидаемое снижение риска в деньгах, а через квартал пересчитайте риск. Разница и есть результат системы.",
+          link:"/poslednyaya-milya-resheniy/", linkText:"Последняя миля исполнения решений по рискам"},
+  ctrl:  {name:"Внутренний контроль", target:3, weight:1,
+          gap:"Контрольные процедуры пока не связаны с рисками и не оставляют следа выполнения. Когда связь и след появляются, на контроль можно опереться и проверить его.",
+          step:"Для топ-10 рисков определите ключевые контрольные процедуры, кто их выполняет и какой след остается. Протестируйте хотя бы три из них за квартал.",
+          link:"/kontrolnye-procedury/", linkText:"Контрольные процедуры: виды и дизайн"},
+  cult:  {name:"Риск-культура", target:3, weight:1.2,
+          gap:"Сообщать о рисках заранее пока не вошло в привычку. Люди, которые видят риск первыми, — главный источник раннего сигнала, и культура открытого разговора усиливает всю систему.",
+          step:"Начните с поведения руководства: разберите на правлении один случай, когда риск сообщили рано, и публично отметьте это. Затем добавьте вопрос о рисках в обсуждение каждого крупного решения.",
+          link:"/risk-kultura/", linkText:"Риск-культура: что это и как ее измерить"}
+};
+var AREA_ORDER = ["doc","roles","proc","appet","integ","report","eff","ctrl","cult"];
+
+// 13 вопросов. Варианты упорядочены от уровня 1 к уровню 5 и близки по длине:
+// это самодиагностика, а не экзамен, поэтому варианты — ступени одной шкалы.
+var QUESTIONS = [
+  {area:"doc", text:"Какие документы по управлению рисками действуют в компании?",
+   hint:"Ответьте по факту применения, а не по наличию файла.",
+   opts:["Документы по управлению рисками пока в разработке",
+         "Политика утверждена, практика по ней пока складывается",
+         "Политика и методика утверждены и применяются во всей компании",
+         "Методика задает шкалы в деньгах и пересматривается по итогам применения",
+         "Документы ежегодно обновляются по результатам и ожиданиям совета"]},
+  {area:"roles", text:"Кто в компании является владельцем риска?",
+   hint:"Владелец — тот, кто принимает решение о мерах и отвечает за последствия.",
+   opts:["Пока риски ведет служба рисков, владельцы не определены",
+         "Владельцы назначены, роль пока осваивается",
+         "Владельцы — руководители, отвечающие за соответствующие цели",
+         "Владельцы отчитываются о мерах, риски учтены в их целях",
+         "Владельцы сами поднимают новые риски и предлагают решения"]},
+  {area:"roles", text:"Как разделены роли бизнеса, службы рисков и внутреннего аудита?",
+   hint:"Модель трех линий: бизнес управляет, служба рисков дает метод, аудит проверяет.",
+   opts:["Отдельной функции рисков пока нет, задачи распределены",
+         "Реестр и меры пока готовит сама служба рисков",
+         "Роли разделены, аудит периодически проверяет систему",
+         "Аудит ежегодно оценивает эффективность системы для комитета",
+         "Проверки всех линий сведены в единую карту заверения"]},
+  {area:"proc", text:"Как в компании выявляют риски?",
+   hint:"",
+   opts:["До системного выявления рисков пока не дошли",
+         "Раз в год подразделения заполняют шаблон реестра",
+         "Регулярно, по единой методике во всех подразделениях",
+         "Регулярно и дополнительно при каждой крупной сделке или проекте",
+         "Плюс сценарный анализ и поиск новых, возникающих рисков"]},
+  {area:"proc", text:"Как выглядит типичная запись в вашем реестре рисков?",
+   hint:"Возьмите любую запись из реестра и сравните.",
+   opts:["Реестр рисков пока не ведется, это в планах",
+         "Названия рисков, причины и последствия пока не расписаны",
+         "Причина, событие, последствие, владелец, оценка и меры",
+         "Плюс оценка в деньгах, остаточный риск и динамика по периодам",
+         "Запись связана с данными и обновляется при изменении условий"]},
+  {area:"proc", text:"Как оцениваются риски?",
+   hint:"",
+   opts:["Экспертно, единая шкала оценки пока в разработке",
+         "Баллами по матрице вероятность-влияние, без привязки к деньгам",
+         "По шкалам, привязанным к деньгам и целям компании",
+         "Для ключевых рисков — количественно: сценарии, ожидаемые потери",
+         "Плюс сводная оценка влияния рисков на бюджет и план"]},
+  {area:"appet", text:"Определен ли в компании риск-аппетит?",
+   hint:"Риск-аппетит — граница риска, которую компания сознательно готова принять.",
+   opts:["Об этом пока не задумывались, границы не определены",
+         "Есть общая формулировка, числа пока не заданы",
+         "Совет утвердил границы аппетита в числах",
+         "Аппетит разложен в лимиты и индикаторы и влияет на решения",
+         "Аппетит пересматривается вместе со стратегией, превышения эскалируются"]},
+  {area:"appet", text:"Как вы узнаете, что риск нарастает, до того как он реализовался?",
+   hint:"Речь о ключевых индикаторах риска (КРИ) с порогами.",
+   opts:["Индикаторы пока не настроены, ориентируемся на события",
+         "Показатели выбраны, пороги и реакция пока в разработке",
+         "По ключевым рискам есть индикаторы с порогами, их собирают регулярно",
+         "Индикаторы опережающие, берутся из рабочих систем, эскалация работает",
+         "Мониторинг автоматизирован и виден руководству в одном месте"]},
+  {area:"integ", text:"Участвует ли оценка рисков в бюджете, инвестициях и проектах?",
+   hint:"",
+   opts:["До этой темы пока не дошли, решения принимаются отдельно",
+         "Оценка прикладывается к решениям, но пока на них не влияет",
+         "Это обязательный шаг инвестиционного и проектного цикла",
+         "Есть примеры, когда оценка рисков изменила решение",
+         "Бюджет и план строятся с учетом рисков: резервы, диапазоны"]},
+  {area:"report", text:"Что получают правление и совет директоров по рискам?",
+   hint:"",
+   opts:["Отчетность по рискам пока не выстроена",
+         "Раз в год руководству приходит перечень рисков",
+         "Регулярный отчет в согласованном формате, раз в квартал или чаще",
+         "Отчет заканчивается решениями, их исполнение отслеживается",
+         "Риски обсуждаются при каждом стратегическом вопросе"]},
+  {area:"eff", text:"Что происходит после того, как риск оценен и мера утверждена?",
+   hint:"Проверьте себя: можете ли вы показать эффект хотя бы одной меры?",
+   opts:["Меры пока в разработке, сроки не назначены",
+         "Меры есть, контроль исполнения пока налаживаем",
+         "У мер есть ответственные и сроки, статус отслеживается",
+         "После исполнения риск пересчитывается, эффект меры виден",
+         "Можем показать, какие потери система предотвратила за год"]},
+  {area:"ctrl", text:"Как устроен внутренний контроль в процессах?",
+   hint:"",
+   opts:["Контрольные процедуры пока не описаны, держатся на опыте людей",
+         "Процедуры описаны, связь с рисками пока выстраиваем",
+         "Ключевые процедуры привязаны к рискам и оставляют след выполнения",
+         "Эффективность ключевых процедур регулярно тестируется",
+         "Контроль встроен в системы и частично автоматизирован"]},
+  {area:"cult", text:"Что происходит, когда сотрудник заранее сообщает о риске?",
+   hint:"Представьте плохую новость, принесенную руководителю за месяц до события.",
+   opts:["Сообщать о рисках заранее пока не принято",
+         "Сообщают неформально, порядок реакции еще не сложился",
+         "Есть понятный канал, сообщения рассматриваются",
+         "Руководство поощряет ранние сигналы и показывает пример",
+         "Качество работы с рисками учитывается в оценке руководителей"]}
+];
+var DONT_KNOW = "Затрудняюсь ответить, данных пока нет";
+
+// Профиль участника: не влияет на балл, влияет на рекомендацию.
+var SIZES = [
+  {k:"s", t:"До 250 сотрудников"},
+  {k:"m", t:"250–2000 сотрудников"},
+  {k:"l", t:"Более 2000 сотрудников или группа компаний"}
+];
+var ROLES = [
+  {k:"rm",  t:"Руковожу или работаю в функции рисков"},
+  {k:"fin", t:"Финансы, контроль, аудит"},
+  {k:"top", t:"Первое лицо или член правления, совета"},
+  {k:"oth", t:"Другое"}
+];
+
+// Продукты risk-place.ru. mode: apply — заявка через форму на этой странице;
+// go — переход на страницу продукта. val — значение в поле «Что вас интересует»
+// формы на главной, чтобы заявка попала в тот же разбор.
+var PRODUCTS = {
+  podklyuch:{name:"Система управления рисками под ключ", url:"/sur-pod-klyuch/", val:"podklyuch",
+             why:"Начинаем с аудита того, что уже есть, и за один-два месяца доводим систему до рабочего состояния: документы, реестр, отчет совету."},
+  diag:     {name:"Оценка зрелости с экспертом", url:"/ocenka-zrelosti/", val:"diag",
+             why:"Независимая оценка по восьми областям: по документам и по фактической практике, с планом на год, выстроенным по эффекту и трудоемкости."},
+  dashboard:{name:"Дашборд рисков", url:"/dashboard/", val:"dashboard",
+             why:"Все риски, индикаторы и исполнение мер на одном экране для правления и совета директоров."},
+  ermp:     {name:"Сертификация ERMP", url:"/sertifikaciya-ermp/", val:"ermp",
+             why:"Программа и сертификация по управлению рисками предприятия для тех, кто ведет функцию внутри компании."},
+  corp:     {name:"Корпоративная программа", url:"/otraslevye-kursy/", val:"corp",
+             why:"Программа для команды руководителей под отрасль компании: общий язык рисков для владельцев и функции."},
+  templates:{name:"Шаблоны реестра, карты и матрицы", url:"/#besplatno", val:"templates",
+             why:"Бесплатная книга Excel: реестр с полями по ГОСТ Р ИСО 31000, матрица и карта рисков с инструкцией."}
+};
+
+// ════════════════════════════════════════════════════════════════════
+// Движок диагностики · основа — движок bcm.risk-place.ru/quiz.html
+// Что изменено против bcm:
+//  • балл считается по областям, а не по вопросам: область с тремя
+//    вопросами не перевешивает область с одним;
+//  • общий уровень не может быть выше самой слабой области больше чем
+//    на ступень: систему определяет слабое звено (методика /zrelost-sur/);
+//  • «не знаю» — отдельный честный ответ, засчитывается как уровень 1;
+//  • результат — уровень, профиль по девяти областям, три главных пробела
+//    с первым шагом и ссылкой на материал библиотеки, следующий шаг.
+// ════════════════════════════════════════════════════════════════════
+var cur = 0, answers = [], size = null, role = null, result = null;
+var startedSent = false, doneSent = false, leadKey = "", leadSent = false;
+var YM = 96530203;
+
+function $(id){ return document.getElementById(id); }
+function goal(name, params){
+  try { ym(YM, "reachGoal", name); } catch (e) {}
+  try { gtag("event", name, params || {}); } catch (e) {}
+}
+function fmt(x){ return (Math.round(x * 10) / 10).toString().replace(".", ","); }
+function mk(tag, cls, html){ var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+function showScreen(id){
+  var list = document.querySelectorAll(".quiz .screen");
+  for (var i = 0; i < list.length; i++) list[i].classList.remove("active");
+  $(id).classList.add("active");
+  window.scrollTo(0, 0);
+}
+function progress(p){ $("progressBar").style.width = Math.round(p * 100) + "%"; }
+
+// ── вопросы ──
+function startQuiz(){
+  answers = new Array(QUESTIONS.length).fill(null);
+  cur = 0; size = null; role = null; result = null; doneSent = false;
+  if (!startedSent){ startedSent = true; goal("rp_diag_start"); }
+  showScreen("s-questions");
+  renderQ();
+}
+function renderQ(){
+  var q = QUESTIONS[cur];
+  $("qCounter").textContent = "Вопрос " + (cur + 1) + " из " + QUESTIONS.length + " · " + AREAS[q.area].name;
+  $("qText").textContent = q.text;
+  var h = $("qHint"); h.textContent = q.hint || ""; h.hidden = !q.hint;
+  var wrap = $("qOptions"); wrap.innerHTML = "";
+  q.opts.concat([DONT_KNOW]).forEach(function(t, i){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "option" + (i === 5 ? " dk" : "") + (answers[cur] === i ? " selected" : "");
+    b.textContent = t;
+    b.onclick = function(){ selectOpt(i); };
+    wrap.appendChild(b);
+  });
+  $("btnBack").style.visibility = cur === 0 ? "hidden" : "visible";
+  $("btnNext").textContent = cur === QUESTIONS.length - 1 ? "Дальше →" : "Далее →";
+  $("btnNext").disabled = answers[cur] === null;
+  progress(cur / (QUESTIONS.length + 1));
+}
+function selectOpt(i){
+  answers[cur] = i;
+  var list = document.querySelectorAll("#qOptions .option");
+  for (var k = 0; k < list.length; k++) list[k].classList.toggle("selected", k === i);
+  $("btnNext").disabled = false;
+}
+function nextQ(){
+  if (answers[cur] === null) return;
+  if (cur < QUESTIONS.length - 1){ cur++; renderQ(); }
+  else { showProfile(); }
+}
+function prevQ(){ if (cur > 0){ cur--; renderQ(); } }
+
+// ── профиль ──
+function showProfile(){
+  renderChoice("pSize", SIZES, function(k){ size = k; }, size);
+  renderChoice("pRole", ROLES, function(k){ role = k; }, role);
+  progress(QUESTIONS.length / (QUESTIONS.length + 1));
+  showScreen("s-profile");
+}
+function renderChoice(boxId, list, set, current){
+  var box = $(boxId); box.innerHTML = "";
+  list.forEach(function(it){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "option" + (current === it.k ? " selected" : "");
+    b.textContent = it.t;
+    b.onclick = function(){
+      set(it.k);
+      var all = box.querySelectorAll(".option");
+      for (var i = 0; i < all.length; i++) all[i].classList.toggle("selected", all[i] === b);
+    };
+    box.appendChild(b);
+  });
+}
+function backToQuestions(){ cur = QUESTIONS.length - 1; showScreen("s-questions"); renderQ(); }
+
+// ── расчет ──
+function levelOf(i){ return i === 5 ? 1 : i + 1; }  // 0..4 → 1..5, «не знаю» → 1
+function compute(){
+  var byArea = {}, dk = 0;
+  QUESTIONS.forEach(function(q, i){
+    if (answers[i] === 5) dk++;
+    (byArea[q.area] = byArea[q.area] || []).push(levelOf(answers[i]));
+  });
+  var lv = {}, sum = 0, min = 5;
+  AREA_ORDER.forEach(function(a){
+    var arr = byArea[a];
+    lv[a] = arr.reduce(function(s, x){ return s + x; }, 0) / arr.length;
+    sum += lv[a]; if (lv[a] < min) min = lv[a];
+  });
+  var avg = sum / AREA_ORDER.length;
+  var overall = Math.min(Math.round(avg), Math.floor(min) + 1);
+  overall = Math.max(1, Math.min(5, overall));
+
+  // пробелы: недобор до целевого уровня, умноженный на вес области
+  var gaps = AREA_ORDER.map(function(a){
+    return {a: a, lv: lv[a], d: Math.max(0, AREAS[a].target - lv[a]) * AREAS[a].weight};
+  }).filter(function(g){ return g.d > 0; })
+    .sort(function(x, y){ return y.d - x.d || AREAS[y.a].weight - AREAS[x.a].weight; });
+  var zone = false;
+  if (gaps.length === 0){
+    zone = true;  // целевой уровень достигнут везде: показываем самые слабые области как зоны роста
+    gaps = AREA_ORDER.filter(function(a){ return lv[a] < 5; })
+      .map(function(a){ return {a: a, lv: lv[a], d: 0}; })
+      .sort(function(x, y){ return x.lv - y.lv; });
+  }
+  gaps = gaps.slice(0, 3);
+
+  // наблюдения по форме профиля
+  var notes = [];
+  var work = (lv.integ + lv.eff) / 2;
+  var docHeavy = lv.doc - work >= 1.5;
+  if (docHeavy)
+    notes.push("Документы заметно опережают практику. Это частая картина: регламенты уже есть, а в решения система пока не встроена. Поэтому дальше выгоднее не писать новые документы, а встраивать оценку рисков в бюджет и инвестиции.");
+  if (lv.eff <= 2 && avg >= 3)
+    notes.push("По большинству областей система зрелая, а результативность пока отстает. Имеет смысл сфокусироваться не на совершенствовании процедур, а на том, какие решения система должна менять и как это показать.");
+  if (lv.cult <= 2 && avg >= 3)
+    notes.push("Процедуры выстроены, а открытый разговор о рисках пока отстает. Культура — область, которую не закрыть регламентом, зато небольшие шаги руководства здесь дают быстрый эффект.");
+  if (dk >= 3)
+    notes.push("Ответов «затрудняюсь ответить»: " + dk + " из " + QUESTIONS.length + ". Это тоже полезный результат: по этим вопросам стоит собрать подтверждения. По логике ГОСТ Р 70350 оценка опирается на документы и факты, и их сбор — первый шаг любой самодиагностики.");
+
+  return {lv: lv, avg: avg, min: min, overall: overall, gaps: gaps, zone: zone, notes: notes, dk: dk, docHeavy: docHeavy};
+}
+
+// ── рекомендация: уровень × размер, роль уточняет альтернативу ──
+var REC = {
+  1:{s:["templates","podklyuch"], m:["podklyuch","diag"],      l:["podklyuch","diag"]},
+  2:{s:["ermp","templates"],      m:["podklyuch","diag"],      l:["podklyuch","corp"]},
+  3:{s:["ermp","diag"],           m:["diag","dashboard"],      l:["diag","corp"]},
+  4:{s:["dashboard","ermp"],      m:["dashboard","diag"],      l:["dashboard","diag"]},
+  5:{s:["diag","dashboard"],      m:["diag","dashboard"],      l:["diag","dashboard"]}
+};
+function recFor(r){
+  var pair = REC[r.overall][size || "m"].slice();
+  // первое лицо при слабых ролях или культуре — команде руководителей нужен общий язык
+  if (role === "top" && (r.lv.roles <= 2 || r.lv.cult <= 2) && pair[0] !== "corp") pair[1] = "corp";
+  // человек из функции рисков в небольшой компании — профессиональная база важнее проекта
+  if (role === "rm" && size === "s" && r.overall <= 3 && pair[0] !== "ermp") pair[1] = "ermp";
+  return pair;
+}
+
+// ── результат ──
+function showResults(){
+  result = compute();
+  var r = result, L = LEVELS[r.overall];
+  showScreen("s-results");
+  progress(1);
+
+  $("resBanner").className = "result-banner " + L.theme;
+  $("resBadge").textContent = "Уровень " + L.n + " из 5 — " + L.name;
+  $("resPill").textContent = "средний балл по областям " + fmt(r.avg) + " из 5";
+  $("resTitle").textContent = L.name;
+  $("resSub").textContent = L.sub;
+  var track = $("resTrack"); track.innerHTML = "";
+  for (var i = 1; i <= 5; i++){
+    var seg = document.createElement("div");
+    seg.className = "l-seg" + (i <= L.n ? " filled " + L.tc : "");
+    track.appendChild(seg);
+  }
+  $("resDesc").textContent = L.desc;
+  if (r.overall < Math.round(r.avg))
+    $("resDesc").textContent += " Средний балл выше, но уровень ограничен самой слабой областью: система работает на уровне своего слабого звена.";
+
+  // профиль по областям: строка = название, значение против цели, шкала из пяти делений.
+  // Разметка собирается через DOM, а не строками: так ее видит линтер сайта.
+  var box = $("resProfile"); box.innerHTML = "";
+  AREA_ORDER.forEach(function(a){
+    var v = r.lv[a], n = Math.max(1, Math.round(v)), tgt = AREAS[a].target;
+    var row = mk("div", "prow"), head = mk("div", "ph2");
+    head.appendChild(mk("span", "", esc(AREAS[a].name)));
+    head.appendChild(mk("b", v >= tgt ? "ok" : (tgt - v >= 1.5 ? "low" : "mid"), fmt(v) + "<i> / цель " + tgt + "</i>"));
+    var tr = mk("div", "level-track");
+    for (var i = 1; i <= 5; i++) tr.appendChild(mk("div", "l-seg" + (i <= n ? " filled " + LEVELS[n].tc : "") + (i === tgt ? " tgt" : "")));
+    row.appendChild(head); row.appendChild(tr); box.appendChild(row);
+  });
+
+  // главные пробелы: каждый отдельной карточкой
+  var cnt = ["", "Главный пробел", "Два главных пробела", "Три главных пробела"][r.gaps.length] || "";
+  $("t-gaps-label").textContent = r.zone ? "Целевой уровень достигнут. Зоны роста" : cnt;
+  var gbox = $("resGaps"); gbox.innerHTML = "";
+  if (r.gaps.length === 0){
+    var c0 = mk("div", "result-card"), t0 = mk("div", "card-text");
+    t0.appendChild(mk("p", "", "Пробелов до целевого уровня нет ни в одной области. Проверьте главное: подтверждается ли каждый ответ документом, протоколом или расчетом. Сильный результат особенно ценен, когда за ним стоят факты."));
+    c0.appendChild(t0); gbox.appendChild(c0);
+  }
+  r.gaps.forEach(function(x, i){
+    var A = AREAS[x.a], card = mk("div", "result-card"), txt = mk("div", "card-text");
+    card.appendChild(mk("div", "card-label", (r.zone ? "Зона роста " : "Пробел ") + (i + 1) + " · " + esc(A.name) + " · " + fmt(x.lv) + " из 5"));
+    txt.appendChild(mk("p", "", esc(A.gap)));
+    txt.appendChild(mk("p", "", "<b>Первый шаг.</b> " + esc(A.step)));
+    var lp = mk("p", ""), ln = mk("a", "", esc(A.linkText) + " →"); ln.href = A.link; lp.appendChild(ln);
+    txt.appendChild(lp); card.appendChild(txt); gbox.appendChild(card);
+  });
+
+  // наблюдения
+  $("resNotesCard").hidden = r.notes.length === 0;
+  $("resNotes").innerHTML = r.notes.map(function(n){ return "<p>" + esc(n) + "</p>"; }).join("");
+
+  $("resNext").textContent = (r.docHeavy && r.overall <= 3)
+    ? "Документы у вас уже есть, и следующий шаг не в них. Выберите два процесса, где решения стоят дороже всего, обычно это инвестиционный комитет и бюджет, и сделайте оценку рисков обязательной точкой в каждом. Через два-три цикла станет видно, меняет ли система решения."
+    : L.next;
+
+  // рекомендация
+  var pair = recFor(r), P = PRODUCTS[pair[0]], A2 = PRODUCTS[pair[1]];
+  $("recName").textContent = P.name;
+  $("recWhy").textContent = P.why;
+  $("recPrimaryBtn").textContent = P.val === "templates" ? "Получить шаблоны →" : "Обсудить с экспертом →";
+  $("recPrimaryBtn").onclick = function(){ goal("rp_diag_product", {product: P.val}); showLeadForm(pair[0]); };
+  $("recMore").href = P.url;
+  $("recAltBtn").textContent = "Или: " + A2.name;
+  $("recAltBtn").onclick = function(){ goal("rp_diag_product", {product: A2.val}); showLeadForm(pair[1]); };
+
+  if (!doneSent){ doneSent = true; goal("rp_diag_done", {level: L.n}); sendResult(pair); }
+}
+
+function gapLines(){
+  return result.gaps.map(function(x, i){ return (i + 1) + ". " + AREAS[x.a].name + " — " + fmt(x.lv) + " из 5"; }).join("\n");
+}
+function profileLines(){
+  return AREA_ORDER.map(function(a){ return AREAS[a].name + ": " + fmt(result.lv[a]); }).join("\n");
+}
+function answerLines(){
+  return QUESTIONS.map(function(q, i){
+    var a = answers[i];
+    return "Q" + (i + 1) + ": " + q.text + "\n → " + (a === 5 ? DONT_KNOW : q.opts[a]) + " (" + levelOf(a) + ")";
+  }).join("\n\n");
+}
+function sizeText(){ var s = SIZES.filter(function(x){ return x.k === size; })[0]; return s ? s.t : "не указан"; }
+function roleText(){ var s = ROLES.filter(function(x){ return x.k === role; })[0]; return s ? s.t : "не указана"; }
+
+// Надежная отправка: до трех попыток с паузой (как на bcm).
+function postLead(body, tries){
+  tries = tries || 3;
+  var attempt = function(i){
+    return fetch("https://ergp.risk-place.org/api/lead", {
+      method: "POST", headers: {"Content-Type": "text/plain"},
+      body: JSON.stringify(body), keepalive: true
+    }).then(function(res){
+      if (res && res.ok) return res;
+      throw new Error("status");
+    }).catch(function(){
+      if (i < tries - 1) return new Promise(function(r){ setTimeout(r, 800 * (i + 1)); }).then(function(){ return attempt(i + 1); });
+      return null;
+    });
+  };
+  return attempt(0);
+}
+
+// Обезличенное событие о прохождении: без контакта, приемник его так и различает.
+function sendResult(pair){
+  var L = LEVELS[result.overall];
+  postLead({
+    type: "quiz", quiz: "RU-SUR", source: "ru", page: "rp-diag",
+    name: "Диагностика зрелости (без контакта)", company: "—", email: "—",
+    product: PRODUCTS[pair[0]].name,
+    comment: "Размер: " + sizeText() + " · роль: " + roleText(),
+    language: "RU",
+    score: fmt(result.avg) + " / 5",
+    level: "Зрелость СУР · уровень " + L.n + " из 5 — " + L.name,
+    description: L.desc,
+    risks: gapLines(),
+    recommendations: "Профиль:\n" + profileLines() + "\n\nРекомендуем: " + PRODUCTS[pair[0]].name + " · " + PRODUCTS[pair[1]].name,
+    answers: answerLines()
+  }, 2);
+}
+
+// ── заявка ──
+function showLeadForm(key){
+  leadKey = key; leadSent = false;
+  var P = PRODUCTS[key];
+  $("t-cont-title").textContent = key === "templates" ? "Пришлем шаблоны на почту" : "Разберем результат с экспертом";
+  $("t-cont-desc").textContent = key === "templates"
+    ? "Книга Excel с реестром, матрицей и картой рисков плюс инструкция на две страницы. Вместе с ней пришлем ваш результат диагностики."
+    : "Эксперт посмотрит ваш профиль и предложит, с чего начать. Тема разговора: «" + P.name + "». Ответим в течение рабочего дня.";
+  ["fName","fEmail","fCompany"].forEach(function(id){ $(id).value = ""; });
+  $("fConsent").checked = false;
+  $("fNote").className = "fmsg"; $("fNote").textContent = ""; $("fNote").style.display = "none";
+  $("btnSubmit").disabled = false;
+  $("formBox").hidden = false; $("formDone").hidden = true;
+  showScreen("s-contacts");
+}
+function submitForm(){
+  if (leadSent) return;
+  var name = $("fName").value.trim(), email = $("fEmail").value.trim(), org = $("fCompany").value.trim();
+  var note = $("fNote");
+  function say(k, t){ note.className = "fmsg " + k; note.textContent = t; note.style.display = "block"; }
+  if (!name || email.indexOf("@") < 0){ say("err", "Заполните имя и рабочую почту."); return; }
+  if (!$("fConsent").checked){ say("err", "Отметьте согласие на обработку персональных данных."); return; }
+  var L = LEVELS[result.overall];
+  say("note", "Отправляем…");
+  $("btnSubmit").disabled = true;
+  postLead({
+    type: "demo", product: PRODUCTS[leadKey].name, formTitle: "Заявка по диагностике зрелости",
+    companySize: size ? sizeText() : "", source: "ru", page: "rp-diag", lang: "ru",
+    name: name, email: email, org: org, role: roleText(),
+    message: "Диагностика зрелости: уровень " + L.n + " — " + L.name + ", средний балл " + fmt(result.avg) + " из 5.\n" +
+             "Размер: " + sizeText() + ".\n\nГлавные пробелы:\n" + gapLines() + "\n\nПрофиль:\n" + profileLines() +
+             "\n\nОтветы:\n" + answerLines()
+  }).then(function(res){
+    if (res){
+      leadSent = true;
+      $("formBox").hidden = true; $("formDone").hidden = false;
+      goal("rp_diag_lead", {product: PRODUCTS[leadKey].val});
+    } else {
+      $("btnSubmit").disabled = false;
+      say("err", "Не получилось отправить. Напишите нам: info@risk-place.ru");
+    }
+  });
+}
+function backToResults(){ showScreen("s-results"); progress(1); }
+function restart(){ startQuiz(); }
+
+document.addEventListener("DOMContentLoaded", function(){ showScreen("s-intro"); });
+
+</script>
+<!--TPL:FOOTER-->
+<footer class="uf"><div class="in">
+  <div class="row1"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></div>
+  <div class="row2"><span>© 2026 Risk-place</span><a href="/sertifikaciya-ermp/#certificate">Проверить сертификат</a><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a><a href="mailto:info@risk-place.ru">info@risk-place.ru</a><a href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Telegram</a><a href="https://bcm.risk-place.ru/">bcm.risk-place.ru (непрерывность)</a><a href="https://risk-place.org/">risk-place.org (EN, AR)</a></div>
+</div></footer>
+<script>(function(){var b=document.querySelector('.uh-burger');if(b)b.addEventListener('click',function(){document.getElementById('uhNav').classList.toggle('open');});})();</script>
+<!--/TPL:FOOTER-->
+</body>
+</html>
