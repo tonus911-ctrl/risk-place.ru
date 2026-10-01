@@ -735,3 +735,8 @@ th{background:var(--panel);font-weight:700;color:var(--ink)}
 .quiz .card-text a{color:var(--navy);text-decoration:underline}
 .quiz .done-box{display:block;margin-bottom:14px}
 .quiz .restart{margin-top:22px;text-align:center}
+
+/* 01.10.2026, батч Б1: строка ссылок на bcm в подвале */
+.uf .rowbcm{font-size:12.5px;gap:6px 14px}
+.uf .rowbcm span{color:#9DA3AD}
+.uf .rowbcm a{color:rgba(255,255,255,.78);font-size:12.5px}
