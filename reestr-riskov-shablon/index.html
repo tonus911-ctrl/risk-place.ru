@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реестр рисков: шаблон Excel с формулами и примером заполнения</title>
+<meta name="description" content="Шаблон реестра рисков в Excel: 21 столбец, уровень и зона считаются формулами, цветовая разметка зон, шкалы вероятности и влияния, категории, сводка. Пример заполнения и правила ведения.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://risk-place.ru/reestr-riskov-shablon/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#14181F">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://risk-place.ru/reestr-riskov-shablon/">
+<meta property="og:title" content="Реестр рисков: шаблон Excel с формулами и примером заполнения">
+<meta property="og:description" content="Шаблон реестра рисков в Excel: 21 столбец, уровень и зона считаются формулами, цветовая разметка зон, шкалы вероятности и влияния, категории, сводка. Пример заполнения и правила ведения.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/reestr-riskov-shablon.png">
+<meta property="og:site_name" content="risk-place.ru">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-82K0ZJ2K9S"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-82K0ZJ2K9S');
+</script>
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Реестр рисков: шаблон Excel с формулами и примером заполнения","description":"Шаблон реестра рисков в Excel: 21 столбец, уровень и зона считаются формулами, цветовая разметка зон, шкалы вероятности и влияния, категории, сводка. Пример заполнения и правила ведения.","inLanguage":"ru-RU","author":{"@type":"Person","name":"Евгений Теленков"},"publisher":{"@type":"Organization","name":"risk-place.ru","url":"https://risk-place.ru/"},"mainEntityOfPage":"https://risk-place.ru/reestr-riskov-shablon/"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Что такое реестр рисков?","acceptedAnswer":{"@type":"Answer","text":"Таблица всех выявленных рисков организации с оценкой, владельцем, мерами и статусом. Основной рабочий документ системы управления рисками, из которого строятся карта рисков, отчет руководству и перечень индикаторов."}},{"@type":"Question","name":"Какие столбцы должны быть в реестре рисков?","acceptedAnswer":{"@type":"Answer","text":"Минимум: ID, формулировка риска через событие, причину и последствие, владелец, вероятность, влияние, уровень, меры с ответственным и сроком, дата пересмотра. Полный состав из 21 столбца с формулами в шаблоне на этой странице."}},{"@type":"Question","name":"Как рассчитывается уровень риска в реестре?","acceptedAnswer":{"@type":"Answer","text":"Произведение вероятности и влияния по пятибалльным шкалам, от 1 до 25. Уровень относится к зоне: зеленая 1-4, желтая 5-9, оранжевая 10-14, красная 15-25; пороги организация задает сама."}},{"@type":"Question","name":"Сколько рисков должно быть в реестре?","acceptedAnswer":{"@type":"Answer","text":"Для компании среднего размера 30-60 рисков, из них 5-10 ключевых. Реестр из сотен строк превращается в архив, который никто не читает и не пересматривает."}},{"@type":"Question","name":"Как часто обновлять реестр рисков?","acceptedAnswer":{"@type":"Answer","text":"Риски красной зоны ежемесячно, остальные ежеквартально, весь реестр на годовой риск-сессии. Внепланово после инцидентов, при запуске проектов и изменении законодательства."}}]}]}</script>
+</head>
+<body>
+<!--TPL:HEADER-->
+<header class="uh">
+  <div class="uh-bar">
+    <a href="/" class="uh-logo"><span class="uh-mark"><img src="/assets/mayak.png" alt="" width="27" height="27"></span><span class="uh-txt">risk-<span class="lp">place</span>.ru</span></a>
+    <nav class="uh-nav" id="uhNav"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/" class="act">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></nav>
+    <button class="uh-burger" aria-label="Меню">&#9776;</button>
+  </div>
+</header>
+<!--/TPL:HEADER-->
+<!--TPL:HERO-->
+<div class="ph"><div class="in">
+  <div class="crumbs"><a href="/">Главная</a><span class="sep">/</span><a href="/biblioteka/">Библиотека</a><span class="sep">/</span><a href="/reestr-i-karta-riskov/">Реестр и карта рисков</a><span class="sep">/</span>Реестр рисков: шаблон</div>
+  <div class="rule"></div>
+  <div class="eyebrow">Библиотека · Реестр и карта рисков</div>
+  <h1>Реестр рисков: шаблон Excel и как его вести</h1>
+  <p class="lead">Реестр это таблица, в которой живет вся система управления рисками: от нее зависят карта, отчет и индикаторы. Шаблон ниже считает уровень и зону формулами, подсвечивает зоны цветом и содержит лист со шкалами. Какие поля нужны и почему, разобрано в статье <a href="/polya-reestra-riskov/">«Какие поля нужны в реестре рисков»</a>; здесь про сам файл и правила ведения.</p>
+  
+  
+  
+</div></div>
+<!--/TPL:HERO-->
+<div class="pb">
+<!--TPL:TOC-->
+<aside class="ptoc">
+  <div class="t">На странице</div>
+  <nav>
+    <a href="#s1">Что внутри</a>
+    <a href="#s2">Как заполнять строку</a>
+    <a href="#s3">Скачать шаблон</a>
+    <a href="#s4">Правила ведения</a>
+    <a href="#s5">Когда Excel заканчивается</a>
+    <a href="#faq">Частые вопросы</a>
+  </nav>
+</aside>
+<!--/TPL:TOC-->
+<main class="pmain">
+<div class="article">
+<h2 id="s1">Что внутри шаблона</h2>
+<p>Четыре листа. «Реестр» с 21 столбцом и примером в первой строке: идентификация, оценка, меры, остаточный риск, индикатор, даты. Столбцы «Уровень» и «Зона» считаются формулами из вероятности и влияния, зона подсвечивается цветом, ввод оценок ограничен числами от 1 до 5. «Шкалы» с описанием пяти уровней вероятности и влияния в цифрах выручки. «Категории» с семью категориями и типичными владельцами. «Сводка» с числом рисков по зонам.</p><div class="table-wrap"><table class="cmp"><thead><tr><th>Группа столбцов</th><th>Столбцы</th><th>Кто заполняет</th></tr></thead><tbody><tr><td>Идентификация</td><td>ID, категория, риск-событие, причины, последствия, владелец</td><td>Владелец риска на риск-сессии</td></tr><tr><td>Оценка</td><td>Вероятность, влияние, уровень (формула), зона (формула)</td><td>Владелец, подтверждает подразделение УР</td></tr><tr><td>Меры</td><td>Существующие меры, дополнительные меры, ответственный, срок, статус</td><td>Владелец</td></tr><tr><td>Остаточный риск</td><td>Остаточные вероятность, влияние, уровень (формула)</td><td>Владелец после выполнения мер</td></tr><tr><td>Мониторинг</td><td>КИР и порог, дата оценки, дата пересмотра</td><td>Владелец, подразделение УР</td></tr></tbody></table></div>
+<h2 id="s2">Как заполнять строку: формулировка риска</h2>
+<p>Половина реестров бесполезна из-за одного столбца: риск записан одним словом. «Поставщики», «кадры», «ИТ» это категории, а не риски. Рабочая формулировка держится на трех частях: событие, причина, последствие.</p><p>Плохо: «Риск поставщика». Хорошо: «Остановка производства из-за прекращения поставок единственным поставщиком компонента X; причина: финансовые проблемы поставщика, санкции; последствие: простой линии до 3 недель, срыв отгрузок на сумму Y». Из такой строки сразу видно, какую меру делать (второй поставщик, запас), какой индикатор вести (доля закупок у одного поставщика) и как оценить влияние (сумма срыва). Правила формулировки разобраны на странице <a href="/formulirovka-riska/">«Формулировка риска»</a>.</p><p>Оценка ставится числом от 1 до 5 по шкалам листа «Шкалы», где уровни привязаны к процентам годовой выручки и частоте событий. Шкала без цифр дает разные оценки у разных подразделений, и реестр перестает быть сравнимым.</p>
+<h2 id="s3">Скачать шаблон</h2>
+<div class="inset"><p><b>Скачать шаблон.</b> Лист «Реестр» на 30 строк с формулами и цветовой разметкой зон, листы «Шкалы», «Категории», «Сводка». Формат xlsx, открывается в Excel, LibreOffice и Google-таблицах.</p><div class="btns"><a class="btn navy" href="/files/reestr-riskov-shablon.xlsx" download>Скачать xlsx (reestr-riskov-shablon.xlsx)</a></div><p class="note">Пороги зон (1-4, 5-9, 10-14, 15-25) правятся в формулах столбца «Зона» и в условном форматировании. Файл отдается без регистрации и форм. Нужна адаптация под вашу компанию или система целиком: <a href="/sur-pod-klyuch/">как мы это делаем и сколько занимает</a>.</p></div>
+<h2 id="s4">Правила ведения, без которых реестр умирает за квартал</h2>
+<ol><li>Один владелец у реестра целиком (подразделение управления рисками) и один владелец у каждой строки. Правит строку владелец риска, сводит подразделение.</li><li>Пересмотр по календарю: красная зона ежемесячно, остальное ежеквартально. Дата пересмотра в столбце, просроченные строки подсвечиваются.</li><li>Закрытые риски переносятся в архивный лист с причиной, а не удаляются: история нужна аудиту и для оценки точности прогноза.</li><li>Число строк ограничено: реестр из 200 рисков никто не читает. Рабочий размер для компании среднего масштаба 30-60 рисков, из них 5-10 ключевых с <a href="/pasport-riska/">паспортами</a>.</li><li>Каждое изменение оценки сопровождается комментарием «почему»: без этого через год никто не вспомнит, откуда взялась четверка.</li></ol>
+<h2 id="s5">Когда Excel заканчивается</h2>
+<p>Файл работает, пока у реестра один администратор и до 50 рисков. Признаки, что пора переходить на систему: несколько человек правят одновременно и версии расходятся; нужна история изменений с автором; индикаторы приходят из разных источников и собираются руками; отчет совету готовится неделю. Что выбирать дальше, разобрано в статье <a href="/excel-ili-sistema/">«Excel или система»</a>, а требования к системе собраны в <a href="/dashboard-riskov/">ТЗ на дашборд рисков</a>.</p>
+<h2 id="faq">Частые вопросы</h2>
+<div class="faq"><div class="q">Что такое реестр рисков</div><p>Таблица всех выявленных рисков организации с оценкой, владельцем, мерами и статусом. Основной рабочий документ системы управления рисками, из которого строятся карта рисков, отчет руководству и перечень индикаторов.</p></div><div class="faq"><div class="q">Какие столбцы должны быть в реестре рисков</div><p>Минимум: ID, формулировка риска через событие, причину и последствие, владелец, вероятность, влияние, уровень, меры с ответственным и сроком, дата пересмотра. Полный состав из 21 столбца с формулами в шаблоне на этой странице.</p></div><div class="faq"><div class="q">Как рассчитывается уровень риска в реестре</div><p>Произведение вероятности и влияния по пятибалльным шкалам, от 1 до 25. Уровень относится к зоне: зеленая 1-4, желтая 5-9, оранжевая 10-14, красная 15-25; пороги организация задает сама.</p></div><div class="faq"><div class="q">Сколько рисков должно быть в реестре</div><p>Для компании среднего размера 30-60 рисков, из них 5-10 ключевых. Реестр из сотен строк превращается в архив, который никто не читает и не пересматривает.</p></div><div class="faq"><div class="q">Как часто обновлять реестр рисков</div><p>Риски красной зоны ежемесячно, остальные ежеквартально, весь реестр на годовой риск-сессии. Внепланово после инцидентов, при запуске проектов и изменении законодательства.</p></div>
+
+<div class="inset cta">
+  <h3>Проверьте зрелость своей системы управления рисками</h3>
+  <p>Тринадцать вопросов по пяти уровням ГОСТ Р 70350, результат сразу: уровень, три главных пробела и следующий шаг.</p>
+  <div class="btns">
+    <a href="/diagnostika/" class="btn gold">Пройти диагностику →</a>
+    <a href="/sertifikaciya-ermp/" class="btn line">Сертификация ERMP →</a>
+    <a href="/dlya-kompanij/" class="btn line">Решения для компаний →</a>
+  </div>
+</div>
+
+<div class="expert">
+  <img src="/assets/exp-telenkov.jpg" alt="Евгений Теленков">
+  <div>
+    <div class="nm">Евгений Теленков</div>
+    <div class="rl">Директор практики управления рисками · к.э.н. · соавтор шести ГОСТ Р</div>
+    <div class="bio">Пятнадцать лет во главе риск-функций: «Билайн», «Норникель», «Роснефть», риск-консалтинг в Ernst &amp; Young. Директор по рискам нефтехимического мегапроекта стоимостью 20 млрд долларов. Заместитель председателя технического комитета 010 «Менеджмент риска» Росстандарта. Подготовил более 800 специалистов.</div>
+    <div><a href="/o-nas/">Подробнее о практике risk-place →</a></div>
+  </div>
+</div>
+</div>
+<div class="upbox"><span class="k">Раздел 01 · Основы управления рисками</span><a href="/osnovy-upravleniya-riskami/">Обзор раздела →</a><span class="sep">·</span><a class="sec" href="/biblioteka/">Вся библиотека</a></div>
+<div class="rel"><div class="k">Читайте также</div><div class="rel-grid"><a href="/polya-reestra-riskov/" class="rel-card"><div class="rt">Поля реестра рисков →</div><div class="rd">Какие поля нужны и почему</div></a><a href="/karta-riskov-shablon/" class="rel-card"><div class="rt">Карта рисков: шаблон →</div><div class="rd">Строится из реестра автоматически</div></a><a href="/formulirovka-riska/" class="rel-card"><div class="rt">Формулировка риска →</div><div class="rd">Событие, причина, последствие</div></a></div></div>
+</main>
+</div>
+<!--TPL:FOOTER-->
+<footer class="uf"><div class="in">
+  <div class="row1"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></div>
+  <div class="row1 rowbcm"><span>Непрерывность бизнеса:</span><a href="https://bcm.risk-place.ru/nepreryvnost-biznesa.html">Что такое непрерывность бизнеса</a><a href="https://bcm.risk-place.ru/onivd-ponivd.html">План ОНиВД</a><a href="https://bcm.risk-place.ru/plan-nepreryvnosti-biznesa.html">План непрерывности</a><a href="https://bcm.risk-place.ru/bia-analiz-vozdeystviya.html">Анализ воздействия (BIA)</a><a href="https://bcm.risk-place.ru/iso-22301.html">ISO 22301</a><a href="https://bcm.risk-place.ru/stoimost-dnya-prostoya.html">Стоимость простоя</a><a href="https://bcm.risk-place.ru/materialy.html">Все материалы bcm</a></div>
+  <div class="row2"><span>© 2026 Risk-place</span><a href="/sertifikaciya-ermp/#certificate">Проверить сертификат</a><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a><a href="mailto:info@risk-place.ru">info@risk-place.ru</a><a href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Telegram</a><a href="https://bcm.risk-place.ru/">bcm.risk-place.ru (непрерывность)</a><a href="https://risk-place.org/">risk-place.org (EN, AR)</a></div>
+</div></footer>
+<script>(function(){var b=document.querySelector('.uh-burger');if(b)b.addEventListener('click',function(){document.getElementById('uhNav').classList.toggle('open');});})();</script>
+<!--/TPL:FOOTER-->
+</body>
+</html>
