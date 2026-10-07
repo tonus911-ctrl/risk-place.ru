@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Количественная оценка рисков проекта: Монте-Карло, P80 и резерв (Excel)</title>
+<meta name="description" content="Количественная оценка рисков капитального проекта методом Монте-Карло: пять шагов, условный пример фабрики в металлургии с бюджетом 18 млрд руб., P50, P80, P90 и резерв на риски, меры снижения, которые двигают P80. Модель Excel на 1000 прогонов.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://risk-place.ru/kolichestvennaya-ocenka-riskov-proekta/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#14181F">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://risk-place.ru/kolichestvennaya-ocenka-riskov-proekta/">
+<meta property="og:title" content="Количественная оценка рисков проекта: Монте-Карло, P80 и резерв (Excel)">
+<meta property="og:description" content="Количественная оценка рисков капитального проекта методом Монте-Карло: пять шагов, условный пример фабрики в металлургии с бюджетом 18 млрд руб., P50, P80, P90 и резерв на риски, меры снижения, которые двигают P80. Модель Excel на 1000 прогонов.">
+<meta property="og:image" content="https://risk-place.ru/assets/lib/kolichestvennaya-ocenka-riskov-proekta.png">
+<meta property="og:site_name" content="risk-place.ru">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+ym(96530203,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/96530203" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-82K0ZJ2K9S"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-82K0ZJ2K9S');
+</script>
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Количественная оценка рисков проекта: Монте-Карло, P80 и резерв (Excel)","description":"Количественная оценка рисков капитального проекта методом Монте-Карло: пять шагов, условный пример фабрики в металлургии с бюджетом 18 млрд руб., P50, P80, P90 и резерв на риски, меры снижения, которые двигают P80. Модель Excel на 1000 прогонов.","inLanguage":"ru-RU","author":{"@type":"Person","name":"Евгений Теленков","url":"https://risk-place.ru/telenkov/"},"publisher":{"@type":"Organization","name":"risk-place.ru","url":"https://risk-place.ru/"},"mainEntityOfPage":"https://risk-place.ru/kolichestvennaya-ocenka-riskov-proekta/"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Что такое P80 в оценке рисков проекта?","acceptedAnswer":{"@type":"Answer","text":"P80 это стоимость или срок проекта, которые не будут превышены с вероятностью 80 процентов по результатам моделирования. Разница между P80 и базовым бюджетом дает резерв на риски при выбранном уровне обеспеченности."}},{"@type":"Question","name":"Какой уровень обеспеченности выбрать: P50, P80 или P90?","acceptedAnswer":{"@type":"Answer","text":"P50 подходит для портфеля из многих проектов, где перерасходы одних покрывают экономию других. Для крупного единичного проекта обычно берут P80, для проектов с жестким лимитом финансирования P90. Выбор утверждает инвестиционный комитет."}},{"@type":"Question","name":"Сколько прогонов нужно для моделирования Монте-Карло?","acceptedAnswer":{"@type":"Answer","text":"Для резерва на уровне P80 достаточно тысячи прогонов: при повторном пересчете результат меняется на 1-2 процента. Десять тысяч дают более гладкое распределение, но на решение обычно уже не влияют."}},{"@type":"Question","name":"Можно ли посчитать риски проекта в Excel без специальных программ?","acceptedAnswer":{"@type":"Answer","text":"Да. Формулы СЛЧИС и обратная функция треугольного распределения дают полноценную модель на тысячу прогонов; пример модели можно скачать на этой странице. Специализированные программы нужны для связанных рисков, оценки сроков по графику и больших реестров."}}]}]}</script>
+</head>
+<body>
+<!--TPL:HEADER-->
+<header class="uh">
+  <div class="uh-bar">
+    <a href="/" class="uh-logo"><span class="uh-mark"><img src="/assets/mayak.png" alt="" width="27" height="27"></span><span class="uh-txt">risk-<span class="lp">place</span>.ru</span></a>
+    <nav class="uh-nav" id="uhNav"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/" class="act">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></nav>
+    <button class="uh-burger" aria-label="Меню">&#9776;</button>
+  </div>
+</header>
+<!--/TPL:HEADER-->
+<!--TPL:HERO-->
+<div class="ph"><div class="in">
+  <div class="crumbs"><a href="/">Главная</a><span class="sep">/</span><a href="/biblioteka/">Библиотека</a><span class="sep">/</span><a href="/riski-proektov/">Риски проектов</a><span class="sep">/</span>Количественная оценка рисков проекта</div>
+  <div class="rule"></div>
+  <div class="eyebrow">Библиотека · Риски проектов</div>
+  <h1>Количественная оценка рисков капитального проекта</h1>
+  <p class="lead">Инвестиционный комитет спрашивает одно: сколько проект будет стоить с учетом рисков и какой резерв закладывать. Ответ дает моделирование Монте-Карло по реестру рисков. Ниже пять шагов, условный пример из металлургии, меры снижения и модель Excel, которую можно открыть и пересчитать.</p>
+  
+  
+  
+</div></div>
+<!--/TPL:HERO-->
+<div class="pb">
+<!--TPL:TOC-->
+<aside class="ptoc">
+  <div class="t">На странице</div>
+  <nav>
+    <a href="#s1">Зачем считать в деньгах</a>
+    <a href="#s2">Пять шагов</a>
+    <a href="#s3">Пример</a>
+    <a href="#s4">Меры снижения</a>
+    <a href="#s5">Скачать модель</a>
+    <a href="#s6">Ошибки</a>
+    <a href="#faq">Частые вопросы</a>
+  </nav>
+</aside>
+<!--/TPL:TOC-->
+<main class="pmain">
+<div class="article">
+<h2 id="s1">Зачем считать риски проекта в деньгах</h2>
+<p data-def="1">Количественная оценка рисков проекта это расчет распределения итоговой стоимости или срока проекта с учетом вероятности и величины каждого риска из реестра. Результат выражается уровнями обеспеченности: P50, P80, P90, то есть суммами, которые проект не превысит с вероятностью 50, 80 и 90 процентов.</p><p>Качественная карта рисков отвечает, какие риски главные. Количественная отвечает на вопросы, которые решают судьбу проекта: какой резерв заложить в бюджет, с какой вероятностью проект уложится в одобренную сумму, какие меры снижения окупаются. Для капитальных проектов в металлургии, химии и энергетике, где бюджет измеряется миллиардами, разница между P50 и P80 обычно составляет 5-10 процентов бюджета, и это решение инвестиционного комитета, которое должно опираться на расчет.</p><p>Метод описан в ГОСТ Р 58771 «Технологии оценки риска» как моделирование Монте-Карло; как он устроен в общем виде, разобрано на странице <a href="/metod-monte-karlo/">«Метод Монте-Карло»</a>, а разница подходов на странице <a href="/kachestvennaya-i-kolichestvennaya/">«Качественная и количественная оценка»</a>.</p>
+<h2 id="s2">Пять шагов от реестра к резерву</h2>
+<ol><li><b>Реестр рисков проекта</b> с владельцами, без дублей и без рисков, уже учтенных в базовой смете как непредвиденные расходы.</li><li><b>Три оценки последствий</b> на каждый риск: минимум, наиболее вероятное, максимум в рублях (или месяцах для сроков). Оценки дают владелец и сметчик вместе, на интервью, с опорой на аналоги.</li><li><b>Вероятность срабатывания</b> каждого риска за жизнь проекта, в процентах.</li><li><b>Моделирование:</b> тысяча прогонов, в каждом риск срабатывает или нет, а величина берется из треугольного распределения по трем оценкам. Сумма по рискам плюс базовый бюджет дает одну из возможных итоговых стоимостей.</li><li><b>Уровни и резерв:</b> из тысячи итогов берутся P50, P80, P90; резерв на риски равен разнице между выбранным уровнем и базовым бюджетом. Выбор уровня записывается в риск-аппетит проекта.</li></ol>
+<h2 id="s3">Пример: фабрика окомкования, бюджет 18 млрд рублей</h2>
+<p>Пример условный, цифры подобраны для иллюстрации порядка величин. Десять рисков стадии строительства:</p><div class="table-wrap"><table class="cmp"><thead><tr><th>Риск</th><th>Вероятность</th><th>Мин / вероятно / макс, млн руб.</th></tr></thead><tbody><tr><td>Рост цены импортного оборудования (курс, логистика)</td><td>60 %</td><td>300 / 900 / 2200</td></tr><tr><td>Задержка поставки ключевого оборудования</td><td>45 %</td><td>200 / 600 / 1800</td></tr><tr><td>Рост цены металлопроката и материалов</td><td>55 %</td><td>150 / 450 / 1100</td></tr><tr><td>Дефицит подрядчиков, рост ставок на монтаж</td><td>40 %</td><td>100 / 350 / 900</td></tr><tr><td>Неблагоприятные инженерно-геологические условия</td><td>25 %</td><td>150 / 500 / 1500</td></tr><tr><td>Изменение проектных решений после экспертизы</td><td>30 %</td><td>80 / 250 / 700</td></tr><tr><td>Сдвиг разрешений и согласований</td><td>30 %</td><td>50 / 200 / 600</td></tr><tr><td>Затянутая пусконаладка, недобор мощности</td><td>35 %</td><td>100 / 400 / 1200</td></tr><tr><td>Рост ставки проектного финансирования</td><td>50 %</td><td>100 / 300 / 800</td></tr><tr><td>Погодные потери в строительный сезон</td><td>40 %</td><td>30 / 100 / 300</td></tr></tbody></table></div><p>Результат тысячи прогонов (меняется на 1-2 процента при каждом пересчете): P50 около 20,3 млрд рублей, P80 около 21,3 млрд, P90 около 21,8 млрд. Резерв до P80 около 3,3 млрд, или 18 процентов базового бюджета. Вероятность уложиться в базовый бюджет с запасом 5 процентов меньше 10 процентов. Это и есть разговор с инвестиционным комитетом: бюджет 18 млрд без резерва почти наверняка будет превышен.</p>
+<h2 id="s4">Снижение рисков капитального проекта в металлургии: какие меры двигают P80</h2>
+<p>Мера окупается, если снижение резерва на уровне P80 больше ее стоимости. Модель позволяет проверить это прямо: меняете вероятность или максимум риска с учетом меры и смотрите, насколько сдвинулся P80.</p><div class="table-wrap"><table class="cmp"><thead><tr><th>Риск</th><th>Мера</th><th>Что меняется в модели</th></tr></thead><tbody><tr><td>Рост цены импортного оборудования</td><td>Фиксированная цена в договоре, валютная оговорка, хеджирование</td><td>Снижается максимум и вероятность</td></tr><tr><td>Задержка поставки оборудования</td><td>Ранний заказ длинноцикловых позиций, второй поставщик, контроль изготовления на заводе</td><td>Снижается вероятность</td></tr><tr><td>Рост цены проката</td><td>Рамочные договоры с ценовой формулой, ранняя закупка</td><td>Снижается наиболее вероятное и максимум</td></tr><tr><td>Геология</td><td>Дополнительные изыскания до утверждения проекта</td><td>Снижается вероятность, ценой изысканий</td></tr><tr><td>Изменение проектных решений</td><td>Заморозка проектных решений после экспертизы, порядок изменений через комитет</td><td>Снижается вероятность</td></tr><tr><td>Пусконаладка</td><td>Шеф-монтаж и пусконаладка поставщиком, гарантия выхода на мощность в договоре</td><td>Последствия частично переходят к поставщику</td></tr></tbody></table></div><p>Самые выгодные меры обычно бьют по рискам с большим максимумом: они сильнее всего растягивают правый хвост распределения, откуда и берется P80.</p>
+<h2 id="s5">Скачать модель Excel</h2>
+<p>Модель повторяет пример: реестр на десять рисков, тысяча прогонов на формулах Excel без макросов и надстроек, итог с P50, P80, P90, резервом и гистограммой. Замените риски своими, нажмите F9 для нового набора прогонов.</p><div class="inset"><p><b>Скачать шаблон.</b> Листы «Риски» с тремя оценками и ожидаемым значением, «Итог» с уровнями обеспеченности, резервом и гистограммой, «Симуляция» на 1000 прогонов. Формат xlsx, открывается в Excel и LibreOffice.</p><div class="btns"><a class="btn navy" href="/files/monte-karlo-riski-proekta.xlsx" download>Скачать xlsx (monte-karlo-riski-proekta.xlsx)</a></div><p class="note">Реестр рисков проекта удобно вести в <a href="/reestr-riskov-shablon/">шаблоне реестра</a>, а выбранный уровень обеспеченности записать в <a href="/risk-appetit-kak-zadat/">риск-аппетит</a>. Файл отдается без регистрации и форм. Нужна оценка рисков вашего проекта или система целиком: <a href="/sur-pod-klyuch/">как мы это делаем</a>.</p></div>
+<h2 id="s6">Четыре ошибки, которые обесценивают расчет</h2>
+<ul><li><b>Двойной учет.</b> Риск уже заложен в смету как непредвиденные расходы и еще раз стоит в модели. Резерв получается завышенным, и комитет перестает доверять цифре.</li><li><b>Оптимистичный максимум.</b> Владелец называет «максимум», который случается каждый второй проект. Максимум это оценка, которую превышают редко, ориентир один случай из двадцати.</li><li><b>Независимость там, где ее нет.</b> Рост курса одновременно дорожит оборудование, прокат и финансирование. Связанные риски объединяют в один или моделируют общим фактором.</li><li><b>Только угрозы.</b> У проекта бывают и возможности: снижение цены, ускорение согласований. Их тоже вносят, с отрицательной величиной.</li></ul>
+<h2 id="faq">Частые вопросы</h2>
+<div class="faq"><div class="q">Что такое P80 в оценке рисков проекта</div><p>P80 это стоимость или срок проекта, которые не будут превышены с вероятностью 80 процентов по результатам моделирования. Разница между P80 и базовым бюджетом дает резерв на риски при выбранном уровне обеспеченности.</p></div><div class="faq"><div class="q">Какой уровень обеспеченности выбрать: P50, P80 или P90</div><p>P50 подходит для портфеля из многих проектов, где перерасходы одних покрывают экономию других. Для крупного единичного проекта обычно берут P80, для проектов с жестким лимитом финансирования P90. Выбор утверждает инвестиционный комитет.</p></div><div class="faq"><div class="q">Сколько прогонов нужно для моделирования Монте-Карло</div><p>Для резерва на уровне P80 достаточно тысячи прогонов: при повторном пересчете результат меняется на 1-2 процента. Десять тысяч дают более гладкое распределение, но на решение обычно уже не влияют.</p></div><div class="faq"><div class="q">Можно ли посчитать риски проекта в Excel без специальных программ</div><p>Да. Формулы СЛЧИС и обратная функция треугольного распределения дают полноценную модель на тысячу прогонов; пример модели можно скачать на этой странице. Специализированные программы нужны для связанных рисков, оценки сроков по графику и больших реестров.</p></div>
+
+<div class="inset cta">
+  <h3>Проверьте зрелость своей системы управления рисками</h3>
+  <p>Тринадцать вопросов по пяти уровням ГОСТ Р 70350, результат сразу: уровень, три главных пробела и следующий шаг.</p>
+  <div class="btns">
+    <a href="/diagnostika/" class="btn gold">Пройти диагностику →</a>
+    <a href="/sertifikaciya-ermp/" class="btn line">Сертификация ERMP →</a>
+    <a href="/dlya-kompanij/" class="btn line">Решения для компаний →</a>
+  </div>
+</div>
+
+<div class="expert">
+  <img src="/assets/exp-telenkov.jpg" alt="Евгений Теленков">
+  <div>
+    <div class="nm"><a href="/telenkov/">Евгений Теленков</a></div>
+    <div class="rl">Директор практики управления рисками · к.э.н. · соавтор шести ГОСТ Р</div>
+    <div class="bio">Пятнадцать лет во главе риск-функций: «Билайн», «Норникель», «Роснефть», риск-консалтинг в Ernst &amp; Young. Директор по рискам нефтехимического мегапроекта стоимостью 20 млрд долларов. Заместитель председателя технического комитета 010 «Менеджмент риска» Росстандарта. Подготовил более 800 специалистов.</div>
+    <div><a href="/o-nas/">Подробнее о практике risk-place →</a></div>
+  </div>
+</div>
+</div>
+<div class="upbox"><span class="k">Раздел 01 · Основы управления рисками</span><a href="/osnovy-upravleniya-riskami/">Обзор раздела →</a><span class="sep">·</span><a class="sec" href="/biblioteka/">Вся библиотека</a></div>
+<div class="rel"><div class="k">Читайте также</div><div class="rel-grid"><a href="/metod-monte-karlo/" class="rel-card"><div class="rt">Метод Монте-Карло →</div><div class="rd">Как устроен метод в общем виде</div></a><a href="/riski-proekta-osnovy/" class="rel-card"><div class="rt">Риски проекта →</div><div class="rd">С чего начинать работу с рисками проекта</div></a><a href="/kachestvennaya-i-kolichestvennaya/" class="rel-card"><div class="rt">Качественная и количественная оценка →</div><div class="rd">Что дает каждый подход</div></a></div></div>
+</main>
+</div>
+<!--TPL:FOOTER-->
+<footer class="uf"><div class="in">
+  <div class="row1"><a href="/sertifikaciya-ermp/">Сертификация ERMP</a><a href="/otraslevye-kursy/">Курсы по управлению рисками</a><a href="/dlya-kompanij/">Для компаний</a><a href="/biblioteka/">Методология</a><a href="/o-nas/">О нас</a><a href="/#contacts">Контакты</a></div>
+  <div class="row1 rowbcm"><span>Непрерывность бизнеса:</span><a href="https://bcm.risk-place.ru/nepreryvnost-biznesa.html">Что такое непрерывность бизнеса</a><a href="https://bcm.risk-place.ru/onivd-ponivd.html">План ОНиВД</a><a href="https://bcm.risk-place.ru/plan-nepreryvnosti-biznesa.html">План непрерывности</a><a href="https://bcm.risk-place.ru/bia-analiz-vozdeystviya.html">Анализ воздействия (BIA)</a><a href="https://bcm.risk-place.ru/iso-22301.html">ISO 22301</a><a href="https://bcm.risk-place.ru/stoimost-dnya-prostoya.html">Стоимость простоя</a><a href="https://bcm.risk-place.ru/materialy.html">Все материалы bcm</a></div>
+  <div class="row2"><span>© 2026 Risk-place</span><a href="/sertifikaciya-ermp/#certificate">Проверить сертификат</a><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a><a href="mailto:info@risk-place.ru">info@risk-place.ru</a><a href="https://t.me/JhonsonTel" target="_blank" rel="noopener">Telegram</a><a href="https://bcm.risk-place.ru/">bcm.risk-place.ru (непрерывность)</a><a href="https://risk-place.org/">risk-place.org (EN, AR)</a></div>
+</div></footer>
+<script>(function(){var b=document.querySelector('.uh-burger');if(b)b.addEventListener('click',function(){document.getElementById('uhNav').classList.toggle('open');});})();</script>
+<script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="/files/"]');if(!a)return;var f=a.getAttribute("href");try{ym(96530203,"reachGoal","download",{file:f});ym(96530203,"params",{download:f});}catch(x){}try{gtag("event","download",{file:f});}catch(x){}});</script>
+<!--/TPL:FOOTER-->
+</body>
+</html>
