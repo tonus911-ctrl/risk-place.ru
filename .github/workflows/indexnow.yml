@@ -38,8 +38,9 @@ jobs:
             git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }} -- '*.html' \
               | sed "s|^|https://$HOST/|" > urls.txt
           fi
-          # главную отдаем коротким адресом
-          sed -i "s|https://$HOST/index.html|https://$HOST/|" urls.txt
+          # страницы отдаем канонически: /раздел/ вместо /раздел/index.html (иначе Яндекс заводит дубли, 09.10.2026)
+          sed -i -E "s|/index\.html$|/|" urls.txt
+          grep -v -E "/(404|page[0-9]+/)" urls.txt > u || true; mv u urls.txt
           sort -u urls.txt -o urls.txt
           echo "Страниц к отправке: $(wc -l < urls.txt)"
           cat urls.txt
