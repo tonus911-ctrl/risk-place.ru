@@ -743,3 +743,43 @@ th{background:var(--panel);font-weight:700;color:var(--ink)}
 /* 02.10.2026, батч Б5: имя автора в блоке эксперта ведет на страницу автора */
 .expert .nm a{color:inherit;text-decoration:none;border-bottom:1px solid var(--gold)}
 .expert .nm a:hover{color:var(--gold)}
+
+/*RU-PRODUCT-CANON 24.10.2026: продуктовые страницы risk-place.ru по канону и единая форма запроса*/
+.ask{list-style:none;margin:8px 0 0;padding:0}
+.ask li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:6px 28px;padding:14px 0;border-top:1px solid var(--line-2)}
+.ask li:first-child{border-top:0;padding-top:4px}
+.ask li>b{font-size:15.5px;line-height:1.45;color:var(--ink)}
+.ask li>span{font-size:15px;line-height:1.55;color:var(--muted)}
+.why{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:12px}
+.why li{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:14px 18px}
+.why li>b{display:block;font-size:15.5px;line-height:1.4;color:var(--ink);margin-bottom:4px}
+.why li>span{display:block;font-size:15px;line-height:1.55;color:var(--muted)}
+.why li>.src{font-size:13px;line-height:1.45;color:var(--dim);margin-top:7px}
+.why .src a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line-3);text-underline-offset:2px}
+.why li.wk{background:var(--panel-2);border-left-color:var(--navy)}
+.why li.wk a{font-weight:600}
+.tlw{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px 22px}
+.tlw li{padding-top:14px;border-top:3px solid var(--line-3)}
+.tlw li.key{border-top-color:var(--gold)}
+.tlw li.fin{border-top-color:var(--navy)}
+.tlw .w{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:6px}
+.tlw b{display:block;font-size:15.5px;line-height:1.35;color:var(--ink);margin-bottom:4px}
+.tlw .t{display:block;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.tlw+.note{margin-top:16px;max-width:none}
+.pricebox{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--r);padding:20px 22px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:14px 30px;align-items:start;margin-top:4px}
+.pricebox .sum{font-family:var(--serif);font-size:clamp(25px,2.4vw,31px);font-weight:600;color:var(--navy);line-height:1.15}
+.pricebox .sum span{display:block;font-family:var(--sans);font-size:13px;font-weight:500;line-height:1.45;color:var(--muted);margin-top:8px}
+.pricebox .btn{margin-top:14px}
+.pricebox+.g2,.pricebox+.g3,.pricebox+h3,.pricebox+p{margin-top:22px}
+.lform{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--r);padding:clamp(18px,2.2vw,26px);margin-top:16px}
+.lform select.fld{cursor:pointer}
+.lform .fgrid.w4{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 0}
+.lform .fend{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-top:14px}
+.lform .fend .consent{margin:0;flex:1 1 320px}
+.lform .fend .btn{flex:0 0 auto}
+.lform .fmsg{margin-top:8px}
+.lform p.small{margin-top:4px}
+@media(max-width:1100px){.lform .fgrid.w4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.ask li{grid-template-columns:1fr;gap:3px}.pricebox{grid-template-columns:1fr}}
+@media(max-width:560px){.lform .fgrid.w4{grid-template-columns:1fr}.lform .fend .btn{width:100%}}
+/*/RU-PRODUCT-CANON*/
