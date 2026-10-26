@@ -56,7 +56,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p class="lead">Через две недели у комитета или совета будет один экран: индекс здоровья рисков, тепловая карта, владельцы и сроки, индикаторы раннего предупреждения. Дашборд работает внутри вашего контура.</p>
   <div class="tiles"><div class="tile"><b>2 недели</b><span>от реестра в таблице до дашборда</span></div><div class="tile"><b>Один экран</b><span>индекс, карта, владельцы, индикаторы</span></div><div class="tile"><b>Ваш контур</b><span>данные остаются в компании</span></div><div class="tile"><b>История</b><span>динамика со второго месяца</span></div></div>
   <div class="cta-row"><span class="pb-price">По объему работ</span><span class="pb-terms">расчет за два рабочих дня · без учета налогов</span></div>
-  <div class="cta-row"><a class="btn navy" href="#demo" data-topic="zoom">Обсудить в Zoom</a><a class="more" href="#kak-vyglyadit">Как выглядит дашборд →</a></div>
+  <div class="cta-row"><a class="btn navy" href="#demo" data-topic="discuss">Обсудить в Zoom</a><a class="more" href="#kak-vyglyadit">Как выглядит дашборд →</a></div>
 </div></div>
 <!--/TPL:HERO-->
 <div class="pb">
@@ -189,7 +189,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <ul class="ld">
     <li><span><b>NDA до первой рабочей встречи.</b> Подписываем ваше соглашение о неразглашении или предлагаем свое.</span></li>
     <li><span><b>Данные остаются у вас.</b> Движок и история работают на вашем ноутбуке, сервере или в частном облаке. Данные мы видим только на этапе настройки и только те, что вы покажете.</span></li>
-    <li><span><b>Опыт.</b> Евгений Теленков: больше 20 планов непрерывности для площадок крупной горно-металлургической компании, директор по рискам нефтехимического мегапроекта на 20 млрд долларов, зампред технического комитета 010 «Менеджмент риска» Росстандарта, соавтор шести ГОСТ Р.</span></li>
+    <li><span><b>Опыт.</b> Евгений Теленков: больше 30 планов непрерывности, в том числе для площадок крупной горно-металлургической компании, директор по рискам нефтехимического мегапроекта на 20 млрд долларов, зампред технического комитета 010 «Менеджмент риска» Росстандарта, соавтор шести ГОСТ Р.</span></li>
     <li><span><b>Отрасли.</b> Горная добыча и металлургия, нефтегаз и нефтехимия, телеком, промышленное производство.</span></li>
     <li><span><b>Честная граница работы.</b> Методологию, движок и экран делаем мы. Подключение к вашим системам-источникам делает ваше ИТ.</span></li>
   </ul>
@@ -200,7 +200,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p class="sub">Цена зависит от масштаба, уровня продукта и числа источников данных.</p>
   <div class="pricebox">
     <div class="sum">По объему работ<span>расчет за два рабочих дня · без учета налогов · старт за две недели</span></div>
-    <div><p>Начать можно с уровня «Старт» на реестре в таблице. Интеграция и ежемесячный сервис добавляются, когда в них появится потребность.</p><a class="btn navy" href="#demo" data-topic="zoom">Обсудить в Zoom</a></div>
+    <div><p>Начать можно с уровня «Старт» на реестре в таблице. Интеграция и ежемесячный сервис добавляются, когда в них появится потребность.</p><a class="btn navy" href="#demo" data-topic="discuss">Обсудить в Zoom</a></div>
   </div>
   <div class="g3">
     <div class="card"><div class="ct">Старт</div><p>Книга Excel с методологией, движок, настройка под вашу структуру, первый дашборд и инструктаж координатора. Две недели.</p></div>
@@ -232,7 +232,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p>Оставьте контакты. Ответим в течение рабочего дня и договоримся о звонке или встрече в Zoom. Если нужно, подпишем NDA до разговора.</p>
   <div class="lform">
     <label class="flabel" for="lfTopic">Тема</label>
-    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="call">Заказать звонок</option><option value="zoom">Встреча в Zoom</option><option value="estimate">Расчет стоимости</option><option value="demo">Демонстрация продукта</option><option value="corporate">Корпоративный доступ и счет для организации</option></select>
+    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="demo">Посмотреть продукт</option><option value="team">Программа для сотрудников</option><option value="compliance">Требование регулятора или заказчика</option><option value="partner">Сотрудничество</option></select>
     <div class="fgrid w4">
       <input type="text" class="fld" id="lfName" placeholder="Имя" aria-label="Имя" autocomplete="name">
       <input type="text" class="fld" id="lfOrg" placeholder="Компания" aria-label="Компания" autocomplete="organization">
@@ -252,9 +252,9 @@ gtag('config', 'G-82K0ZJ2K9S');
   function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
   var out=document.getElementById("lfOut");function say(k,t){out.className="fmsg "+k;out.textContent=t;}
   var sel=document.getElementById("lfTopic");
-  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel)sel.value=a.getAttribute("data-topic");});});
+  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel){sel.value=a.getAttribute("data-topic");if(sel.selectedIndex<0)sel.selectedIndex=0;}});});
   b.addEventListener("click",async function(){var name=v("lfName"),org=v("lfOrg"),email=v("lfEmail"),phone=v("lfPhone");
-    var topic=sel?sel.options[sel.selectedIndex].text:"";
+    var topic=sel&&sel.selectedIndex>=0?sel.options[sel.selectedIndex].text:"";
     if(!name||!org||email.indexOf("@")<1){say("err","Заполните имя, компанию и рабочую почту.");return;}
     if(phone&&phone.replace(/\D/g,"").length<7){say("err","Проверьте номер телефона.");return;}
     if(!document.getElementById("lfConsent").checked){say("err","Отметьте согласие на обработку персональных данных.");return;}

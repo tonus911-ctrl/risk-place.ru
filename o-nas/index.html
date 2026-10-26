@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>О нас: практика управления рисками risk-place</title>
-<meta name="description" content="Практика управления рисками risk-place: два основателя с двадцатью годами в риск-функциях промышленности и банков, соавторство в шести национальных стандартах, проекты для Норникеля, Сибура, РЖД, Nestle, более 800 обученных специалистов, профессиональное сообщество ERGP.">
+<meta name="description" content="Практика управления рисками risk-place: два основателя с двадцатью годами в риск-функциях промышленности и банков, соавторство в шести национальных стандартах, проекты для Норникеля, Сибура, РЖД, Nestle, более 800 участников программ, профессиональное сообщество ERGP.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://risk-place.ru/o-nas/">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://risk-place.ru/o-nas/">
 <meta property="og:title" content="О нас: практика управления рисками risk-place">
-<meta property="og:description" content="Практика управления рисками risk-place: два основателя с двадцатью годами в риск-функциях промышленности и банков, соавторство в шести национальных стандартах, проекты для Норникеля, Сибура, РЖД, Nestle, более 800 обученных специалистов, профессиональное сообщество ERGP.">
+<meta property="og:description" content="Практика управления рисками risk-place: два основателя с двадцатью годами в риск-функциях промышленности и банков, соавторство в шести национальных стандартах, проекты для Норникеля, Сибура, РЖД, Nestle, более 800 участников программ, профессиональное сообщество ERGP.">
 <meta property="og:image" content="https://risk-place.ru/assets/hero-lighthouse-wide.jpg">
 <meta property="og:site_name" content="risk-place.ru">
 <meta property="og:locale" content="ru_RU">
@@ -53,7 +53,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <div class="eyebrow">Практика управления рисками и непрерывности бизнеса</div>
   <h1>Люди за ERMP и практика, которая стоит за продуктами</h1>
   <p class="lead">Мы строили системы управления рисками внутри крупных компаний, проводили их через проверки аудиторов и доводили до состояния, когда ими пользуются каждый день. Опыт, накопленный за двадцать лет такой работы, и лег в основу сертификации, программ, системы под ключ и дашборда.</p>
-  <div class="tiles"><div class="tile"><b>20 лет</b><span>в риск-функциях</span></div><div class="tile"><b>6 ГОСТ-ов</b><span>в соавторстве</span></div><div class="tile"><b>800+</b><span>обученных специалистов</span></div><div class="tile"><b>Норникель, Сибур</b><span>РЖД, Nestle и другие</span></div></div>
+  <div class="tiles"><div class="tile"><b>20 лет</b><span>в риск-функциях</span></div><div class="tile"><b>6 ГОСТ-ов</b><span>в соавторстве</span></div><div class="tile"><b>800+</b><span>специалистов прошли программы</span></div><div class="tile"><b>Норникель, Сибур</b><span>РЖД, Nestle и другие</span></div></div>
   
   
 </div></div>
@@ -142,7 +142,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p>Оставьте контакты. Ответим в течение рабочего дня и договоримся о звонке или встрече в Zoom. Если нужно, подпишем NDA до разговора.</p>
   <div class="lform">
     <label class="flabel" for="lfTopic">Тема</label>
-    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="call">Заказать звонок</option><option value="zoom">Встреча в Zoom</option><option value="estimate">Расчет стоимости</option><option value="demo">Демонстрация продукта</option><option value="corporate">Корпоративный доступ и счет для организации</option></select>
+    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="demo">Посмотреть продукт</option><option value="team">Программа для сотрудников</option><option value="compliance">Требование регулятора или заказчика</option><option value="partner">Сотрудничество</option></select>
     <div class="fgrid w4">
       <input type="text" class="fld" id="lfName" placeholder="Имя" aria-label="Имя" autocomplete="name">
       <input type="text" class="fld" id="lfOrg" placeholder="Компания" aria-label="Компания" autocomplete="organization">
@@ -162,9 +162,9 @@ gtag('config', 'G-82K0ZJ2K9S');
   function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
   var out=document.getElementById("lfOut");function say(k,t){out.className="fmsg "+k;out.textContent=t;}
   var sel=document.getElementById("lfTopic");
-  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel)sel.value=a.getAttribute("data-topic");});});
+  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel){sel.value=a.getAttribute("data-topic");if(sel.selectedIndex<0)sel.selectedIndex=0;}});});
   b.addEventListener("click",async function(){var name=v("lfName"),org=v("lfOrg"),email=v("lfEmail"),phone=v("lfPhone");
-    var topic=sel?sel.options[sel.selectedIndex].text:"";
+    var topic=sel&&sel.selectedIndex>=0?sel.options[sel.selectedIndex].text:"";
     if(!name||!org||email.indexOf("@")<1){say("err","Заполните имя, компанию и рабочую почту.");return;}
     if(phone&&phone.replace(/\D/g,"").length<7){say("err","Проверьте номер телефона.");return;}
     if(!document.getElementById("lfConsent").checked){say("err","Отметьте согласие на обработку персональных данных.");return;}

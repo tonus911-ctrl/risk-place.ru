@@ -56,7 +56,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p class="lead">Руководители и собственники научатся выявлять угрозы, оценивать вероятность и последствия и выбирать, какой риск принять, снизить или передать. В финале разбор ситуаций, которые вы принесете.</p>
   <div class="tiles"><div class="tile"><b>5 модулей</b><span>от основ до практики</span></div><div class="tile"><b>16 часов</b><span>общая продолжительность</span></div><div class="tile"><b>3–10 человек</b><span>размер группы</span></div><div class="tile"><b>Сертификат</b><span>по итогам тестирования</span></div></div>
   <div class="cta-row"><span class="pb-price">от 20 000 ₽</span><span class="pb-terms">за участника · без учета налогов</span></div>
-  <div class="cta-row"><a class="btn navy" href="#demo" data-topic="zoom">Обсудить в Zoom</a><a class="more" href="#kak-prohodit">Как проходит программа →</a></div>
+  <div class="cta-row"><a class="btn navy" href="#demo" data-topic="discuss">Обсудить в Zoom</a><a class="more" href="#kak-prohodit">Как проходит программа →</a></div>
 </div></div>
 <!--/TPL:HERO-->
 <div class="pb">
@@ -116,7 +116,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <ul class="ld">
     <li><span><b>NDA до первой рабочей встречи.</b> Подписываем ваше соглашение о неразглашении или предлагаем свое.</span></li>
     <li><span><b>Данные остаются у вас.</b> Ситуации и документы участников разбираем внутри группы. В примерах на сайте только обезличенные данные.</span></li>
-    <li><span><b>Опыт.</b> Евгений Теленков: больше 20 планов непрерывности для площадок крупной горно-металлургической компании, директор по рискам нефтехимического мегапроекта на 20 млрд долларов, зампред технического комитета 010 «Менеджмент риска» Росстандарта, соавтор шести ГОСТ Р.</span></li>
+    <li><span><b>Опыт.</b> Евгений Теленков: больше 30 планов непрерывности, в том числе для площадок крупной горно-металлургической компании, директор по рискам нефтехимического мегапроекта на 20 млрд долларов, зампред технического комитета 010 «Менеджмент риска» Росстандарта, соавтор шести ГОСТ Р.</span></li>
     <li><span><b>Отрасли.</b> Горная добыча и металлургия, нефтегаз и нефтехимия, телеком, промышленное производство.</span></li>
     <li><span><b>Честная граница работы.</b> Программа дает руководителю рамку для решений. Если нужна выстроенная система с документами и отчетом совету, это отдельная работа: <a href="/sur-pod-klyuch/">система под ключ</a>.</span></li>
   </ul>
@@ -127,7 +127,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p class="sub">Итог зависит от числа участников и формата.</p>
   <div class="pricebox">
     <div class="sum">от 20 000 ₽<span>за участника · без учета налогов · группа от 3 до 10 человек</span></div>
-    <div><p>Очно на площадке компании, онлайн-формат по запросу. Самостоятельный формат с онлайн-встречей эксперта для разбора считаем отдельно.</p><a class="btn navy" href="#demo" data-topic="zoom">Обсудить в Zoom</a></div>
+    <div><p>Очно на площадке компании, онлайн-формат по запросу. Самостоятельный формат с онлайн-встречей эксперта для разбора считаем отдельно.</p><a class="btn navy" href="#demo" data-topic="discuss">Обсудить в Zoom</a></div>
   </div>
 </section>
 
@@ -161,7 +161,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p>Оставьте контакты. Ответим в течение рабочего дня и договоримся о звонке или встрече в Zoom. Если нужно, подпишем NDA до разговора.</p>
   <div class="lform">
     <label class="flabel" for="lfTopic">Тема</label>
-    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="call">Заказать звонок</option><option value="zoom">Встреча в Zoom</option><option value="estimate">Расчет стоимости</option><option value="demo">Демонстрация продукта</option><option value="corporate">Корпоративный доступ и счет для организации</option></select>
+    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="demo">Посмотреть продукт</option><option value="team">Программа для сотрудников</option><option value="compliance">Требование регулятора или заказчика</option><option value="partner">Сотрудничество</option></select>
     <div class="fgrid w4">
       <input type="text" class="fld" id="lfName" placeholder="Имя" aria-label="Имя" autocomplete="name">
       <input type="text" class="fld" id="lfOrg" placeholder="Компания" aria-label="Компания" autocomplete="organization">
@@ -181,9 +181,9 @@ gtag('config', 'G-82K0ZJ2K9S');
   function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
   var out=document.getElementById("lfOut");function say(k,t){out.className="fmsg "+k;out.textContent=t;}
   var sel=document.getElementById("lfTopic");
-  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel)sel.value=a.getAttribute("data-topic");});});
+  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel){sel.value=a.getAttribute("data-topic");if(sel.selectedIndex<0)sel.selectedIndex=0;}});});
   b.addEventListener("click",async function(){var name=v("lfName"),org=v("lfOrg"),email=v("lfEmail"),phone=v("lfPhone");
-    var topic=sel?sel.options[sel.selectedIndex].text:"";
+    var topic=sel&&sel.selectedIndex>=0?sel.options[sel.selectedIndex].text:"";
     if(!name||!org||email.indexOf("@")<1){say("err","Заполните имя, компанию и рабочую почту.");return;}
     if(phone&&phone.replace(/\D/g,"").length<7){say("err","Проверьте номер телефона.");return;}
     if(!document.getElementById("lfConsent").checked){say("err","Отметьте согласие на обработку персональных данных.");return;}

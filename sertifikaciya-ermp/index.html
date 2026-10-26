@@ -267,7 +267,7 @@ gtag('config', 'G-82K0ZJ2K9S');
   <p>Оставьте контакты. Ответим в течение рабочего дня и договоримся о звонке или встрече в Zoom. Если нужно, подпишем NDA до разговора.</p>
   <div class="lform">
     <label class="flabel" for="lfTopic">Тема</label>
-    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="call">Заказать звонок</option><option value="zoom">Встреча в Zoom</option><option value="estimate">Расчет стоимости</option><option value="demo">Демонстрация продукта</option><option value="corporate">Корпоративный доступ и счет для организации</option><option value="ochno">Очная группа ERMP, 5–13 декабря</option><option value="online">Онлайн-поток ERMP, лист ожидания</option></select>
+    <select class="fld" id="lfTopic"><option value="discuss" selected>Обсудить вашу задачу</option><option value="demo">Посмотреть продукт</option><option value="team">Программа для сотрудников</option><option value="compliance">Требование регулятора или заказчика</option><option value="partner">Сотрудничество</option><option value="ochno">Очная группа ERMP, 5–13 декабря</option><option value="online">Онлайн-поток ERMP, лист ожидания</option></select>
     <div class="fgrid w4">
       <input type="text" class="fld" id="lfName" placeholder="Имя" aria-label="Имя" autocomplete="name">
       <input type="text" class="fld" id="lfOrg" placeholder="Компания" aria-label="Компания" autocomplete="organization">
@@ -287,9 +287,9 @@ gtag('config', 'G-82K0ZJ2K9S');
   function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
   var out=document.getElementById("lfOut");function say(k,t){out.className="fmsg "+k;out.textContent=t;}
   var sel=document.getElementById("lfTopic");
-  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel)sel.value=a.getAttribute("data-topic");});});
+  document.querySelectorAll("[data-topic]").forEach(function(a){a.addEventListener("click",function(){if(sel){sel.value=a.getAttribute("data-topic");if(sel.selectedIndex<0)sel.selectedIndex=0;}});});
   b.addEventListener("click",async function(){var name=v("lfName"),org=v("lfOrg"),email=v("lfEmail"),phone=v("lfPhone");
-    var topic=sel?sel.options[sel.selectedIndex].text:"";
+    var topic=sel&&sel.selectedIndex>=0?sel.options[sel.selectedIndex].text:"";
     if(!name||!org||email.indexOf("@")<1){say("err","Заполните имя, компанию и рабочую почту.");return;}
     if(phone&&phone.replace(/\D/g,"").length<7){say("err","Проверьте номер телефона.");return;}
     if(!document.getElementById("lfConsent").checked){say("err","Отметьте согласие на обработку персональных данных.");return;}
