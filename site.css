@@ -783,3 +783,13 @@ th{background:var(--panel);font-weight:700;color:var(--ink)}
 @media(max-width:640px){.ask li{grid-template-columns:1fr;gap:3px}.pricebox{grid-template-columns:1fr}}
 @media(max-width:560px){.lform .fgrid.w4{grid-template-columns:1fr}.lform .fend .btn{width:100%}}
 /*/RU-PRODUCT-CANON*/
+
+/*NO-TOC 29.10.2026: оглавление «На странице» убрано, основное поле на всю ширину контейнера*/
+.ptoc{display:none}
+.pb>.pmain,.pb.one>.pmain{flex:1 1 100%;max-width:100%;margin:0}
+.pmain p,.pmain ol,.pmain ul.plain{max-width:96ch}
+/*/NO-TOC*/
+
+/*HERO-LIGHTHOUSE 29.10.2026: маяк целиком и по центру по вертикали*/
+.hero{background-size:cover,auto 140%;background-position:center,right top}
+/*/HERO-LIGHTHOUSE*/
