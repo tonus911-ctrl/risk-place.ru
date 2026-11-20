@@ -851,3 +851,6 @@ h2+.faq{border-top:0;padding-top:6px}
 .faq-js .faq>:not(.q){display:none}
 .faq-js .faq.open>:not(.q){display:block}
 /*/FAQ-ACC*/
+
+/* 20.11.2026: body flex и margin auto, без width:100% колонка статьи растягивалась до ширины таблицы и текст уходил за край на телефоне */
+.pb{min-width:0;width:100%}
