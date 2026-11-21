@@ -884,8 +884,6 @@ h2+.faq{border-top:0;padding-top:6px}
 .kii{--sage:#E3EFE9;--sage-d:#4F8572;--sky:#E5EDF6;--sky-d:#4A6F94;--lav:#EDE9F5;--lav-d:#6B5C94;--sand:#F6EFE2;--sand-d:#9A7629;--peach:#FBEAE2;--peach-d:#AF5E44;
   --ok:#3E9B6A;--wip:#E2A92B}
 .kii.pb{min-width:0}
-.kii .hero2 .cta-row{margin-top:4px}
-.kii .hero2 .cta-row{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 .kii .ps.half{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
 .kii .ps.half .hl p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0 0 18px}
 .kii .qa,.kii .trl{list-style:none;margin:0;padding:0;display:grid;gap:0}
@@ -1031,3 +1029,40 @@ h2+.faq{border-top:0;padding-top:6px}
 .kii .fc-sage{color:var(--sage-d)}.kii .fc-sky{color:var(--sky-d)}.kii .fc-lav{color:var(--lav-d)}.kii .fc-sand{color:var(--sand-d)}.kii .fc-peach{color:var(--peach-d)}
 .kii .dr-sage{--c:var(--sage-d);--b:var(--sage)}.kii .dr-sky{--c:var(--sky-d);--b:var(--sky)}.kii .dr-lav{--c:var(--lav-d);--b:var(--lav)}.kii .dr-sand{--c:var(--sand-d);--b:var(--sand)}.kii .dr-peach{--c:var(--peach-d);--b:var(--peach)}
 /* KII-END */
+/* HERO-START: единый герой внутренних страниц (решение Евгения 21.11.2026). Главная (section.hero) не затрагивается.
+   Компьютер: высота 320 px, содержимое по центру по вертикали; плитки одним рядом под текстом;
+   кнопки: бордовая + кнопка с рамкой (вторая ссылка .more в cta-row и золотая кнопка оформляются рамкой).
+   Телефон и планшет: высота по содержимому, плитки одной прокручиваемой строкой. */
+.ph{box-sizing:border-box;padding:18px 0}
+.ph>.in{width:100%}
+.ph .crumbs{margin-bottom:12px}
+.ph .rule{margin-bottom:10px}
+.ph .eyebrow{margin-bottom:8px}
+.ph h1{font-size:clamp(23px,2.2vw,28px);line-height:1.18;margin-bottom:8px;max-width:none}
+.ph .lead{font-size:15.5px;line-height:1.55;max-width:none}
+.ph .tiles{display:flex;flex-wrap:nowrap;gap:10px;margin:12px 0 0;max-width:none}
+.ph .tile{flex:1 1 auto;min-width:0;max-width:340px;padding:7px 12px 6px;border-radius:6px}
+.ph .tile b{font-size:15px;margin-bottom:1px}
+.ph .tile span{font-size:12px;line-height:1.35;display:block}
+.ph .cta-row{margin-top:10px;gap:10px}
+.ph .cta-row+.cta-row{margin-top:10px}
+@media(min-width:861px){.ph .cta-row{display:inline-flex;vertical-align:middle;margin-right:22px}.ph .cta-row+.cta-row{margin-top:10px}}
+.ph .pb-price{font-size:18px}
+.ph .btn,.ph .cta-row .more{font-size:14.5px;padding:11px 22px;line-height:1.2}
+.ph .cta-row .more,.ph .btn.gold,.ph .btn.line{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--navy);border:1px solid var(--navy);border-radius:999px;font-weight:700;white-space:nowrap}
+.ph .cta-row .more:hover,.ph .btn.gold:hover,.ph .btn.line:hover{background:var(--navy);color:#fff}
+.ph .btn.navy{border:1px solid var(--navy)}
+.ph .cta-row .btn.gold~.more{background:none;border:0;padding:11px 4px;color:var(--navy)}
+.ph .cta-row .btn.gold~.more:hover{background:none;color:var(--ink)}
+@media(min-width:861px){
+  .ph{min-height:320px;display:flex;align-items:center}
+}
+@media(max-width:860px){
+  .ph .tiles{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:4px;margin-right:-16px;padding-right:16px}
+  .ph .tile{flex:0 0 auto;width:min(46%,200px);max-width:none;scroll-snap-align:start}
+}
+@media(max-width:560px){
+  .ph .cta-row .more,.ph .btn.gold{width:100%}
+  .ph .cta-row .btn.gold~.more{width:auto}
+}
+/* HERO-END */
