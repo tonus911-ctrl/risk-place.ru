@@ -1030,7 +1030,7 @@ h2+.faq{border-top:0;padding-top:6px}
 .kii .dr-sage{--c:var(--sage-d);--b:var(--sage)}.kii .dr-sky{--c:var(--sky-d);--b:var(--sky)}.kii .dr-lav{--c:var(--lav-d);--b:var(--lav)}.kii .dr-sand{--c:var(--sand-d);--b:var(--sand)}.kii .dr-peach{--c:var(--peach-d);--b:var(--peach)}
 /* KII-END */
 /* HERO-START: единый герой внутренних страниц (решение Евгения 21.11.2026). Главная (section.hero) не затрагивается.
-   Компьютер: высота 320 px, содержимое по центру по вертикали; плитки одним рядом под текстом;
+   Компьютер: высота 400 px (с 21.11 вторая версия, было 320), крошки наверху, остальное по центру; плитки одним рядом под текстом;
    кнопки: бордовая + кнопка с рамкой (вторая ссылка .more в cta-row и золотая кнопка оформляются рамкой).
    Телефон и планшет: высота по содержимому, плитки одной прокручиваемой строкой. */
 .ph{box-sizing:border-box;padding:18px 0}
@@ -1046,7 +1046,6 @@ h2+.faq{border-top:0;padding-top:6px}
 .ph .tile span{font-size:12px;line-height:1.35;display:block}
 .ph .cta-row{margin-top:10px;gap:10px}
 .ph .cta-row+.cta-row{margin-top:10px}
-@media(min-width:861px){.ph .cta-row{display:inline-flex;vertical-align:middle;margin-right:22px}.ph .cta-row+.cta-row{margin-top:10px}}
 .ph .pb-price{font-size:18px}
 .ph .btn,.ph .cta-row .more{font-size:14.5px;padding:11px 22px;line-height:1.2}
 .ph .cta-row .more,.ph .btn.gold,.ph .btn.line{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--navy);border:1px solid var(--navy);border-radius:999px;font-weight:700;white-space:nowrap}
@@ -1055,7 +1054,19 @@ h2+.faq{border-top:0;padding-top:6px}
 .ph .cta-row .btn.gold~.more{background:none;border:0;padding:11px 4px;color:var(--navy)}
 .ph .cta-row .btn.gold~.more:hover{background:none;color:var(--ink)}
 @media(min-width:861px){
-  .ph{min-height:320px;display:flex;align-items:center}
+  /* 21.11.2026, вторая версия: 400 px; крошки наверху, остальное по центру оставшейся высоты с ровными промежутками */
+  .ph{min-height:400px;display:flex;align-items:stretch;padding:26px 0}
+  .ph>.in{display:flex;flex-direction:column}
+  .ph .in>.crumbs{margin-bottom:16px}
+  .ph .in>.crumbs+*{margin-top:auto}
+  .ph .in>:last-child{margin-bottom:auto}
+  .ph .rule{margin-bottom:12px}
+  .ph .eyebrow{margin-bottom:12px}
+  .ph h1{margin-bottom:14px}
+  .ph .tiles{margin-top:20px}
+  .ph .cta-row{margin-top:18px}
+  .ph .cta-row+.cta-row{margin-top:12px}
+  .ph .search{margin-top:20px}
 }
 @media(max-width:860px){
   .ph .tiles{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:4px;margin-right:-16px;padding-right:16px}
