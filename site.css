@@ -88,7 +88,8 @@ h1,h2,h3,h4{color:var(--ink);text-wrap:pretty}
 .uh-burger{display:none;margin-left:auto;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink);padding:4px 6px;line-height:1}
 .uh-lang+.uh-burger{margin-left:6px}
 @media(max-width:1180px){.uh-nav{gap:13px}.uh-nav a{font-size:13.5px}}
-@media(max-width:960px){
+/* 21.11.2026: порог бургера 960 -> 1080, в меню семь пунктов, на 961–1031 «О нас» и «Контакты» уходили за край */
+@media(max-width:1080px){
   .uh-burger{display:block}
   .uh-nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:14px var(--gx);gap:12px}
   .uh-nav.open{display:flex}
