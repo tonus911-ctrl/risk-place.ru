@@ -1037,10 +1037,10 @@ h2+.faq{border-top:0;padding-top:6px}
 .ph{box-sizing:border-box;padding:18px 0}
 .ph>.in{width:100%}
 .ph .crumbs{margin-bottom:12px}
-.ph .rule{margin-bottom:10px}
+.ph .rule{margin-bottom:14px;width:48px}
 .ph .eyebrow{margin-bottom:8px}
-.ph h1{font-size:clamp(23px,2.2vw,28px);line-height:1.18;margin-bottom:8px;max-width:none}
-.ph .lead{font-size:15.5px;line-height:1.55;max-width:none}
+.ph h1{font-size:clamp(24px,2.4vw,30px);line-height:1.16;margin-bottom:10px;max-width:none}   /* 23.11: герой в два уровня, заголовок крупнее */
+.ph .lead{font-size:16.5px;line-height:1.6;max-width:880px}   /* 23.11: абзац в две-три строки, без тонкой полосы во всю ширину */
 .ph .tiles{display:flex;flex-wrap:nowrap;gap:10px;margin:12px 0 0;max-width:none}
 .ph .tile{flex:1 1 auto;min-width:0;max-width:340px;padding:7px 12px 6px;border-radius:6px}
 .ph .tile b{font-size:15px;margin-bottom:1px}
@@ -1064,8 +1064,8 @@ h2+.faq{border-top:0;padding-top:6px}
   .ph .rule{margin-bottom:12px}
   .ph .eyebrow{margin-bottom:12px}
   .ph h1{margin-bottom:14px}
-  .ph .tiles{margin-top:20px}
-  .ph .cta-row{margin-top:18px}
+  .ph .tiles{margin-top:18px}
+  .ph .cta-row{margin-top:16px}
   .ph .cta-row+.cta-row{margin-top:12px}
   .ph .search{margin-top:20px}
 }
